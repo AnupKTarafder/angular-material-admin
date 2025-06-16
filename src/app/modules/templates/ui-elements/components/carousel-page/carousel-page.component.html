@@ -3,32 +3,32 @@
 <div class="small-carousels-wrapper">
   <mat-card  appearance="outlined"  class="small-carousel-card">
     <owl-carousel-o [options]="customOptions">
-      <ng-container *ngFor="let slide of digCarouselSlides">
+      @for (slide of digCarouselSlides; track slide) {
         <ng-template carouselSlide [id]="slide.id">
           <img [src]="slide.src" [alt]="slide.alt" [title]="slide.text">
         </ng-template>
-      </ng-container>
+      }
     </owl-carousel-o>
   </mat-card>
 
   <mat-card appearance="outlined" class="small-carousel-card">
     <owl-carousel-o [options]="customOptions">
-      <ng-container *ngFor="let slide of digCarouselSlides">
+      @for (slide of digCarouselSlides; track slide) {
         <ng-template carouselSlide [id]="slide.id">
           <img [src]="slide.src" [alt]="slide.alt" [title]="slide.text">
         </ng-template>
-      </ng-container>
+      }
     </owl-carousel-o>
   </mat-card>
 </div>
 
 <mat-card appearance="outlined" class="big-carousel-card">
   <owl-carousel-o [options]="customOptions">
-    <ng-container *ngFor="let slide of firstSmallCarousel">
+    @for (slide of firstSmallCarousel; track slide) {
       <ng-template carouselSlide [id]="slide.id">
         <img [src]="slide.src" [alt]="slide.alt" [title]="slide.text">
       </ng-template>
-    </ng-container>
+    }
   </owl-carousel-o>
 </mat-card>
 

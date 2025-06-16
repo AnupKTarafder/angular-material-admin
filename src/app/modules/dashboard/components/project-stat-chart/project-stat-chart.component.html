@@ -9,14 +9,16 @@
       <div class="project-stat-content__total-info-wrapper">
         <div class="project-stat-content__total-info">
           <p class="project-stat-content__total-info-users">{{selectedStatsLightBlueData.users}}</p>
-          <p
-            *ngIf="selectedStatsLightBlueData.percent > 0"
-            class="project-stat-content__total-info-percent"
-          >+{{selectedStatsLightBlueData.percent}}%</p>
-          <p
-            *ngIf="selectedStatsLightBlueData.percent < 0"
-            class="project-stat-content__total-info-percent-warn"
-          >{{selectedStatsLightBlueData.percent}}%</p>
+          @if (selectedStatsLightBlueData.percent > 0) {
+            <p
+              class="project-stat-content__total-info-percent"
+            >+{{selectedStatsLightBlueData.percent}}%</p>
+          }
+          @if (selectedStatsLightBlueData.percent < 0) {
+            <p
+              class="project-stat-content__total-info-percent-warn"
+            >{{selectedStatsLightBlueData.percent}}%</p>
+          }
         </div>
         <div class="project-stat-content__total-info-chart">
           <apx-chart
@@ -74,14 +76,16 @@
       <div class="project-stat-content__total-info-wrapper">
         <div class="project-stat-content__total-info">
           <p class="project-stat-content__total-info-users">{{selectedStatsSingAppData.users}}</p>
-          <p
-            *ngIf="selectedStatsSingAppData.percent > 0"
-            class="project-stat-content__total-info-percent"
-          >+{{selectedStatsSingAppData.percent}}%</p>
-          <p
-            *ngIf="selectedStatsSingAppData.percent < 0"
-            class="project-stat-content__total-info-percent-warn"
-          >{{selectedStatsSingAppData.percent}}%</p>
+          @if (selectedStatsSingAppData.percent > 0) {
+            <p
+              class="project-stat-content__total-info-percent"
+            >+{{selectedStatsSingAppData.percent}}%</p>
+          }
+          @if (selectedStatsSingAppData.percent < 0) {
+            <p
+              class="project-stat-content__total-info-percent-warn"
+            >{{selectedStatsSingAppData.percent}}%</p>
+          }
         </div>
         <div class="project-stat-content__total-info-chart">
           <apx-chart
@@ -139,14 +143,16 @@
       <div class="project-stat-content__total-info-wrapper">
         <div class="project-stat-content__total-info">
           <p class="project-stat-content__total-info-users">{{selectedStatsRNSData.users}}</p>
-          <p
-            *ngIf="selectedStatsRNSData.percent > 0"
-            class="project-stat-content__total-info-percent"
-          >+{{selectedStatsRNSData.percent}}%</p>
-          <p
-            *ngIf="selectedStatsRNSData.percent < 0"
-            class="project-stat-content__total-info-percent-warn"
-          >{{selectedStatsRNSData.percent}}%</p>
+          @if (selectedStatsRNSData.percent > 0) {
+            <p
+              class="project-stat-content__total-info-percent"
+            >+{{selectedStatsRNSData.percent}}%</p>
+          }
+          @if (selectedStatsRNSData.percent < 0) {
+            <p
+              class="project-stat-content__total-info-percent-warn"
+            >{{selectedStatsRNSData.percent}}%</p>
+          }
         </div>
         <div class="project-stat-content__total-info-chart">
           <apx-chart

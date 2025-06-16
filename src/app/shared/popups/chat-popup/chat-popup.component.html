@@ -4,13 +4,15 @@
     <mat-icon class="close-icon" (click)="close()">clear</mat-icon>
   </div>
 
-  <div *ngFor="let chat of chatList" class="message-wrapper">
-    <img [src]="chat.imgUrl" class="user-icon">
-    <div>
-      <p class="user-name">{{chat.userName}}</p>
-      <p class="user-message">{{chat.message}}</p>
+  @for (chat of chatList; track chat) {
+    <div class="message-wrapper">
+      <img [src]="chat.imgUrl" class="user-icon">
+      <div>
+        <p class="user-name">{{chat.userName}}</p>
+        <p class="user-message">{{chat.message}}</p>
+      </div>
     </div>
-  </div>
+  }
 
   <div class="comment-wrapper">
     <mat-form-field class="comment-input">
