@@ -18,28 +18,28 @@ importers:
         specifier: ^13.2.4
         version: 13.3.9(@angular/common@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5))(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5)
       '@angular/common':
-        specifier: ~14.3.0
+        specifier: ^14.3.0
         version: 14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5)
       '@angular/compiler':
-        specifier: ~14.3.0
+        specifier: ^14.3.0
         version: 14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))
       '@angular/core':
-        specifier: ~14.3.0
+        specifier: ^14.3.0
         version: 14.3.0(rxjs@6.5.5)(zone.js@0.11.8)
       '@angular/forms':
-        specifier: ~14.3.0
+        specifier: ^14.3.0
         version: 14.3.0(@angular/common@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5))(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(@angular/platform-browser@14.3.0(@angular/animations@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))(@angular/common@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5))(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))(rxjs@6.5.5)
       '@angular/material':
         specifier: ^13.2.4
         version: 13.3.9(f8670d93138355cf97c2abeda25e20cc)
       '@angular/platform-browser':
-        specifier: ~14.3.0
+        specifier: ^14.3.0
         version: 14.3.0(@angular/animations@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))(@angular/common@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5))(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))
       '@angular/platform-browser-dynamic':
-        specifier: ~14.3.0
+        specifier: ^14.3.0
         version: 14.3.0(@angular/common@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5))(@angular/compiler@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(@angular/platform-browser@14.3.0(@angular/animations@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))(@angular/common@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5))(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))
       '@angular/router':
-        specifier: ~14.3.0
+        specifier: ^14.3.0
         version: 14.3.0(@angular/common@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5))(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(@angular/platform-browser@14.3.0(@angular/animations@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))(@angular/common@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8))(rxjs@6.5.5))(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))(rxjs@6.5.5)
       '@auth0/angular-jwt':
         specifier: ^3.0.1
@@ -118,16 +118,16 @@ importers:
         specifier: ^4.1.17
         version: 4.1.30
       '@angular-devkit/build-angular':
-        specifier: ~14.2.13
+        specifier: ^14.2.13
         version: 14.2.13(@angular/compiler-cli@14.3.0(@angular/compiler@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))(typescript@4.8.4))(chokidar@3.6.0)(typescript@4.8.4)
       '@angular/cli':
-        specifier: ~14.2.13
+        specifier: ^14.2.13
         version: 14.2.13(chokidar@3.6.0)
       '@angular/compiler-cli':
-        specifier: ~14.3.0
+        specifier: ^14.3.0
         version: 14.3.0(@angular/compiler@14.3.0(@angular/core@14.3.0(rxjs@6.5.5)(zone.js@0.11.8)))(typescript@4.8.4)
       '@angular/language-service':
-        specifier: ~14.3.0
+        specifier: ^14.3.0
         version: 14.3.0
       '@angularclass/hmr':
         specifier: ^3.0.0
