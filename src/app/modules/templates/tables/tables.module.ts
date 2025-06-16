@@ -3,18 +3,18 @@ import { CommonModule } from '@angular/common';
 import { TablesRoutingModule } from './tables-routing.module';
 import { TablesBasicPageComponent } from './containers';
 import { EmployeeTableComponent, MaterialTableComponent } from './components';
-import { MatCardModule } from '@angular/material/card';
+import { MatLegacyCardModule as MatCardModule } from '@angular/material/legacy-card';
 import { MatIconModule } from '@angular/material/icon';
-import { MatTableModule } from '@angular/material/table';
-import { MatInputModule } from '@angular/material/input';
-import { MatButtonModule } from '@angular/material/button';
-import { MatCheckboxModule } from '@angular/material/checkbox';
-import { MatPaginatorModule } from '@angular/material/paginator';
+import { MatLegacyTableModule as MatTableModule } from '@angular/material/legacy-table';
+import { MatLegacyInputModule as MatInputModule } from '@angular/material/legacy-input';
+import { MatLegacyButtonModule as MatButtonModule } from '@angular/material/legacy-button';
+import { MatLegacyCheckboxModule as MatCheckboxModule } from '@angular/material/legacy-checkbox';
+import { MatLegacyPaginatorModule as MatPaginatorModule } from '@angular/material/legacy-paginator';
 import { SharedModule } from '../../../shared/shared.module';
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { TablesDynamicPageComponent } from './containers';
 import { NutritionTableComponent } from './components';
-import { MatChipsModule } from '@angular/material/chips';
+import { MatLegacyChipsModule as MatChipsModule } from '@angular/material/legacy-chips';
 import { CustomTableComponent } from './components/custom-table/custom-table.component';
 
 @NgModule({

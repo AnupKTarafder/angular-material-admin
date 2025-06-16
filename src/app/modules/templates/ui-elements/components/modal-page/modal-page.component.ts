@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import {routes} from '../../../../../consts';
-import {MatDialog} from '@angular/material/dialog';
+import {MatLegacyDialog as MatDialog} from '@angular/material/legacy-dialog';
 import {GridComponent, LocationComponent, LongContentComponent, SubscribedComponent} from '../../popups';
 import {FormComponent} from '../../popups/form/form.component';
 import {take} from 'rxjs/operators';
