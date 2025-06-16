@@ -4,9 +4,10 @@ import {ProductDetails} from '../../models/product-details';
 import {UntypedFormControl, UntypedFormGroup, Validators} from '@angular/forms';
 
 @Component({
-  selector: 'app-product-edit-form',
-  templateUrl: './product-edit-form.component.html',
-  styleUrls: ['./product-edit-form.component.scss'],
+    selector: 'app-product-edit-form',
+    templateUrl: './product-edit-form.component.html',
+    styleUrls: ['./product-edit-form.component.scss'],
+    standalone: false
 })
 export class ProductEditFormComponent implements OnInit {
   @Input() product: ProductDetails;

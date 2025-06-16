@@ -2,9 +2,10 @@ import {Component, Input} from '@angular/core';
 import {TimeLineItem} from '../../models';
 
 @Component({
-  selector: 'app-time-line-card',
-  templateUrl: './time-line-card.component.html',
-  styleUrls: ['./time-line-card.component.scss']
+    selector: 'app-time-line-card',
+    templateUrl: './time-line-card.component.html',
+    styleUrls: ['./time-line-card.component.scss'],
+    standalone: false
 })
 export class TimeLineCardComponent {
   @Input() public timeLineItem: TimeLineItem;

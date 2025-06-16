@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'app-simple-validation',
-  templateUrl: './simple-validation.component.html',
-  styleUrls: ['./simple-validation.component.scss']
+    selector: 'app-simple-validation',
+    templateUrl: './simple-validation.component.html',
+    styleUrls: ['./simple-validation.component.scss'],
+    standalone: false
 })
 export class SimpleValidationComponent implements OnInit {
   public form: UntypedFormGroup;

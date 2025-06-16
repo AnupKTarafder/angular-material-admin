@@ -6,9 +6,10 @@ import { AuthService } from '../../../shared/services/auth.service';
 import { routes } from '../../../consts';
 
 @Component({
-  selector: 'app-change-password',
-  templateUrl: './change-password.component.html',
-  styleUrls: ['./change-password.component.scss'],
+    selector: 'app-change-password',
+    templateUrl: './change-password.component.html',
+    styleUrls: ['./change-password.component.scss'],
+    standalone: false
 })
 export class ChangePasswordComponent implements OnInit {
   form: UntypedFormGroup;

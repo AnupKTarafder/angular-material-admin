@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {UntypedFormControl, UntypedFormGroup} from '@angular/forms';
 
 @Component({
-  selector: 'app-settings-edit-form',
-  templateUrl: './settings-edit-form.component.html',
-  styleUrls: ['./settings-edit-form.component.scss']
+    selector: 'app-settings-edit-form',
+    templateUrl: './settings-edit-form.component.html',
+    styleUrls: ['./settings-edit-form.component.scss'],
+    standalone: false
 })
 export class SettingsEditFormComponent implements OnInit {
   public settingForm: UntypedFormGroup;

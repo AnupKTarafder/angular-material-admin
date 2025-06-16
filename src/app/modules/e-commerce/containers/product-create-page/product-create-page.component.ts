@@ -6,9 +6,10 @@ import {ProductDetails} from '../../models/product-details';
 import {ProductService} from '../../services';
 
 @Component({
-  selector: 'app-product-create-page',
-  templateUrl: './product-create-page.component.html',
-  styleUrls: ['./product-create-page.component.scss']
+    selector: 'app-product-create-page',
+    templateUrl: './product-create-page.component.html',
+    styleUrls: ['./product-create-page.component.scss'],
+    standalone: false
 })
 export class ProductCreatePageComponent {
   public routes: typeof routes = routes;

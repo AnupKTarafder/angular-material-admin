@@ -6,9 +6,10 @@ import {routes} from '../../../../../consts';
 import {SharedService} from '../../../../../shared/services/shared.service';
 
 @Component({
-  selector: 'app-line-charts-page',
-  templateUrl: './line-charts-page.component.html',
-  styleUrls: ['./line-charts-page.component.scss']
+    selector: 'app-line-charts-page',
+    templateUrl: './line-charts-page.component.html',
+    styleUrls: ['./line-charts-page.component.scss'],
+    standalone: false
 })
 export class LineChartsPageComponent {
   public basicLineChartData$: Observable<LineChartData>

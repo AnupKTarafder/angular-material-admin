@@ -30,9 +30,10 @@ type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-heatmap-chart',
-  templateUrl: './heatmap-chart.component.html',
-  styleUrls: ['./heatmap-chart.component.scss']
+    selector: 'app-heatmap-chart',
+    templateUrl: './heatmap-chart.component.html',
+    styleUrls: ['./heatmap-chart.component.scss'],
+    standalone: false
 })
 export class HeatmapChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() heatmapChartData: HeatmapChartData;

@@ -2,9 +2,10 @@ import { Component } from '@angular/core';
 import {MatDialogRef} from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-chat-popup',
-  templateUrl: './chat-popup.component.html',
-  styleUrls: ['./chat-popup.component.scss']
+    selector: 'app-chat-popup',
+    templateUrl: './chat-popup.component.html',
+    styleUrls: ['./chat-popup.component.scss'],
+    standalone: false
 })
 export class ChatPopupComponent {
   message: string;

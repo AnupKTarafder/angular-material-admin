@@ -5,9 +5,10 @@ import {ChartOptions} from '../../models/chart-options';
 import {colors} from '../../../../../consts';
 
 @Component({
-  selector: 'app-image-bar-chart',
-  templateUrl: './image-bar-chart.component.html',
-  styleUrls: ['./image-bar-chart.component.scss']
+    selector: 'app-image-bar-chart',
+    templateUrl: './image-bar-chart.component.html',
+    styleUrls: ['./image-bar-chart.component.scss'],
+    standalone: false
 })
 export class ImageBarChartComponent implements OnInit {
   @Input() imageBarChartData: BarChartData;

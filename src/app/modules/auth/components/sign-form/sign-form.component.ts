@@ -3,9 +3,10 @@ import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms
 import { AuthService } from '../../../../shared/services/auth.service';
 
 @Component({
-  selector: 'app-sign-form',
-  templateUrl: './sign-form.component.html',
-  styleUrls: ['./sign-form.component.scss'],
+    selector: 'app-sign-form',
+    templateUrl: './sign-form.component.html',
+    styleUrls: ['./sign-form.component.scss'],
+    standalone: false
 })
 export class SignFormComponent implements OnInit {
   @Output() sendSignForm = new EventEmitter<void>();

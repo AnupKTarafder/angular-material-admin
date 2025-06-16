@@ -12,9 +12,10 @@ import { MatPaginator } from '@angular/material/paginator';
 import { FilterConfig, FilterItems } from '../../../shared/models/common';
 
 @Component({
-  selector: 'app-users-list',
-  templateUrl: './users-list.component.html',
-  styleUrls: ['./users-list.component.scss'],
+    selector: 'app-users-list',
+    templateUrl: './users-list.component.html',
+    styleUrls: ['./users-list.component.scss'],
+    standalone: false
 })
 export class UsersListComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;

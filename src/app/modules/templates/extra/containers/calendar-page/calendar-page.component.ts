@@ -22,9 +22,10 @@ enum CalendarViewsTypes {
 }
 
 @Component({
-  selector: 'app-calendar-page',
-  templateUrl: './calendar-page.component.html',
-  styleUrls: ['./calendar-page.component.scss']
+    selector: 'app-calendar-page',
+    templateUrl: './calendar-page.component.html',
+    styleUrls: ['./calendar-page.component.scss'],
+    standalone: false
 })
 export class CalendarPageComponent implements OnInit, AfterViewInit {
   @ViewChild('calendar', { static: false }) public calendarComponent: FullCalendarComponent;

@@ -5,9 +5,10 @@ import { colors } from '../../../../../consts';
 import {BarChartData} from '../../models/bar-chart-data';
 
 @Component({
-  selector: 'app-bar-chart',
-  templateUrl: './bar-chart.component.html',
-  styleUrls: ['./bar-chart.component.scss']
+    selector: 'app-bar-chart',
+    templateUrl: './bar-chart.component.html',
+    styleUrls: ['./bar-chart.component.scss'],
+    standalone: false
 })
 export class BarChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() barChartData: BarChartData;

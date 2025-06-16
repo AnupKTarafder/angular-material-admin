@@ -7,9 +7,10 @@ import {routes} from '../../../../../consts';
 import {SharedService} from '../../../../../shared/services/shared.service';
 
 @Component({
-  selector: 'app-overview-charts-page',
-  templateUrl: './overview-charts-page.component.html',
-  styleUrls: ['./overview-charts-page.component.scss']
+    selector: 'app-overview-charts-page',
+    templateUrl: './overview-charts-page.component.html',
+    styleUrls: ['./overview-charts-page.component.scss'],
+    standalone: false
 })
 export class OverviewChartsPageComponent implements OnInit {
   public lineChartData$: Observable<LineChartData>;

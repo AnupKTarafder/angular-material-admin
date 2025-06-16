@@ -3,9 +3,10 @@ import {routes} from '../../../../consts';
 import {UntypedFormControl, FormGroup} from '@angular/forms';
 
 @Component({
-  selector: 'app-edit-page',
-  templateUrl: './edit-page.component.html',
-  styleUrls: ['./edit-page.component.scss']
+    selector: 'app-edit-page',
+    templateUrl: './edit-page.component.html',
+    styleUrls: ['./edit-page.component.scss'],
+    standalone: false
 })
 export class EditPageComponent implements OnInit {
   public routes: typeof routes = routes;

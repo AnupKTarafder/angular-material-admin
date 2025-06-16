@@ -5,9 +5,10 @@ import {ChartOptions} from '../../models/chart-options';
 import { colors } from '../../../../../consts';
 
 @Component({
-  selector: 'app-basic-line-chart',
-  templateUrl: './basic-line-chart.component.html',
-  styleUrls: ['./basic-line-chart.component.scss']
+    selector: 'app-basic-line-chart',
+    templateUrl: './basic-line-chart.component.html',
+    styleUrls: ['./basic-line-chart.component.scss'],
+    standalone: false
 })
 export class BasicLineChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() basicLineChartData: LineChartData;

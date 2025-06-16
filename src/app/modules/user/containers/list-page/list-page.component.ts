@@ -12,9 +12,10 @@ import {MatDialog} from '@angular/material/dialog';
 import {DeleteUserPopupComponent} from '../../popups/delete-user-popup/delete-user-popup.component';
 
 @Component({
-  selector: 'app-list-page',
-  templateUrl: './list-page.component.html',
-  styleUrls: ['./list-page.component.scss']
+    selector: 'app-list-page',
+    templateUrl: './list-page.component.html',
+    styleUrls: ['./list-page.component.scss'],
+    standalone: false
 })
 export class ListPageComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;

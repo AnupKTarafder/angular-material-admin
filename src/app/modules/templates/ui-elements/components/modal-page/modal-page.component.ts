@@ -6,9 +6,10 @@ import {FormComponent} from '../../popups/form/form.component';
 import {take} from 'rxjs/operators';
 
 @Component({
-  selector: 'app-modal-page',
-  templateUrl: './modal-page.component.html',
-  styleUrls: ['./modal-page.component.scss']
+    selector: 'app-modal-page',
+    templateUrl: './modal-page.component.html',
+    styleUrls: ['./modal-page.component.scss'],
+    standalone: false
 })
 export class ModalPageComponent {
   public routes: typeof routes = routes;

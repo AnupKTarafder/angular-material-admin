@@ -5,9 +5,10 @@ import {MatPaginator} from '@angular/material/paginator';
 import {Nutrition} from '../../models/nutrition';
 
 @Component({
-  selector: 'app-nutrition-table',
-  templateUrl: './nutrition-table.component.html',
-  styleUrls: ['./nutrition-table.component.scss']
+    selector: 'app-nutrition-table',
+    templateUrl: './nutrition-table.component.html',
+    styleUrls: ['./nutrition-table.component.scss'],
+    standalone: false
 })
 export class NutritionTableComponent implements OnInit {
   @Input() nutritionTableData: Nutrition[];

@@ -5,9 +5,10 @@ import {ChartOptions} from '../../models/chart-options';
 import {colors} from '../../../../../consts';
 
 @Component({
-  selector: 'app-stacked-bar-chart',
-  templateUrl: './stacked-bar-chart.component.html',
-  styleUrls: ['./stacked-bar-chart.component.scss']
+    selector: 'app-stacked-bar-chart',
+    templateUrl: './stacked-bar-chart.component.html',
+    styleUrls: ['./stacked-bar-chart.component.scss'],
+    standalone: false
 })
 export class StackedBarChartComponent {
   @Input() stackedBarChartData: BarChartData;

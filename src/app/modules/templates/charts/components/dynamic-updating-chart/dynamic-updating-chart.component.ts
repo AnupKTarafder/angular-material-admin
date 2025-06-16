@@ -6,9 +6,10 @@ import {colors} from '../../../../../consts';
 
 
 @Component({
-  selector: 'app-dynamic-updating-chart',
-  templateUrl: './dynamic-updating-chart.component.html',
-  styleUrls: ['./dynamic-updating-chart.component.scss']
+    selector: 'app-dynamic-updating-chart',
+    templateUrl: './dynamic-updating-chart.component.html',
+    styleUrls: ['./dynamic-updating-chart.component.scss'],
+    standalone: false
 })
 export class DynamicUpdatingChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() dynamicUpdatingChartData: LineChartData;

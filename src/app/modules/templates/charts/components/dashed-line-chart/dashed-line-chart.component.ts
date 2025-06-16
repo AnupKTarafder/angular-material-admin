@@ -30,9 +30,10 @@ type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-dashed-line-chart',
-  templateUrl: './dashed-line-chart.component.html',
-  styleUrls: ['./dashed-line-chart.component.scss']
+    selector: 'app-dashed-line-chart',
+    templateUrl: './dashed-line-chart.component.html',
+    styleUrls: ['./dashed-line-chart.component.scss'],
+    standalone: false
 })
 export class DashedLineChartComponent implements OnInit {
   @Input() dashedLineChartData: DashedLineChartData;

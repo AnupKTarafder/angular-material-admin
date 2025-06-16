@@ -8,9 +8,10 @@ import {ProductDetails} from '../../models/product-details';
 import {ActivatedRoute} from '@angular/router';
 
 @Component({
-  selector: 'app-product-page',
-  templateUrl: './product-page.component.html',
-  styleUrls: ['./product-page.component.scss']
+    selector: 'app-product-page',
+    templateUrl: './product-page.component.html',
+    styleUrls: ['./product-page.component.scss'],
+    standalone: false
 })
 export class ProductPageComponent implements OnInit {
   public routes: typeof routes = routes;

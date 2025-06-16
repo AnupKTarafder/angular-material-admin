@@ -7,9 +7,10 @@ import am4geodata_worldLow from '@amcharts/amcharts4-geodata/worldLow';
 import {colors, routes} from '../../../../../consts';
 
 @Component({
-  selector: 'app-vector-map-page',
-  templateUrl: './vector-map-page.component.html',
-  styleUrls: ['./vector-map-page.component.scss']
+    selector: 'app-vector-map-page',
+    templateUrl: './vector-map-page.component.html',
+    styleUrls: ['./vector-map-page.component.scss'],
+    standalone: false
 })
 export class VectorMapPageComponent implements AfterViewInit {
   @ViewChild('chartdiv', { static: false }) public mapChart: ElementRef<HTMLElement>;

@@ -5,9 +5,10 @@ import { colors } from '../../../../../consts';
 import {ChartOptions} from '../../models/chart-options';
 
 @Component({
-  selector: 'app-monochome-pie-chart',
-  templateUrl: './monochome-pie-chart.component.html',
-  styleUrls: ['./monochome-pie-chart.component.scss']
+    selector: 'app-monochome-pie-chart',
+    templateUrl: './monochome-pie-chart.component.html',
+    styleUrls: ['./monochome-pie-chart.component.scss'],
+    standalone: false
 })
 export class MonochomePieChartComponent implements OnInit {
   @Input() pieChartData: PieChartData;

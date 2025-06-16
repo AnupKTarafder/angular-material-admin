@@ -3,9 +3,10 @@ import { Component, Input } from '@angular/core';
 import { PerformanceChartData } from '../../models';
 
 @Component({
-  selector: 'app-performance-chart',
-  templateUrl: './performance-chart.component.html',
-  styleUrls: ['./performance-chart.component.scss']
+    selector: 'app-performance-chart',
+    templateUrl: './performance-chart.component.html',
+    styleUrls: ['./performance-chart.component.scss'],
+    standalone: false
 })
 export class PerformanceChartComponent {
   @Input() performanceChartData: PerformanceChartData;

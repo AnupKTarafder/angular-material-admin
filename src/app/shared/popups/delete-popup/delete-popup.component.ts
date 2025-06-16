@@ -2,9 +2,10 @@ import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { MatDialogRef } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-delete-popup',
-  templateUrl: './delete-popup.component.html',
-  styleUrls: ['./delete-popup.component.scss']
+    selector: 'app-delete-popup',
+    templateUrl: './delete-popup.component.html',
+    styleUrls: ['./delete-popup.component.scss'],
+    standalone: false
 })
 export class DeletePopupComponent implements OnInit {
 

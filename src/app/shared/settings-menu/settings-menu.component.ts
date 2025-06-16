@@ -2,9 +2,10 @@ import { Component, EventEmitter, Output } from '@angular/core';
 import { routes } from '../../consts/routes';
 
 @Component({
-  selector: 'app-settings-menu-app',
-  templateUrl: './settings-menu.component.html',
-  styleUrls: ['./settings-menu.component.scss'],
+    selector: 'app-settings-menu-app',
+    templateUrl: './settings-menu.component.html',
+    styleUrls: ['./settings-menu.component.scss'],
+    standalone: false
 })
 export class SettingsMenuAppComponent {
   public routes: typeof routes = routes;

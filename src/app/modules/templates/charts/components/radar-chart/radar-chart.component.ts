@@ -5,9 +5,10 @@ import { colors } from '../../../../../consts';
 import { ChartOptions } from '../../models/chart-options';
 
 @Component({
-  selector: 'app-radar-chart',
-  templateUrl: './radar-chart.component.html',
-  styleUrls: ['./radar-chart.component.scss']
+    selector: 'app-radar-chart',
+    templateUrl: './radar-chart.component.html',
+    styleUrls: ['./radar-chart.component.scss'],
+    standalone: false
 })
 export class RadarChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() radarChartData: RadarChartData;

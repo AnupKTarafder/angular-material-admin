@@ -13,9 +13,10 @@ import { AutoCompleteItem } from '../../../shared/models/common';
 import { UsersService } from '../../../shared/services/users.service';
 
 @Component({
-  selector: 'app-users-create',
-  templateUrl: './users-create.component.html',
-  styleUrls: ['./users-create.component.scss'],
+    selector: 'app-users-create',
+    templateUrl: './users-create.component.html',
+    styleUrls: ['./users-create.component.scss'],
+    standalone: false
 })
 export class UsersCreateComponent implements OnInit {
   loading = false;

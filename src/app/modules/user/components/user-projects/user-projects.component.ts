@@ -4,9 +4,10 @@ import { ChartOptions } from '../../../templates/charts/models/chart-options';
 import { colors } from '../../../../consts/colors';
 
 @Component({
-  selector: 'app-user-projects',
-  templateUrl: './user-projects.component.html',
-  styleUrls: ['./user-projects.component.scss']
+    selector: 'app-user-projects',
+    templateUrl: './user-projects.component.html',
+    styleUrls: ['./user-projects.component.scss'],
+    standalone: false
 })
 export class UserProjectsComponent {
   public apexPieChartOptions: Partial<ChartOptions>;

@@ -16,9 +16,10 @@ enum ToastPositionTypes {
 }
 
 @Component({
-  selector: 'app-notification-page',
-  templateUrl: './notification-page.component.html',
-  styleUrls: ['./notification-page.component.scss']
+    selector: 'app-notification-page',
+    templateUrl: './notification-page.component.html',
+    styleUrls: ['./notification-page.component.scss'],
+    standalone: false
 })
 export class NotificationPageComponent {
   public toastrPositionTypes: typeof ToastPositionTypes = ToastPositionTypes;

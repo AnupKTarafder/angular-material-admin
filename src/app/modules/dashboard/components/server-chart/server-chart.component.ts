@@ -31,9 +31,10 @@ type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-server-chart',
-  templateUrl: './server-chart.component.html',
-  styleUrls: ['./server-chart.component.scss']
+    selector: 'app-server-chart',
+    templateUrl: './server-chart.component.html',
+    styleUrls: ['./server-chart.component.scss'],
+    standalone: false
 })
 export class ServerChartComponent implements OnInit {
   @Input() serverChartData: ServerChartData;

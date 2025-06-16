@@ -12,9 +12,10 @@ import { DeletePopupComponent } from '../../../../shared/popups/delete-popup/del
 import { MatDialog } from '@angular/material/dialog';
 
 @Component({
-  selector: 'app-management-page',
-  templateUrl: './management-page.component.html',
-  styleUrls: ['./management-page.component.scss']
+    selector: 'app-management-page',
+    templateUrl: './management-page.component.html',
+    styleUrls: ['./management-page.component.scss'],
+    standalone: false
 })
 export class ManagementPageComponent implements OnInit {
   @ViewChild(MatSort, {static: true}) sort: MatSort;

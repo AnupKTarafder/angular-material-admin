@@ -2,9 +2,10 @@ import { Component, OnInit } from '@angular/core';
 import {UntypedFormControl, UntypedFormGroup} from '@angular/forms';
 
 @Component({
-  selector: 'app-profile-edit-form',
-  templateUrl: './profile-edit-form.component.html',
-  styleUrls: ['./profile-edit-form.component.scss']
+    selector: 'app-profile-edit-form',
+    templateUrl: './profile-edit-form.component.html',
+    styleUrls: ['./profile-edit-form.component.scss'],
+    standalone: false
 })
 export class ProfileEditFormComponent implements OnInit {
   public socialForm: UntypedFormGroup;

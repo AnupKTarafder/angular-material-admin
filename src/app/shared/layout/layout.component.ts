@@ -9,9 +9,10 @@ import { MatSidenav } from '@angular/material/sidenav';
 import { SharedService } from '../services/shared.service';
 
 @Component({
-  selector: 'app-layout',
-  templateUrl: './layout.component.html',
-  styleUrls: ['./layout.component.scss'],
+    selector: 'app-layout',
+    templateUrl: './layout.component.html',
+    styleUrls: ['./layout.component.scss'],
+    standalone: false
 })
 export class LayoutComponent implements OnDestroy {
   @ViewChild('sidenav') sidenav: MatSidenav;

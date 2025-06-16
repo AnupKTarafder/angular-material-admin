@@ -4,9 +4,10 @@ import {colors} from '../../../../../consts';
 import {ChartOptions} from '../../models/chart-options';
 
 @Component({
-  selector: 'app-update-pie-chart',
-  templateUrl: './update-pie-chart.component.html',
-  styleUrls: ['./update-pie-chart.component.scss']
+    selector: 'app-update-pie-chart',
+    templateUrl: './update-pie-chart.component.html',
+    styleUrls: ['./update-pie-chart.component.scss'],
+    standalone: false
 })
 export class UpdatePieChartComponent implements OnInit, AfterViewInit {
   @ViewChild('chart') chart: ElementRef;

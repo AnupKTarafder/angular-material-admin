@@ -5,9 +5,10 @@ import { colors } from '../../../../consts';
 import { ChartOptions } from '../../../templates/charts/models/chart-options';
 
 @Component({
-  selector: 'app-visits-chart',
-  templateUrl: './visits-chart.component.html',
-  styleUrls: ['./visits-chart.component.scss']
+    selector: 'app-visits-chart',
+    templateUrl: './visits-chart.component.html',
+    styleUrls: ['./visits-chart.component.scss'],
+    standalone: false
 })
 export class VisitsChartComponent implements OnChanges, AfterViewInit {
   @Input() visitsChartData: VisitsChartData;

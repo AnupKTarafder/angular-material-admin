@@ -5,9 +5,10 @@ import {ChartOptions} from '../../models/chart-options';
 import {colors} from '../../../../../consts';
 
 @Component({
-  selector: 'app-line-data-labels-chart',
-  templateUrl: './line-data-labels-chart.component.html',
-  styleUrls: ['./line-data-labels-chart.component.scss']
+    selector: 'app-line-data-labels-chart',
+    templateUrl: './line-data-labels-chart.component.html',
+    styleUrls: ['./line-data-labels-chart.component.scss'],
+    standalone: false
 })
 export class LineDataLabelsChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() lineDataLabelsChartData: LineChartData;

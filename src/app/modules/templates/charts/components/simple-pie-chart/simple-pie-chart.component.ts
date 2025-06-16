@@ -5,9 +5,10 @@ import {ChartOptions} from '../../models/chart-options';
 import {colors} from '../../../../../consts';
 
 @Component({
-  selector: 'app-simple-pie-chart',
-  templateUrl: './simple-pie-chart.component.html',
-  styleUrls: ['./simple-pie-chart.component.scss']
+    selector: 'app-simple-pie-chart',
+    templateUrl: './simple-pie-chart.component.html',
+    styleUrls: ['./simple-pie-chart.component.scss'],
+    standalone: false
 })
 export class SimplePieChartComponent implements OnInit {
   @Input() pieChartData: PieChartData;

@@ -13,10 +13,11 @@ import { DataFormatterService } from '../../../shared/services/data-formatter.se
 import { routes } from '../../../consts';
 
 @Component({
-  selector: '[profile]',
-  templateUrl: './profile.component.html',
-  encapsulation: ViewEncapsulation.None,
-  styleUrls: ['./profile.component.scss'],
+    selector: '[profile]',
+    templateUrl: './profile.component.html',
+    encapsulation: ViewEncapsulation.None,
+    styleUrls: ['./profile.component.scss'],
+    standalone: false
 })
 export class ProfileComponent {
   public routes: typeof routes = routes;

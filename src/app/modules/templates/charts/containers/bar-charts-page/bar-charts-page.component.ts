@@ -6,9 +6,10 @@ import {routes} from '../../../../../consts';
 import {SharedService} from '../../../../../shared/services/shared.service';
 
 @Component({
-  selector: 'app-bar-charts-page',
-  templateUrl: './bar-charts-page.component.html',
-  styleUrls: ['./bar-charts-page.component.scss']
+    selector: 'app-bar-charts-page',
+    templateUrl: './bar-charts-page.component.html',
+    styleUrls: ['./bar-charts-page.component.scss'],
+    standalone: false
 })
 export class BarChartsPageComponent {
   public barChartData$: Observable<BarChartData>

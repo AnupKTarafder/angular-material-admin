@@ -13,9 +13,10 @@ import { AutoCompleteItem } from '../../../shared/models/common';
 import { UsersService } from '../../../shared/services/users.service';
 
 @Component({
-  selector: 'app-users-edit',
-  templateUrl: './users-edit.component.html',
-  styleUrls: ['./users-edit.component.scss'],
+    selector: 'app-users-edit',
+    templateUrl: './users-edit.component.html',
+    styleUrls: ['./users-edit.component.scss'],
+    standalone: false
 })
 export class UsersEditComponent implements OnInit {
   selectedUsers;

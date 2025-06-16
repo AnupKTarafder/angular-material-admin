@@ -10,9 +10,10 @@ const ELEMENT_DATA: any[] = [
 ];
 
 @Component({
-  selector: 'app-grid-table',
-  templateUrl: './grid-table.component.html',
-  styleUrls: ['./grid-table.component.scss']
+    selector: 'app-grid-table',
+    templateUrl: './grid-table.component.html',
+    styleUrls: ['./grid-table.component.scss'],
+    standalone: false
 })
 export class GridTableComponent {
   displayedColumns: string[] = ['value', 'xs', 's', 'm', 'l', 'xl'];

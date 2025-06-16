@@ -7,9 +7,10 @@ enum matSelectedFields {
 }
 
 @Component({
-  selector: 'app-date-menu',
-  templateUrl: './date-menu.component.html',
-  styleUrls: ['./date-menu.component.scss']
+    selector: 'app-date-menu',
+    templateUrl: './date-menu.component.html',
+    styleUrls: ['./date-menu.component.scss'],
+    standalone: false
 })
 export class DateMenuComponent {
   @Output() changeDateType = new EventEmitter<string>();

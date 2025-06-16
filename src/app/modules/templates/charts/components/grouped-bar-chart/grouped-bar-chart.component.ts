@@ -4,9 +4,10 @@ import {ChartOptions} from '../../models/chart-options';
 import {colors} from '../../../../../consts';
 
 @Component({
-  selector: 'app-grouped-bar-chart',
-  templateUrl: './grouped-bar-chart.component.html',
-  styleUrls: ['./grouped-bar-chart.component.scss']
+    selector: 'app-grouped-bar-chart',
+    templateUrl: './grouped-bar-chart.component.html',
+    styleUrls: ['./grouped-bar-chart.component.scss'],
+    standalone: false
 })
 export class GroupedBarChartComponent implements OnInit {
   @Input() groupedBarChartData: BarChartData;

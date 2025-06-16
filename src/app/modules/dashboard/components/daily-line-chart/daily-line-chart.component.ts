@@ -41,9 +41,10 @@ enum matSelectedFields {
 }
 
 @Component({
-  selector: 'app-daily-line-chart',
-  templateUrl: './daily-line-chart.component.html',
-  styleUrls: ['./daily-line-chart.component.scss']
+    selector: 'app-daily-line-chart',
+    templateUrl: './daily-line-chart.component.html',
+    styleUrls: ['./daily-line-chart.component.scss'],
+    standalone: false
 })
 export class DailyLineChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() dailyLineChartData: DailyLineChartData;

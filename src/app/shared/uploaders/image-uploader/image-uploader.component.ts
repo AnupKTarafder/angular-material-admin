@@ -6,9 +6,10 @@ import { ImageUploaderService } from '../../services/image-uploader.service';
 import { ImageInterface } from '../../models/image.interface';
 
 @Component({
-  selector: 'app-image-uploader',
-  templateUrl: './image-uploader.component.html',
-  styleUrls: ['./image-uploader.component.scss'],
+    selector: 'app-image-uploader',
+    templateUrl: './image-uploader.component.html',
+    styleUrls: ['./image-uploader.component.scss'],
+    standalone: false
 })
 export class ImageUploaderComponent implements OnInit {
   @Input() entityName: string;

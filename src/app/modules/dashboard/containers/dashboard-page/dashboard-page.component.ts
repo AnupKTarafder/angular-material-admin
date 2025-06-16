@@ -14,9 +14,10 @@ import {
 import {SharedService} from '../../../../shared/services/shared.service';
 
 @Component({
-  selector: 'app-dashboard-page',
-  templateUrl: './dashboard-page.component.html',
-  styleUrls: ['./dashboard-page.component.scss']
+    selector: 'app-dashboard-page',
+    templateUrl: './dashboard-page.component.html',
+    styleUrls: ['./dashboard-page.component.scss'],
+    standalone: false
 })
 export class DashboardPageComponent {
   public dailyLineChartData$: Observable<DailyLineChartData>;

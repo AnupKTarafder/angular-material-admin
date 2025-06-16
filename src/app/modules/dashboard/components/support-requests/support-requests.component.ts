@@ -6,9 +6,10 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MatSort } from '@angular/material/sort';
 
 @Component({
-  selector: 'app-support-requests',
-  templateUrl: './support-requests.component.html',
-  styleUrls: ['./support-requests.component.scss']
+    selector: 'app-support-requests',
+    templateUrl: './support-requests.component.html',
+    styleUrls: ['./support-requests.component.scss'],
+    standalone: false
 })
 export class SupportRequestsComponent {
   @Input() supportRequestData: SupportRequestData[];

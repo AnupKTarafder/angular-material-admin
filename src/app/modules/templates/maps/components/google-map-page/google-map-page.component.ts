@@ -2,9 +2,10 @@ import {Component} from '@angular/core';
 import {routes} from '../../../../../consts';
 
 @Component({
-  selector: 'app-google-map-page',
-  templateUrl: './google-map-page.component.html',
-  styleUrls: ['./google-map-page.component.scss']
+    selector: 'app-google-map-page',
+    templateUrl: './google-map-page.component.html',
+    styleUrls: ['./google-map-page.component.scss'],
+    standalone: false
 })
 export class GoogleMapPageComponent {
   public routes: typeof routes = routes;

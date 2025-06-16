@@ -30,9 +30,10 @@ type ChartOptions = {
 };
 
 @Component({
-  selector: 'app-pie-chart',
-  templateUrl: './pie-chart.component.html',
-  styleUrls: ['./pie-chart.component.scss']
+    selector: 'app-pie-chart',
+    templateUrl: './pie-chart.component.html',
+    styleUrls: ['./pie-chart.component.scss'],
+    standalone: false
 })
 export class PieChartComponent implements OnInit {
   @Input() pieChartData: PieChartData;

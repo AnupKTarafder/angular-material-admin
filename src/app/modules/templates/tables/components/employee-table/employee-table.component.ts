@@ -6,9 +6,10 @@ import { MatPaginator } from '@angular/material/paginator';
 import { Employee } from '../../models/employee';
 
 @Component({
-  selector: 'app-employee-table',
-  templateUrl: './employee-table.component.html',
-  styleUrls: ['./employee-table.component.scss']
+    selector: 'app-employee-table',
+    templateUrl: './employee-table.component.html',
+    styleUrls: ['./employee-table.component.scss'],
+    standalone: false
 })
 export class EmployeeTableComponent implements OnInit {
   @Input() employeeTableData: Employee[];

@@ -5,9 +5,10 @@ import { routes } from '../../../../consts';
 import { AuthService } from '../../../../shared/services/auth.service';
 
 @Component({
-  selector: 'app-auth-page',
-  templateUrl: './auth-page.component.html',
-  styleUrls: ['./auth-page.component.scss'],
+    selector: 'app-auth-page',
+    templateUrl: './auth-page.component.html',
+    styleUrls: ['./auth-page.component.scss'],
+    standalone: false
 })
 export class AuthPageComponent {
   public todayDate: Date = new Date();

@@ -3,9 +3,10 @@ import { OwlOptions } from 'ngx-owl-carousel-o';
 import { routes } from '../../../../../consts';
 
 @Component({
-  selector: 'app-carousel-page',
-  templateUrl: './carousel-page.component.html',
-  styleUrls: ['./carousel-page.component.scss']
+    selector: 'app-carousel-page',
+    templateUrl: './carousel-page.component.html',
+    styleUrls: ['./carousel-page.component.scss'],
+    standalone: false
 })
 export class CarouselPageComponent {
   public routes: typeof routes = routes;

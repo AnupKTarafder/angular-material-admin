@@ -4,9 +4,10 @@ import { RevenueChartData } from '../../models';
 import {colors} from '../../../../consts';
 
 @Component({
-  selector: 'app-revenue-chart',
-  templateUrl: './revenue-chart.component.html',
-  styleUrls: ['./revenue-chart.component.scss']
+    selector: 'app-revenue-chart',
+    templateUrl: './revenue-chart.component.html',
+    styleUrls: ['./revenue-chart.component.scss'],
+    standalone: false
 })
 export class RevenueChartComponent implements OnInit {
   @Input() revenueCharData: RevenueChartData;

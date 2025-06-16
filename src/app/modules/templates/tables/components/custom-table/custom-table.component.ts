@@ -5,9 +5,10 @@ import { SelectionModel } from '@angular/cdk/collections';
 import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
-  selector: 'app-custom-table',
-  templateUrl: './custom-table.component.html',
-  styleUrls: ['./custom-table.component.scss']
+    selector: 'app-custom-table',
+    templateUrl: './custom-table.component.html',
+    styleUrls: ['./custom-table.component.scss'],
+    standalone: false
 })
 export class CustomTableComponent {
   @Input() nutritionTableData: Nutrition[];

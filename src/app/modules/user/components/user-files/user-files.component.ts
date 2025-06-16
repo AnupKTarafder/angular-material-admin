@@ -1,9 +1,10 @@
 import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core';
 
 @Component({
-  selector: 'app-user-files',
-  templateUrl: './user-files.component.html',
-  styleUrls: ['./user-files.component.scss']
+    selector: 'app-user-files',
+    templateUrl: './user-files.component.html',
+    styleUrls: ['./user-files.component.scss'],
+    standalone: false
 })
 export class UserFilesComponent implements OnChanges {
   @Input() isDark: boolean;

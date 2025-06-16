@@ -37,9 +37,10 @@ enum ProjectsType {
 }
 
 @Component({
-  selector: 'app-project-stat-chart',
-  templateUrl: './project-stat-chart.component.html',
-  styleUrls: ['./project-stat-chart.component.scss']
+    selector: 'app-project-stat-chart',
+    templateUrl: './project-stat-chart.component.html',
+    styleUrls: ['./project-stat-chart.component.scss'],
+    standalone: false
 })
 export class ProjectStatChartComponent implements OnInit {
   @Input() projectsStatsData: ProjectStatData;

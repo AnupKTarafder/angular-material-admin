@@ -6,9 +6,10 @@ import {ProductService} from '../../services';
 import {ProductDetails} from '../../models/product-details';
 
 @Component({
-  selector: 'app-product-edit-page',
-  templateUrl: './product-edit-page.component.html',
-  styleUrls: ['./product-edit-page.component.scss']
+    selector: 'app-product-edit-page',
+    templateUrl: './product-edit-page.component.html',
+    styleUrls: ['./product-edit-page.component.scss'],
+    standalone: false
 })
 export class ProductEditPageComponent implements OnInit {
   public routes: typeof routes = routes;

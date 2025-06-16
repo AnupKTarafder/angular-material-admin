@@ -7,9 +7,10 @@ import {ProductCard} from '../../models';
 import {UntypedFormControl, UntypedFormGroup } from '@angular/forms';
 
 @Component({
-  selector: 'app-products-page',
-  templateUrl: './products-page.component.html',
-  styleUrls: ['./products-page.component.scss']
+    selector: 'app-products-page',
+    templateUrl: './products-page.component.html',
+    styleUrls: ['./products-page.component.scss'],
+    standalone: false
 })
 export class ProductsPageComponent implements OnInit {
   public routes: typeof routes = routes;

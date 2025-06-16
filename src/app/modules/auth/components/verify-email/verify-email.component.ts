@@ -3,8 +3,9 @@ import { AuthService } from '../../../../shared/services/auth.service';
 import { ActivatedRoute } from '@angular/router';
 
 @Component({
-  selector: 'app-verify-email',
-  template: '',
+    selector: 'app-verify-email',
+    template: '',
+    standalone: false
 })
 export class VerifyEmailComponent {
   constructor(public authService: AuthService, private route: ActivatedRoute) {

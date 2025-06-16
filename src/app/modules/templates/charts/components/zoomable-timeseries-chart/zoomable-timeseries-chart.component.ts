@@ -1465,9 +1465,10 @@ export const dataSeries = [
 
 
 @Component({
-  selector: 'app-zoomable-timeseries-chart',
-  templateUrl: './zoomable-timeseries-chart.component.html',
-  styleUrls: ['./zoomable-timeseries-chart.component.scss']
+    selector: 'app-zoomable-timeseries-chart',
+    templateUrl: './zoomable-timeseries-chart.component.html',
+    styleUrls: ['./zoomable-timeseries-chart.component.scss'],
+    standalone: false
 })
 export class ZoomableTimeseriesChartComponent implements OnInit {
   @Input() zoomableTimeseriesChartData: LineChartData;

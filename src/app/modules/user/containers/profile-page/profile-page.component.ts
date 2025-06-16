@@ -8,15 +8,16 @@ import {routes} from '../../../../consts';
 import {SharedService} from '../../../../shared/services/shared.service';
 
 @Component({
-  selector: 'app-profile-page',
-  templateUrl: './profile-page.component.html',
-  styleUrls: ['./profile-page.component.scss'],
-  providers: [
-    {
-      provide: CalendarDateFormatter,
-      useClass: CustomDateFormatter,
-    },
-  ],
+    selector: 'app-profile-page',
+    templateUrl: './profile-page.component.html',
+    styleUrls: ['./profile-page.component.scss'],
+    providers: [
+        {
+            provide: CalendarDateFormatter,
+            useClass: CustomDateFormatter,
+        },
+    ],
+    standalone: false
 })
 export class ProfilePageComponent implements OnInit, OnChanges {
   public apexPieChartOptions: Partial<ChartOptions>;

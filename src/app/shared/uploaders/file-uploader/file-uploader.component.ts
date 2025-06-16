@@ -5,9 +5,10 @@ import { AppConfig } from '../../../app.config';
 import { v4 as uuidv4 } from 'uuid';
 
 @Component({
-  selector: 'app-file-uploader',
-  templateUrl: './file-uploader.component.html',
-  styleUrls: ['./file-uploader.component.scss'],
+    selector: 'app-file-uploader',
+    templateUrl: './file-uploader.component.html',
+    styleUrls: ['./file-uploader.component.scss'],
+    standalone: false
 })
 export class FileUploaderComponent implements OnInit {
   @Input() entityName: string;
