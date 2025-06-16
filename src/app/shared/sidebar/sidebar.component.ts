@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { routes } from '../../consts';
 import { FlatTreeControl } from '@angular/cdk/tree';
 import { MatTreeFlatDataSource, MatTreeFlattener } from '@angular/material/tree';
-import { MatLegacyDialog as MatDialog } from '@angular/material/legacy-dialog';
+import { MatDialog } from '@angular/material/dialog';
 import { ChatPopupComponent } from '../popups/chat-popup/chat-popup.component';
 
 

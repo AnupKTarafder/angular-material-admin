@@ -1,6 +1,6 @@
 <app-breadcrumb [path]="routes.PRODUCT"></app-breadcrumb>
 
-<mat-card class="product-info-wrapper">
+<mat-card appearance="outlined" class="product-info-wrapper">
   <img class="product-image" [src]="(product$ | async).imageLarge" alt="product-image">
 
   <div class="info-wrapper">
@@ -71,7 +71,7 @@
   </div>
 </mat-card>
 
-<mat-card class="product-text-info-wrapper">
+<mat-card appearance="outlined" class="product-text-info-wrapper">
   <mat-card-title>
     <p>Product Info</p>
   </mat-card-title>

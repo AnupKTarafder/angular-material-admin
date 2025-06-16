@@ -24,6 +24,7 @@ app-type-item-select + app-time-period-select {
   margin-left: 8px;
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
 .mat-button-toggle-group {
   height: 36px;
   display: flex;
@@ -31,12 +32,14 @@ app-type-item-select + app-time-period-select {
   border-color: $blue;
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
 .mat-button-toggle {
   background-color: transparent;
   color: $blue;
   padding: 0 7px;
 }
 
+/* TODO(mdc-migration): The following rule targets internal classes of button that may no longer apply for the MDC version. */
 .mat-button-toggle-checked {
   background-color: $blue;
   color: $white;

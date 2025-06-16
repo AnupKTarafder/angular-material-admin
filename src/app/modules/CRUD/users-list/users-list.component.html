@@ -13,7 +13,7 @@
     Add filter
   </button>
 
-  <mat-card class="card" *ngIf="showFilters">
+  <mat-card appearance="outlined" class="card" *ngIf="showFilters">
     <app-filter
       [filters]="filters"
       [config]="config"
@@ -25,7 +25,7 @@
   </mat-card>
 </div>
 
-<mat-card class="card">
+<mat-card appearance="outlined" class="card">
   <mat-card-content class="card-content">
     <a href="{{ redirectToSwagger() }}">API documentation for users</a>
     <div class="table-title-wrapper">

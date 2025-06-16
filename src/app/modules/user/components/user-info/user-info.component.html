@@ -1,12 +1,12 @@
-<mat-card class="user-card">
+<mat-card appearance="outlined" class="user-card">
   <mat-card-content class="user-card-content">
     <div class="user-avatar">
       <div class="avatar-wrapper">
         <img class="avatar-img" src="./assets/user/profile/photo.png" alt="avatar">
       </div>
-      <mat-chip-list class="avatar-badge-wrapper">
-        <mat-chip color="warn" selected class="avatar-badge">Pro</mat-chip>
-      </mat-chip-list>
+      <mat-chip-listbox class="avatar-badge-wrapper">
+        <mat-chip-option color="warn" selected class="avatar-badge">Pro</mat-chip-option>
+      </mat-chip-listbox>
     </div>
 
     <div class="user-info-wrapper">
@@ -16,13 +16,13 @@
       <a href="#" class="user-site">NewGenerArt.com</a>
 
       <div class="user-skills-wrapper">
-        <mat-chip-list>
-          <mat-chip selected class="user-skill blue">UI/UX</mat-chip>
-          <mat-chip selected class="user-skill yellow">Art</mat-chip>
-          <mat-chip selected class="user-skill pink">Design</mat-chip>
-          <mat-chip selected class="user-skill yellow">Illustration</mat-chip>
-          <mat-chip selected class="user-skill green">Mobile</mat-chip>
-        </mat-chip-list>
+        <mat-chip-listbox>
+          <mat-chip-option selected class="user-skill blue">UI/UX</mat-chip-option>
+          <mat-chip-option selected class="user-skill yellow">Art</mat-chip-option>
+          <mat-chip-option selected class="user-skill pink">Design</mat-chip-option>
+          <mat-chip-option selected class="user-skill yellow">Illustration</mat-chip-option>
+          <mat-chip-option selected class="user-skill green">Mobile</mat-chip-option>
+        </mat-chip-listbox>
       </div>
 
       <div class="icons-wrapper">

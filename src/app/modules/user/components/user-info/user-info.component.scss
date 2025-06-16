@@ -134,22 +134,26 @@
   letter-spacing: 0.6px;
 }
 
-.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary.blue {
+/* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version. */
+.mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary.blue {
   background-color: $blue-20;
   color: $blue;
 }
 
-.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary.pink {
+/* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version. */
+.mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary.pink {
   background-color: $pink-20;
   color: $pink;
 }
 
-.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary.yellow {
+/* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version. */
+.mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary.yellow {
   background-color: $yellow-20;
   color: $yellow;
 }
 
-.mat-chip.mat-standard-chip.mat-chip-selected.mat-primary.green {
+/* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version. */
+.mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary.green {
   background-color: $green-20;
   color: $green;
 }

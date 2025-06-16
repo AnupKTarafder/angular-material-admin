@@ -1,5 +1,5 @@
 @mixin mat-table() {
-  .mat-table {
+  .mat-mdc-table {
     background: transparent;
 
     tr {
@@ -17,13 +17,13 @@
 }
 
 @mixin mat-table-dark() {
-  .mat-table {
+  .mat-mdc-table {
     background: transparent;
 
     th {
       color: #D6D6D6;
 
-      &.mat-header-cell {
+      &.mat-mdc-header-cell {
         border-color: $white-70;
       }
     }
@@ -31,7 +31,7 @@
     td {
       color: $white;
 
-      &.mat-cell {
+      &.mat-mdc-cell {
         border-color: $white-70;
       }
     }

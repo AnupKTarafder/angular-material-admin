@@ -3,7 +3,7 @@
 @import "src/app/styles/variables";
 @import "src/app/styles/sidebar";
 
-.mat-list-base {
+.mat-mdc-list-base {
   border-bottom: 1px solid $gray-80;
   width: 100%;
   padding-bottom: 16px;
@@ -12,7 +12,7 @@
     border-top: 1px solid $gray-80;
   }
 
-  & .mat-list-item {
+  & .mat-mdc-list-item {
     display: flex;
     cursor: pointer;
     width: auto;
@@ -47,7 +47,7 @@
   margin-bottom: 16px;
 }
 
-.mat-list-base .mat-list-item.ui-element {
+.mat-mdc-list-base .mat-mdc-list-item.ui-element {
   padding-left: 40px;
 }
 

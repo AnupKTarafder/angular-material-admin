@@ -1,9 +1,9 @@
-<mat-card class="product-card" [routerLink]="[routes.PRODUCT, product.id]">
+<mat-card appearance="outlined" class="product-card" [routerLink]="[routes.PRODUCT, product.id]">
   <mat-card-content>
     <img src="{{product.image}}" alt="{{product.title}}" class="product-img">
-    <mat-chip-list>
-      <mat-chip class="product-status" [color]="product.status === 'Sale' ? 'warn' : 'primary'" selected>{{product.status}}</mat-chip>
-    </mat-chip-list>
+    <mat-chip-listbox>
+      <mat-chip-option class="product-status" [color]="product.status === 'Sale' ? 'warn' : 'primary'" selected>{{product.status}}</mat-chip-option>
+    </mat-chip-listbox>
 
     <div class="product-title-wrapper">
       <p class="product-title">{{product.title}}</p>

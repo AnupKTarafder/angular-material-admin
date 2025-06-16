@@ -173,8 +173,8 @@ a {
   margin-right: 20px;
 }
 
-.mat-list-base {
-  & .mat-list-item, .mat-menu-trigger {
+.mat-mdc-list-base {
+  & .mat-mdc-list-item, .mat-mdc-menu-trigger {
     color: $sidebar-title-color;
 
     &.active {

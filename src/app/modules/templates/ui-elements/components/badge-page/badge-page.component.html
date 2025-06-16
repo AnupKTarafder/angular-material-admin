@@ -1,7 +1,7 @@
 <app-breadcrumb [path]="routes.BADGE"></app-breadcrumb>
 
 <div class="content-wrapper">
-  <mat-card class="badge-card">
+  <mat-card appearance="outlined" class="badge-card">
     <mat-card-title>
       <p>Badge Example</p>
     </mat-card-title>
@@ -25,7 +25,7 @@
     </mat-card-content>
   </mat-card>
 
-  <mat-card class="icon-badge-card">
+  <mat-card appearance="outlined" class="icon-badge-card">
     <mat-card-title>
       <p>Icon Badges</p>
     </mat-card-title>
@@ -73,7 +73,7 @@
   </mat-card>
 </div>
 
-<mat-card class="chips-card">
+<mat-card appearance="outlined" class="chips-card">
   <mat-card-title>
     <p>Chips</p>
   </mat-card-title>
@@ -82,13 +82,13 @@
   </mat-card-subtitle>
 
   <mat-card-content>
-    <mat-chip-list aria-label="Fish selection">
-      <mat-chip color="primary" selected>Primary</mat-chip>
-      <mat-chip color="warn" selected>Warning</mat-chip>
-      <mat-chip color="accent" selected>Accent</mat-chip>
-      <mat-chip color="info" selected>Info</mat-chip>
-      <mat-chip color="success" selected>Success</mat-chip>
-    </mat-chip-list>
+    <mat-chip-listbox aria-label="Fish selection">
+      <mat-chip-option color="primary" selected>Primary</mat-chip-option>
+      <mat-chip-option color="warn" selected>Warning</mat-chip-option>
+      <mat-chip-option color="accent" selected>Accent</mat-chip-option>
+      <mat-chip-option color="info" selected>Info</mat-chip-option>
+      <mat-chip-option color="success" selected>Success</mat-chip-option>
+    </mat-chip-listbox>
   </mat-card-content>
 </mat-card>
 

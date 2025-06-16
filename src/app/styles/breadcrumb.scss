@@ -4,8 +4,8 @@ $breadcrumb-title-color: $grey;
 $breadcrumb-active-title-color: $blue;
 
 @mixin breadcrumb {
-  .breadcrumb-list.mat-list-base {
-    & .mat-list-item {
+  .breadcrumb-list.mat-mdc-list-base {
+    & .mat-mdc-list-item {
       color: $breadcrumb-title-color;
 
       &.active {
@@ -16,8 +16,8 @@ $breadcrumb-active-title-color: $blue;
 }
 
 @mixin breadcrumb-dark {
-  .breadcrumb-list.mat-list-base {
-    & .mat-list-item {
+  .breadcrumb-list.mat-mdc-list-base {
+    & .mat-mdc-list-item {
       color: $white;
 
       &.active {

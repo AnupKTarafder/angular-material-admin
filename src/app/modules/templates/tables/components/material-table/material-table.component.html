@@ -1,4 +1,4 @@
-<mat-card class="material-table">
+<mat-card appearance="outlined" class="material-table">
   <mat-card-title class="material-table__header">
     <p class="material-table__title">Material-UI Table</p>
     <app-settings-menu></app-settings-menu>
@@ -32,13 +32,13 @@
             </div>
           </div>
           <div *ngIf="column === 'status'" [ngClass]="element[column]">
-            <mat-chip-list>
-              <mat-chip
+            <mat-chip-listbox>
+              <mat-chip-option
                 class="material-table__content-badge"
                 [color]="element[column] === 'send' ? 'primary' : element[column] === 'declined' ? 'warn' : 'accent'"
                 selected
-              >{{element[column]}}</mat-chip>
-            </mat-chip-list>
+              >{{element[column]}}</mat-chip-option>
+            </mat-chip-listbox>
           </div>
         </td>
       </ng-container>

@@ -18,8 +18,8 @@ $sidebar-color-active-dark-theme: #D6D6D6;
 @mixin sidebar($color) {
   $sidebar-icon-color-active: $color;
 
-  .sidebar.mat-list-base {
-    & .mat-list-item, .mat-menu-trigger {
+  .sidebar.mat-mdc-list-base {
+    & .mat-mdc-list-item, .mat-mdc-menu-trigger {
       color: $sidebar-title-color;
 
       &.active {
@@ -95,8 +95,8 @@ $sidebar-color-active-dark-theme: #D6D6D6;
     }
   }
 
-  .sidebar.mat-list-base {
-    & .mat-list-item, .mat-menu-trigger {
+  .sidebar.mat-mdc-list-base {
+    & .mat-mdc-list-item, .mat-mdc-menu-trigger {
       color: $sidebar-color-active-dark-theme;
 
       &.active {

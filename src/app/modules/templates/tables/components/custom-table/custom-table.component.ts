@@ -1,8 +1,8 @@
 import { Component, Input, ViewChild } from '@angular/core';
 import { Nutrition } from '../../models/nutrition';
-import { MatLegacyTableDataSource as MatTableDataSource } from '@angular/material/legacy-table';
+import { MatTableDataSource } from '@angular/material/table';
 import { SelectionModel } from '@angular/cdk/collections';
-import { MatLegacyPaginator as MatPaginator } from '@angular/material/legacy-paginator';
+import { MatPaginator } from '@angular/material/paginator';
 
 @Component({
   selector: 'app-custom-table',

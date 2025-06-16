@@ -225,10 +225,11 @@ $ama-radio-button-theme: ama-light-theme(
 );
 
 @mixin _mat-radio-color($palette) {
+  /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
   &.mat-radio-checked .mat-radio-outer-circle {
     border-color: mat-color($palette);
   }
-
+  /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
   .mat-radio-inner-circle,
   .mat-radio-ripple .mat-ripple-element:not(.mat-radio-persistent-ripple),
   &.mat-radio-checked .mat-radio-persistent-ripple,
@@ -245,12 +246,12 @@ $ama-radio-button-theme: ama-light-theme(
   $info: map-get($theme, info);
   $background: map-get($theme, background);
   $foreground: map-get($theme, foreground);
-
+  /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
   .mat-radio-outer-circle {
     border-color: mat-color($foreground, secondary-text);
   }
 
-  .mat-radio-button {
+  .mat-mdc-radio-button {
     &.mat-primary {
       @include _mat-radio-color($primary);
     }
@@ -266,17 +267,20 @@ $ama-radio-button-theme: ama-light-theme(
     // This needs extra specificity, because the classes above are combined
     // (e.g. `.mat-radio-button.mat-accent`) which increases their specificity a lot.
     // TODO: consider making the selectors into descendants (`.mat-primary .mat-radio-button`).
+    /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
+    /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
     &.mat-radio-disabled {
+      /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
       &.mat-radio-checked .mat-radio-outer-circle,
       .mat-radio-outer-circle {
         border-color: mat-color($foreground, disabled);
       }
-
+      /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
       .mat-radio-ripple .mat-ripple-element,
       .mat-radio-inner-circle {
         background-color: mat-color($foreground, disabled);
       }
-
+      /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
       .mat-radio-label-content {
         color: mat-color($foreground, disabled);
       }
@@ -299,7 +303,7 @@ $ama-radio-button-theme: ama-light-theme(
 @mixin custom-mat-chips-color($foreground, $background) {
   background-color: $background;
   color: $foreground;
-
+  /*TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version.*/
   .mat-chip-remove {
     color: $foreground;
     opacity: 0.4;
@@ -351,22 +355,23 @@ $ama-chip-theme: ama-light-theme(
   $unselected-background: mat-color($background, unselected-chip);
   $unselected-foreground: mat-color($foreground, text);
 
-  .mat-chip.mat-standard-chip {
+  .mat-mdc-chip.mat-mdc-standard-chip {
     @include custom-mat-chips-color(
       $unselected-foreground,
       $unselected-background
     );
-
+    /*TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version.*/
+    /*TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version.*/
     &:not(.mat-chip-disabled) {
       &:active {
         @include _mat-theme-elevation(3, $theme);
       }
-
+      /*TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version.*/
       .mat-chip-remove:hover {
         opacity: 0.54;
       }
     }
-
+    /*TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version.*/
     &.mat-chip-disabled {
       opacity: 0.4;
     }
@@ -375,8 +380,8 @@ $ama-chip-theme: ama-light-theme(
       background: map_get($foreground, base);
     }
   }
-
-  .mat-chip.mat-standard-chip.mat-chip-selected {
+  /*TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version.*/
+  .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected {
     &.mat-primary {
       @include mat-chips-theme-color($primary);
     }
@@ -480,18 +485,18 @@ body {
 @include mat-tab-label;
 @include mat-card;
 
-.mat-select-panel .mat-option.mat-selected:not(.mat-option-multiple),
+.mat-select-panel .mat-mdc-option.mat-selected:not(.mat-mdc-option-multiple),
 .mat-option:hover:not(.mat-option-disabled) {
   background-color: $blue-white;
 }
 
-.mat-select-panel {
-  & .mat-option {
+.mat-mdc-select-panel {
+  & .mat-mdc-option {
     font-size: 16px !important;
   }
 }
 
-.mat-menu-panel.settings-theme-menu {
+.mat-mdc-menu-panel.settings-theme-menu {
   margin-right: 64px;
   margin-top: -55px;
 }
