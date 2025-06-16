@@ -1,0 +1,6 @@
+onlyBuiltDependencies:
+  - '@angular/cli'
+  - '@scarf/scarf'
+  - core-js
+  - esbuild
+  - nice-napi
