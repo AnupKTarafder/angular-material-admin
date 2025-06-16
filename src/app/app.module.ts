@@ -20,41 +20,35 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatRadioModule } from '@angular/material/radio';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
-import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { HttpInterceptorService } from './shared/services/http-interceptor.service';
 
-@NgModule({
-  declarations: [AppComponent, NotFoundComponent],
-  imports: [
-    BrowserModule,
-    SharedModule,
-    AuthModule,
-    CrudModule,
-    BrowserAnimationsModule,
-    RouterModule,
-    DashboardModule,
-    AppRoutingModule,
-    ToastrModule.forRoot(),
-    MatCardModule,
-    MatButtonModule,
-    CalendarModule.forRoot({
-      provide: DateAdapter,
-      useFactory: adapterFactory,
-    }),
-    MatIconModule,
-    MatMenuModule,
-    MatRadioModule,
-    MatSlideToggleModule,
-    FormsModule,
-    HttpClientModule,
-  ],
-  providers: [
-    {
-      provide: HTTP_INTERCEPTORS,
-      useClass: HttpInterceptorService,
-      multi: true,
-    },
-  ],
-  bootstrap: [AppComponent],
-})
+@NgModule({ declarations: [AppComponent, NotFoundComponent],
+    bootstrap: [AppComponent], imports: [BrowserModule,
+        SharedModule,
+        AuthModule,
+        CrudModule,
+        BrowserAnimationsModule,
+        RouterModule,
+        DashboardModule,
+        AppRoutingModule,
+        ToastrModule.forRoot(),
+        MatCardModule,
+        MatButtonModule,
+        CalendarModule.forRoot({
+            provide: DateAdapter,
+            useFactory: adapterFactory,
+        }),
+        MatIconModule,
+        MatMenuModule,
+        MatRadioModule,
+        MatSlideToggleModule,
+        FormsModule], providers: [
+        {
+            provide: HTTP_INTERCEPTORS,
+            useClass: HttpInterceptorService,
+            multi: true,
+        },
+        provideHttpClient(withInterceptorsFromDi()),
+    ] })
 export class AppModule {}
