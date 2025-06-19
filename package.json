@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --prod",
+    "build": "ng build --watch",
     "lint": "ng lint",
     "hmr": "ng serve --configuration hmr"
   },
@@ -53,13 +53,18 @@
     "@angular/compiler-cli": "^20.0.3",
     "@angular/language-service": "^20.0.3",
     "@angularclass/hmr": "^3.0.0",
+    "@eslint/css": "^0.7.0",
+    "@eslint/js": "^9.26.0",
     "@types/echarts": "^4.6.7",
     "@types/jasmine": "~3.6.0",
     "@types/jasminewd2": "~2.0.8",
     "@types/node": "^12.12.64",
     "codelyzer": "^6.0.0",
-    "ts-node": "~8.3.0",
-    "tslint": "~6.1.0",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "globals": "^16.1.0",
+    "prettier": "^3.5.3",
+    "prettier-plugin-tailwindcss": "^0.6.11",
     "typescript": "5.8.3"
   },
   "packageManager": "pnpm@10.12.1+sha512.f0dda8580f0ee9481c5c79a1d927b9164f2c478e90992ad268bbb2465a736984391d6333d2c327913578b2804af33474ca554ba29c04a8b13060a717675ae3ac"

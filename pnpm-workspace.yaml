@@ -1,6 +1,9 @@
 onlyBuiltDependencies:
   - '@angular/cli'
+  - '@parcel/watcher'
   - '@scarf/scarf'
   - core-js
   - esbuild
+  - lmdb
+  - msgpackr-extract
   - nice-napi
