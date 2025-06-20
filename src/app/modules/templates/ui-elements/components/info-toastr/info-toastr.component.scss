@@ -2,23 +2,23 @@
 @use 'src/app/styles/toasrt';
 
 .toastr-wrapper {
-  @include toastr-wrapper;
+  @include toasrt.toastr-wrapper;
 }
 
 .toastr-wrapper-icon {
-  @include toastr-wrapper-icon;
+  @include toasrt.toastr-wrapper-icon;
 }
 
 .toastr-content {
-  @include toastr-content;
+  @include toasrt.toastr-content;
 
   &__title {
-    @include toastr-content-title;
+    @include toasrt.toastr-content-title;
   }
 }
 
 .toastr-icon {
-  @include toastr-icon;
+  @include toasrt.toastr-icon;
 }
 
 :host {
