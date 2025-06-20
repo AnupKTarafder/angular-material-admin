@@ -1,6 +1,6 @@
-@import '../../../../styles/colors';
-@import '../../../../styles/font';
-@import '../../../../styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .support-requests {
   padding: 0;
@@ -13,8 +13,8 @@
   }
 
   &__title {
-    font-size: $fs-medium;
-    font-weight: $fw-lighter;
+    font-size: font.$fs-medium;
+    font-weight: font.$fw-lighter;
     margin: 0;
     line-height: 40px;
     white-space: nowrap;
@@ -27,7 +27,7 @@
     overflow-y: hidden;
     overflow-x: scroll;
 
-    @media (max-width: $small) {
+    @media (max-width: variables.$small) {
       height: auto;
     }
   }
@@ -37,30 +37,30 @@
   }
 
   &__table-row-title {
-    color: $dark-grey;
-    font-size: $fs-small;
-    font-weight: $fw-lighter;
+    color: colors.$dark-grey;
+    font-size: font.$fs-small;
+    font-weight: font.$fw-lighter;
     line-height: 24px;
     text-transform: uppercase;
     padding: 18.4px;
   }
 
   &__table-content {
-    color: $dark-grey;
-    font-size: $fs-small;
+    color: colors.$dark-grey;
+    font-size: font.$fs-small;
     padding: 20px;
   }
 
   &__content-badge {
     width: fit-content;
     border-radius: 32px;
-    color: $white;
+    color: colors.$white;
     text-align: center;
     padding: 5px 10px;
     font-size: 13px;
     box-sizing: border-box;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-    font-weight: $fw-lighter;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-weight: font.$fw-lighter;
     line-height: 1.75;
     letter-spacing: 0.45px;
 
@@ -76,19 +76,19 @@ mat-menu {
 }
 
 .delivered {
-  background-color: $green;
+  background-color: colors.$green;
 }
 
 .pending {
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .canseled {
-  background-color: $pink;
+  background-color: colors.$pink;
 }
 
 .progress {
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .table {
@@ -100,9 +100,9 @@ mat-menu {
 }
 
 .table-header-text {
-  font-size: $fs-small;
-  font-weight: $fw-normal;
-  color: $light-grey;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-normal;
+  color: colors.$light-grey;
   text-transform: uppercase;
   width: max-content;
   margin: 0;
@@ -113,9 +113,9 @@ mat-menu {
 }
 
 .table-body-text {
-  font-size: $fs-small;
-  font-weight: $fw-normal;
-  color: $dark-grey;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-normal;
+  color: colors.$dark-grey;
   text-transform: uppercase;
   width: max-content;
   margin: 0;

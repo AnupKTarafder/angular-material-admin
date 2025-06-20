@@ -1,21 +1,21 @@
-@import "src/app/styles/font";
-@import "src/app/styles/colors";
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
 
 .example-input-wrapper {
   display: flex;
   align-items: center;
-  justify-content: space-between
+  justify-content: space-between;
 }
 
 .example-input-title {
   margin: 0 0 5px 0;
-  font-size: $fs-normal;
-  color: $dark-grey;
+  font-size: font.$fs-normal;
+  color: colors.$dark-grey;
 }
 
 .example-form-field {
   width: 50%;
-  font-size: $fs-normal;
+  font-size: font.$fs-normal;
 }
 
 .example-right-align {

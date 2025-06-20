@@ -1,6 +1,6 @@
-@import '../../../../../styles/colors';
-@import '../../../../../styles/font';
-@import '../../../../../styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .color-card {
   margin-top: 24px;
@@ -14,10 +14,11 @@
   width: 100%;
 }
 
-.header, .body {
-  color: $dark-grey;
-  font-size: $fs-normal;
-  border-bottom-color: $white-gray;
+.header,
+.body {
+  color: colors.$dark-grey;
+  font-size: font.$fs-normal;
+  border-bottom-color: colors.$white-gray;
   white-space: nowrap;
 }
 
@@ -28,23 +29,22 @@
 }
 
 .usage-column {
-  color: $dark-grey;
-  font-size: $fs-normal;
-  border-bottom-color: $white-gray;
+  color: colors.$dark-grey;
+  font-size: font.$fs-normal;
+  border-bottom-color: colors.$white-gray;
   width: 315px;
 }
 
 .usage-text {
-  color: $blue;
+  color: colors.$blue;
 }
 
 @mixin pre {
   display: flex;
   justify-content: center;
   padding: 7px;
-  color: $dark-grey;
-  background: $blue-white;
-
+  color: colors.$dark-grey;
+  background: colors.$blue-white;
 }
 
 .pre-usage {
@@ -61,28 +61,26 @@
   font-size: 12px;
 }
 
-
 .blue {
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .yellow {
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .pink {
-  background-color: $pink;
+  background-color: colors.$pink;
 }
 
 .green {
-  background-color: $green;
+  background-color: colors.$green;
 }
 
 .violet {
-  background-color: $violet;
+  background-color: colors.$violet;
 }
 
 .grey {
-  background-color: $default;
+  background-color: colors.$default;
 }
-

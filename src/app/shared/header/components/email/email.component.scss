@@ -1,15 +1,15 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/font';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .email-button {
   margin-left: 16px;
 
   &__icon {
-    color: $white-35;
+    color: colors.$white-35;
   }
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-top: 0;
   }
 }
@@ -19,15 +19,15 @@
 
   &__title {
     margin: 0;
-    font-weight: $fw-lighter;
-    font-size: $fs-large;
-    color: $dark-grey;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-large;
+    color: colors.$dark-grey;
   }
 
   &__subtitle {
-    color: $pink;
-    font-weight: $fw-lighter;
-    font-size: $fs-small;
+    color: colors.$pink;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-small;
     margin: 4px 0 16px 0;
   }
 }
@@ -38,7 +38,7 @@
   padding: 6px 16px;
 
   &:hover {
-    background-color: $blue-white;
+    background-color: colors.$blue-white;
   }
 
   &__icon-wrapper {
@@ -47,9 +47,9 @@
   }
 
   &__icon {
-    font-weight: $fw-lighter;
-    font-size: $fs-small;
-    color: $white;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-small;
+    color: colors.$white;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -60,9 +60,9 @@
 
   &__time {
     text-align: center;
-    color: $grey;
-    font-weight: $fw-lighter;
-    font-size: $fs-xs;
+    color: colors.$grey;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-xs;
   }
 }
 
@@ -75,15 +75,15 @@
 
   &__user {
     margin-top: 3px;
-    font-weight: $fw-normal;
-    font-size: $fs-small;
-    color: $dark-grey;
+    font-weight: font.$fw-normal;
+    font-size: font.$fs-small;
+    color: colors.$dark-grey;
   }
 
   &__message {
-    color: $grey;
-    font-weight: $fs-small;
-    font-size: $fs-small;
+    color: colors.$grey;
+    font-weight: font.$fs-small;
+    font-size: font.$fs-small;
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
@@ -106,17 +106,17 @@
 }
 
 .yellow {
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .green {
-  background-color: $green;
+  background-color: colors.$green;
 }
 
 .blue {
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .ping {
-  background-color: $pink;
+  background-color: colors.$pink;
 }

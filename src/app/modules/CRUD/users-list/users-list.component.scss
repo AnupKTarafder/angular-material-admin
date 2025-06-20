@@ -1,6 +1,6 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/font';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .card,
 .filter-form {
@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -20,15 +20,15 @@
 .card-title {
   margin: -30px 0 0 0;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin: 0;
   }
 }
 
 .card-subtitle {
   font-size: 12px;
-  font-weight: $fw-lighter;
-  color: $grey;
+  font-weight: font.$fw-lighter;
+  color: colors.$grey;
 }
 
 .filter-buttons {
@@ -47,7 +47,7 @@
   justify-content: space-between;
   margin: 16px 0 8px 0;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
@@ -59,7 +59,7 @@
 .search-field {
   font-size: 14px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
     margin: 24px 0;
   }
@@ -70,7 +70,7 @@
 }
 
 .search-icon {
-  color: $light-grey;
+  color: colors.$light-grey;
   margin: 0 8px 0 0;
   padding: 0;
 }
@@ -83,14 +83,14 @@
 }
 
 .table-title {
-  font-size: $fs-regular;
-  font-weight: $fw-lighter;
-  color: $dark-grey;
+  font-size: font.$fs-regular;
+  font-weight: font.$fw-lighter;
+  color: colors.$dark-grey;
   margin: 0;
 }
 
 .table-title-icon {
-  color: $dark-grey;
+  color: colors.$dark-grey;
   cursor: pointer;
   width: 48px;
   height: 48px;
@@ -101,7 +101,7 @@
   padding: 0;
 
   &:hover {
-    background-color: $black-04;
+    background-color: colors.$black-04;
   }
 }
 
@@ -118,15 +118,15 @@
 
 .table-header {
   font-size: 15px;
-  font-weight: $fw-normal;
-  color: $dark-grey;
+  font-weight: font.$fw-normal;
+  color: colors.$dark-grey;
   padding: 14px 38px 14px 24px;
 }
 
 .table-body {
   font-size: 15px;
-  font-weight: $fw-lighter;
-  color: $dark-grey;
+  font-weight: font.$fw-lighter;
+  color: colors.$dark-grey;
   padding: 14px 38px 14px 24px;
 }
 
@@ -153,7 +153,7 @@
 }
 
 .product-title {
-  color: $blue;
+  color: colors.$blue;
   cursor: pointer;
 
   &:hover {
@@ -171,8 +171,8 @@
 }
 
 .product-pop {
-  font-size: $fs-normal;
-  color: $yellow;
+  font-size: font.$fs-normal;
+  color: colors.$yellow;
   margin: 0;
 }
 
@@ -182,7 +182,7 @@
 }
 
 .mat-success {
-  background-color: $green;
+  background-color: colors.$green;
   color: white;
 }
 

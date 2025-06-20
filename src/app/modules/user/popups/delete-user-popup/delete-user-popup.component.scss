@@ -1,16 +1,16 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
 
 .title {
-  font-size: $fs-regular;
-  font-weight: $fw-normal;
-  color: $dark-grey;
+  font-size: font.$fs-regular;
+  font-weight: font.$fw-normal;
+  color: colors.$dark-grey;
 }
 
 .subtitle {
-  font-size: $fs-normal;
-  font-weight: $fw-lighter;
-  color: $grey;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-lighter;
+  color: colors.$grey;
 }
 
 .buttons-wrapper {

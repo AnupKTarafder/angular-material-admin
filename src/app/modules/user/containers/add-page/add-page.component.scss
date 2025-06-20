@@ -1,12 +1,12 @@
-@import "src/app/styles/font";
-@import "src/app/styles/colors";
-@import "src/app/styles/variables";
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
 
 .add-line-card {
   margin-top: 24px;
   padding: 48px;
 
-  @media(max-width: $small) {
+  @media (max-width: variables.$small) {
     padding: 24px;
   }
 }
@@ -16,7 +16,7 @@
   align-items: center;
   justify-content: space-between;
 
-  @media(max-width: $small) {
+  @media (max-width: variables.$small) {
     overflow-x: auto;
   }
 }
@@ -27,11 +27,11 @@
 
   &.active {
     & .add-line-item {
-      background-color: $blue;
+      background-color: colors.$blue;
     }
 
     & .add-line-item-title {
-      color: $dark-grey;
+      color: colors.$dark-grey;
     }
   }
 }
@@ -39,7 +39,7 @@
 .add-line-item {
   width: 24px;
   height: 24px;
-  background-color: $gray-06;
+  background-color: colors.$gray-06;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -47,13 +47,13 @@
 }
 
 .add-line-item-text {
-  color: $white;
+  color: colors.$white;
   font-size: 12px;
   margin: 0;
 }
 
 .add-line-item-icon {
-  color: $white;
+  color: colors.$white;
   font-size: 12px;
   margin: 0;
   height: 12px;
@@ -61,13 +61,13 @@
 }
 
 .add-line-item-title {
-  color: $grey;
-  font-size: $fs-small;
-  font-weight: $fw-normal;
+  color: colors.$grey;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-normal;
   margin: 0 0 0 8px;
   width: max-content;
 
-  @media(max-width: $small) {
+  @media (max-width: variables.$small) {
     display: none;
   }
 }
@@ -77,14 +77,17 @@
   margin: 0 8px;
   min-width: 50px;
 
-  @media(max-width: $small) {
+  @media (max-width: variables.$small) {
     display: none;
   }
 }
 
 .steps-card {
   margin-top: 24px;
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
 }
 
 .content {
@@ -93,7 +96,7 @@
 }
 
 .content-wrapper {
-  @media(max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
     box-sizing: border-box;
   }
@@ -106,15 +109,15 @@
 .font-wrapper {
   width: max-content;
 
-  @media(max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
 
 .upload-image-text {
-  font-size: $fs-normal;
-  font-weight: $fw-normal;
-  color: $grey;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-normal;
+  color: colors.$grey;
   margin: 0;
 
   &:last-child {
@@ -131,7 +134,7 @@
   width: 600px;
   margin-bottom: 35px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }

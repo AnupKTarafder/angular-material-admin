@@ -1,4 +1,4 @@
-@import '../../../../styles/colors';
+@use 'src/app/styles/colors';
 
 .form {
   width: 100%;
@@ -18,8 +18,10 @@
   &__create {
     margin: 0;
     width: 95%;
-    box-shadow: 0 0 11px 0 $shadow-white, 0 0 0 -2px $shadow-grey,
-      0 1px 8px 0 $shadow-dark-grey;
+    box-shadow:
+      0 0 11px 0 colors.$shadow-white,
+      0 0 0 -2px colors.$shadow-grey,
+      0 1px 8px 0 colors.$shadow-dark-grey;
   }
 }
 
@@ -34,45 +36,45 @@
 
   &_solid {
     &-pink {
-      background-color: $pink;
+      background-color: colors.$pink;
     }
 
     &-blue {
-      background-color: $blue;
+      background-color: colors.$blue;
     }
 
     &-green {
-      background-color: $green;
+      background-color: colors.$green;
     }
 
     &-yellow {
-      background-color: $yellow;
+      background-color: colors.$yellow;
     }
 
     &-violet {
-      background-color: $violet;
+      background-color: colors.$violet;
     }
   }
 
   &_transparent {
     &-pink {
-      background-color: $pink-15;
+      background-color: colors.$pink-15;
     }
 
     &-blue {
-      background-color: $blue-15;
+      background-color: colors.$blue-15;
     }
 
     &-green {
-      background-color: $green-15;
+      background-color: colors.$green-15;
     }
 
     &-yellow {
-      background-color: $yellow-15;
+      background-color: colors.$yellow-15;
     }
 
     &-violet {
-      background-color: $violet-15;
+      background-color: colors.$violet-15;
     }
   }
 
@@ -80,7 +82,7 @@
     margin: 0;
 
     &_white {
-      color: $white;
+      color: colors.$white;
     }
   }
 
@@ -92,48 +94,48 @@
     justify-content: center;
 
     &_transparent {
-      color: $white-80;
+      color: colors.$white-80;
 
       &-pink {
-        color: $pink;
+        color: colors.$pink;
       }
 
       &-blue {
-        color: $blue;
+        color: colors.$blue;
       }
 
       &-green {
-        color: $green;
+        color: colors.$green;
       }
 
       &-yellow {
-        color: $yellow;
+        color: colors.$yellow;
       }
 
       &-violet {
-        color: $violet;
+        color: colors.$violet;
       }
     }
 
     &_solid {
       &-pink {
-        color: $pink;
+        color: colors.$pink;
       }
 
       &-blue {
-        color: $blue;
+        color: colors.$blue;
       }
 
       &-green {
-        color: $green;
+        color: colors.$green;
       }
 
       &-yellow {
-        color: $yellow;
+        color: colors.$yellow;
       }
 
       &-violet {
-        color: $violet;
+        color: colors.$violet;
       }
     }
   }
@@ -149,28 +151,28 @@
 
     &_transparent {
       &-pink {
-        color: $pink;
-        background-color: $pink-15;
+        color: colors.$pink;
+        background-color: colors.$pink-15;
       }
 
       &-blue {
-        color: $blue;
-        background-color: $blue-15;
+        color: colors.$blue;
+        background-color: colors.$blue-15;
       }
 
       &-green {
-        color: $green;
-        background-color: $green-15;
+        color: colors.$green;
+        background-color: colors.$green-15;
       }
 
       &-yellow {
-        color: $yellow;
-        background-color: $yellow-15;
+        color: colors.$yellow;
+        background-color: colors.$yellow-15;
       }
 
       &-violet {
-        color: $violet;
-        background-color: $violet-15;
+        color: colors.$violet;
+        background-color: colors.$violet-15;
       }
     }
   }

@@ -1,10 +1,13 @@
-@import '../../../../../styles/colors';
-@import '../../../../../styles/font';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
 
 .icons-wrapper {
-  padding:0;
+  padding: 0;
   margin-top: 24px;
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
 }
 
 .tab-label {
@@ -19,9 +22,9 @@
   padding: 50px 24px 16px 24px;
 
   &__title {
-    font-weight: $fw-lighter;
-    font-size: $fs-xxxl;
-    color: $light-grey;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-xxxl;
+    color: colors.$light-grey;
     line-height: 1;
     letter-spacing: -0.24992px;
   }
@@ -29,11 +32,11 @@
   &__button {
     height: 41.6px;
     width: 90.11px;
-    color: $white;
-    background-color: $pink;
+    color: colors.$white;
+    background-color: colors.$pink;
     line-height: 1.75;
-    font-size: $fs-normal;
-    font-weight: $fw-lighter;
+    font-size: font.$fs-normal;
+    font-weight: font.$fw-lighter;
   }
 }
 
@@ -47,7 +50,7 @@
   &__icon-wrapper {
     width: 170px;
     padding: 8px;
-    color: $grey;
+    color: colors.$grey;
     display: flex;
     align-items: center;
   }

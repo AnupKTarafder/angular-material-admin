@@ -1,11 +1,14 @@
-@import './src/app/styles/colors';
-@import './src/app/styles/font';
-@import './src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .card {
   width: 100%;
   padding: 0;
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
 }
 
 .customer-info {
@@ -31,14 +34,14 @@
 }
 
 .customer-name {
-  font-size: $fs-normal;
-  font-weight: $fw-bold;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-bold;
   margin: 0;
-  color: $dark-grey;
+  color: colors.$dark-grey;
 }
 
 .link {
-  color: $blue;
+  color: colors.$blue;
 
   &:hover {
     text-decoration: underline;
@@ -46,21 +49,21 @@
 }
 
 .date-publish {
-  font-size: $fs-small;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-lighter;
   margin: 0;
-  color: $dark-grey;
+  color: colors.$dark-grey;
 }
 
 .description {
   padding: 0 24px;
-  color: $dark-grey;
+  color: colors.$dark-grey;
   margin: 8px;
 }
 
 .title-text {
-  font-size: $fs-normal;
-  color: $dark-grey;
+  font-size: font.$fs-normal;
+  color: colors.$dark-grey;
 }
 
 .description-text {
@@ -81,20 +84,20 @@
 
 .content-button {
   background-color: transparent;
-  color: $dark-grey;
+  color: colors.$dark-grey;
   box-shadow: none;
   margin-bottom: 16px;
 
   &:hover {
-    background-color: $header-button-background-color-hover;
+    background-color: variables.$header-button-background-color-hover;
   }
 }
 
 .content-text {
-  font-size: $fs-normal;
-  color: $dark-grey;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-normal;
+  color: colors.$dark-grey;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-weight: font.$fw-lighter;
   line-height: 1.5;
   letter-spacing: 0.00938em;
   margin: 0;
@@ -141,7 +144,7 @@
   box-shadow: none;
 
   &:hover {
-    background-color: $header-button-background-color-hover;
+    background-color: variables.$header-button-background-color-hover;
   }
 }
 
@@ -157,8 +160,8 @@
   display: flex;
   margin: 0 -8px 0 -8px;
   padding: 16px 24px;
-  border-top: 1px solid $white-gray;
-  border-bottom: 1px solid $white-gray;
+  border-top: 1px solid colors.$white-gray;
+  border-bottom: 1px solid colors.$white-gray;
 }
 
 .comment-wrapper + .comment-wrapper {
@@ -167,9 +170,9 @@
 
 .comment-name {
   font-size: 12.32px;
-  font-weight: $fw-lighter;
+  font-weight: font.$fw-lighter;
   margin: 0 0 4px 0;
-  color: $dark-grey;
+  color: colors.$dark-grey;
 }
 
 .comment-text {
@@ -181,7 +184,7 @@
   padding: 8px 16px 0 16px;
   height: 50px;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     height: auto;
   }
 }
@@ -191,10 +194,10 @@
   height: 40px;
   margin-right: 8px;
   box-shadow: none;
-  font-size: $fs-normal;
+  font-size: font.$fs-normal;
 }
 
 .custom-comment {
   width: 88%;
-  font-size: $fs-normal;
+  font-size: font.$fs-normal;
 }

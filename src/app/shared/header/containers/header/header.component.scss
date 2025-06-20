@@ -1,6 +1,6 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/font';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .header {
   display: flex;
@@ -19,10 +19,10 @@
     box-shadow: $header-button-box-shadow;
 
     &:hover {
-      background-color: $header-button-background-color-hover;
+      background-color: variables.$header-button-background-color-hover;
     }
 
-    @media (max-width: $small) {
+    @media (max-width: variables.$small) {
       margin-top: 0;
     }
   }
@@ -34,9 +34,9 @@
   &__title-text {
     color: $header-title-font-color;
     margin-left: 32px;
-    font-weight: $fw-lighter;
+    font-weight: font.$fw-lighter;
 
-    @media (max-width: $small) {
+    @media (max-width: variables.$small) {
       display: none;
     }
   }

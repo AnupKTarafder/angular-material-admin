@@ -1,11 +1,11 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
 
 .content-wrapper {
   display: flex;
   margin-top: 36px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -14,7 +14,7 @@
   width: 30%;
   margin-right: 36px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
     margin-right: 0;
     margin-top: 24px;
@@ -22,12 +22,12 @@
 }
 
 .title {
-  color: $dark-grey;
+  color: colors.$dark-grey;
   margin-bottom: 8px;
 }
 
 .subtitle {
-  color: $dark-grey;
+  color: colors.$dark-grey;
   margin: 0;
 }
 
@@ -40,7 +40,10 @@
   cursor: pointer;
   margin: 16px 0;
   padding: 16px;
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
 }
 
 .circle {
@@ -53,21 +56,21 @@
 .calendar-wrapper {
   width: 70%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
 
 .green {
-  background-color: $green;
+  background-color: colors.$green;
 }
 
 .yellow {
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .violet {
-  background-color: $violet;
+  background-color: colors.$violet;
 }
 
 .tools-panel-wrapper {
@@ -76,7 +79,7 @@
   justify-content: space-between;
   padding: 12px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -85,7 +88,7 @@
   display: flex;
   align-items: center;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     justify-content: space-between;
     width: 100%;
   }
@@ -99,7 +102,7 @@
   height: 48px;
 
   &:hover {
-    background-color: $header-button-background-color-hover;
+    background-color: variables.$header-button-background-color-hover;
   }
 }
 
@@ -109,14 +112,14 @@
   justify-content: center;
   background-color: transparent;
   box-shadow: none;
-  color: $dark-grey;
+  color: colors.$dark-grey;
   width: auto;
   height: 36px;
   padding: 6px 9px;
   line-height: 24px;
 
   &:hover {
-    background-color: $header-button-background-color-hover;
+    background-color: variables.$header-button-background-color-hover;
   }
 }
 
@@ -130,10 +133,10 @@
 }
 
 .active {
-  background-color: $blue;
-  color: $white;
+  background-color: colors.$blue;
+  color: colors.$white;
 
   &:hover {
-    background-color: $blue;
-  };
+    background-color: colors.$blue;
+  }
 }

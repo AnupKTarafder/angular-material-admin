@@ -1,4 +1,4 @@
-@import "src/app/styles/colors";
+@use 'src/app/styles/colors';
 
 .tables-page {
   padding: 24px;
@@ -9,6 +9,6 @@
 }
 
 .link {
-  color: $blue;
+  color: colors.$blue;
   text-decoration: none;
 }

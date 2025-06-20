@@ -1,40 +1,40 @@
-@import './src/app/styles/colors';
-@import './src/app/styles/font';
-@import './src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .first-card {
   margin: 24px 0;
   height: 460px;
   background-size: cover;
-  background: url("/assets/ui-elements/cards/mac.png") round;
-  color: $white;
+  background: url('/assets/ui-elements/cards/mac.png') round;
+  color: colors.$white;
 
-  @media (max-width: $small) {
-    background: url("/assets/ui-elements/cards/mac.png");
+  @media (max-width: variables.$small) {
+    background: url('/assets/ui-elements/cards/mac.png');
   }
 
   .title {
-    font-size: $fs-normal;
-    font-weight: $fw-lighter;
+    font-size: font.$fs-normal;
+    font-weight: font.$fw-lighter;
   }
 
   .subtitle {
-    font-size: $fs-medium;
-    font-weight: $fw-lighter;
+    font-size: font.$fs-medium;
+    font-weight: font.$fw-lighter;
     margin-bottom: 0;
   }
 
   .text {
-    font-size: $fs-small;
-    font-weight: $fw-lighter;
+    font-size: font.$fs-small;
+    font-weight: font.$fw-lighter;
     margin-top: 10px;
   }
 
   .button {
     font-size: 13px;
-    font-weight: $fw-normal;
+    font-weight: font.$fw-normal;
     text-transform: uppercase;
-    color: $white;
+    color: colors.$white;
     padding: 4px 5px;
     line-height: 22px;
     margin-top: 24px;
@@ -45,7 +45,7 @@
 .first-card-content {
   width: 50%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
@@ -54,7 +54,7 @@
   display: flex;
   margin-top: 48px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -69,7 +69,7 @@
 .card + div {
   margin-left: 48px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-left: 0;
     margin-top: 36px;
   }
@@ -78,7 +78,7 @@
 div + mat-card {
   margin-left: 48px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-left: 0;
     margin-top: 36px;
   }
@@ -96,18 +96,18 @@ div + mat-card {
   padding: 16px;
 
   .title {
-    font-size: $fs-medium;
-    font-weight: $fw-lighter;
-    color: $dark-grey;
+    font-size: font.$fs-medium;
+    font-weight: font.$fw-lighter;
+    color: colors.$dark-grey;
     margin-bottom: 8px;
   }
 
   .text {
-    font-size: $fs-small;
-    font-weight: $fw-lighter;
-    color: $dark-grey;
+    font-size: font.$fs-small;
+    font-weight: font.$fw-lighter;
+    color: colors.$dark-grey;
     margin-bottom: 32px;
-    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
     line-height: 1.43;
     letter-spacing: 0.48px;
   }
@@ -115,7 +115,7 @@ div + mat-card {
   button + button {
     margin-left: 16px;
 
-    @media (min-width: $small) and (max-width: ($normal - 1px)) {
+    @media (min-width: variables.$small) and (max-width: (variables.$normal - 1px)) {
       margin-left: 0;
       margin-top: 8px;
     }
@@ -123,18 +123,18 @@ div + mat-card {
 }
 
 .text-title {
-  border-bottom: 1px solid $black-12;
+  border-bottom: 1px solid colors.$black-12;
   padding-bottom: 10px;
   margin: 0;
   display: flex;
   align-items: center;
 
   p {
-    font-size: $fs-regular;
+    font-size: font.$fs-regular;
     margin: 0;
 
     &:first-child {
-      color: $green;
+      color: colors.$green;
     }
 
     &:hover {
@@ -165,34 +165,37 @@ div + mat-card {
 }
 
 .star {
-  font-size: $fs-large;
-  color: $yellow;
+  font-size: font.$fs-large;
+  color: colors.$yellow;
   padding: 0;
 }
 
 .stars-title {
-  font-size: $fs-small;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-lighter;
   margin: 0;
-  color: $dark-grey;
+  color: colors.$dark-grey;
 }
 
 .percent {
-  font-weight: $fw-lighter;
-  font-size: $fs-medium;
-  color: $green;
+  font-weight: font.$fw-lighter;
+  font-size: font.$fs-medium;
+  color: colors.$green;
   margin: 0;
 }
 
 .title-percent {
-  font-size: $fs-small;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-lighter;
   margin-bottom: 32px;
-  color: $dark-grey;
+  color: colors.$dark-grey;
 }
 
 .fourth-card {
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
   padding: 0;
   /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
   mat-card-title {
@@ -216,20 +219,20 @@ div + mat-card {
     height: 40px;
     margin-right: 16px;
     box-shadow: none;
-    font-size: $fs-regular;
+    font-size: font.$fs-regular;
   }
 
-  .title{
-    font-size: $fs-small;
-    font-weight: $fw-lighter;
-    color: $dark-grey;
+  .title {
+    font-size: font.$fs-small;
+    font-weight: font.$fw-lighter;
+    color: colors.$dark-grey;
     margin: 0;
   }
 
   .subtitle {
-    font-size: $fs-small;
-    font-weight: $fw-lighter;
-    color: $grey;
+    font-size: font.$fs-small;
+    font-weight: font.$fw-lighter;
+    color: colors.$grey;
     margin: 0;
   }
 
@@ -237,12 +240,12 @@ div + mat-card {
     width: 40px;
     height: 40px;
     box-shadow: none;
-    font-size: $fs-regular;
+    font-size: font.$fs-regular;
     background-color: transparent;
-    color: $light-grey;
+    color: colors.$light-grey;
 
     &:hover {
-      background-color: $black-04;
+      background-color: colors.$black-04;
     }
   }
 
@@ -261,7 +264,10 @@ div + mat-card {
 
 .fifth-card {
   width: 100%;
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
   padding: 0;
   height: fit-content;
   overflow: hidden;
@@ -287,22 +293,22 @@ div + mat-card {
   }
 
   .content-title {
-    font-size: $fs-medium;
-    font-weight: $fw-lighter;
-    color: $dark-grey;
+    font-size: font.$fs-medium;
+    font-weight: font.$fw-lighter;
+    color: colors.$dark-grey;
     margin-bottom: 8px;
   }
 
   .content-subtitle {
-    font-size: $fs-small;
-    font-weight: $fw-lighter;
-    color: $dark-grey;
+    font-size: font.$fs-small;
+    font-weight: font.$fw-lighter;
+    color: colors.$dark-grey;
     margin: 0;
   }
 
   .footer {
     margin: 0;
-    border-top: 1px solid $black-08;
+    border-top: 1px solid colors.$black-08;
   }
 
   .footer-wrapper {
@@ -312,9 +318,9 @@ div + mat-card {
     align-items: center;
 
     .footer-title {
-      font-size: $fs-normal;
-      font-weight: $fw-lighter;
-      color: $dark-grey;
+      font-size: font.$fs-normal;
+      font-weight: font.$fw-lighter;
+      color: colors.$dark-grey;
       margin: 0;
     }
   }

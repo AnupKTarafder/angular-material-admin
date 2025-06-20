@@ -1,11 +1,11 @@
-@import "src/app/styles/mat-badge";
-@import "src/app/styles/variables";
+@use 'src/app/styles/mat-badge';
+@use 'src/app/styles/variables';
 
 .content-wrapper {
   margin-top: 36px;
   display: flex;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -18,7 +18,7 @@
     margin-bottom: 22px;
   }
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
     margin-right: 0;
   }
@@ -37,7 +37,7 @@
   width: 50%;
   margin-left: 18px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
     margin-left: 0;
     margin-top: 36px;
@@ -84,7 +84,7 @@
 }
 
 .h1 {
-  @media (max-width: $normal) {
+  @media (max-width: variables.$normal) {
     display: none;
   }
 }

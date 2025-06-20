@@ -1,6 +1,6 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
-@import "src/app/styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .content-wrapper {
   margin-top: 36px;
@@ -12,7 +12,7 @@
   }
 }
 
-.toolbar{
+.toolbar {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
@@ -22,13 +22,13 @@
   box-shadow: none;
 
   &:hover {
-    background: #8B9BFF;
+    background: #8b9bff;
   }
 }
 
 .content-text {
-  font-size: $fs-normal;
-  color: $dark-grey;
+  font-size: font.$fs-normal;
+  color: colors.$dark-grey;
   margin: 24px 0;
 }
 
@@ -44,7 +44,7 @@
 .navbar-title-button-wrapper {
   display: inherit;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     display: none;
   }
 }

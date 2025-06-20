@@ -1,13 +1,13 @@
-@import "../../../../../styles/colors";
-@import "../../../../../styles/font";
-@import "../../../../../styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .wrapper {
   display: flex;
   width: 100%;
   margin-top: 36px;
 
-  @media (max-width: $normal) {
+  @media (max-width: variables.$normal) {
     flex-wrap: wrap;
   }
 }
@@ -21,18 +21,17 @@
 .card + .card {
   margin-left: 36px;
 
-  @media (max-width: $normal) {
+  @media (max-width: variables.$normal) {
     margin-left: 0;
     margin-top: 38px;
   }
 }
 
-
 @mixin grid-item {
   width: 100%;
   height: 52px;
   border-radius: 4px;
-  color: $white;
+  color: colors.$white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -40,28 +39,27 @@
 
 .first-grid-item {
   @include grid-item;
-  background-color: $blue;
+  background-color: colors.$blue;
   align-self: flex-start;
 }
 
 .second-grid-item {
   @include grid-item;
-  background-color: $yellow;
+  background-color: colors.$yellow;
   align-self: center;
 }
 
 .third-grid-item {
   @include grid-item;
-  background-color: $pink;
+  background-color: colors.$pink;
   align-self: flex-end;
 }
-
 
 @mixin grid-item-2 {
   width: 93px;
   height: 100%;
   border-radius: 4px;
-  color: $white;
+  color: colors.$white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -69,23 +67,22 @@
 
 .first-grid-item-2 {
   @include grid-item-2;
-  background-color: $blue;
+  background-color: colors.$blue;
   justify-self: flex-end;
 }
 
 .second-grid-item-2 {
   @include grid-item-2;
-  background-color: $yellow;
-
+  background-color: colors.$yellow;
 }
 
 .third-grid-item-2 {
   @include grid-item-2;
-  background-color: $pink;
+  background-color: colors.$pink;
 }
 
 .code-wrapper {
-  background-color: $blue-white;
+  background-color: colors.$blue-white;
   height: auto;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -93,17 +90,17 @@
 }
 
 .code {
-  font-size: $fs-xs;
+  font-size: font.$fs-xs;
 }
 
 .blue {
-  color: $blue;
+  color: colors.$blue;
 }
 
 .pink {
-  color: $pink;
+  color: colors.$pink;
 }
 
 .grey {
-  color: $grey;
+  color: colors.$grey;
 }

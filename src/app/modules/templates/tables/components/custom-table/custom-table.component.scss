@@ -1,21 +1,21 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
 
 .card {
   margin-top: 24px;
 }
 
 .card-title {
-  font-size: $fs-regular;
-  color: $grey;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-regular;
+  color: colors.$grey;
+  font-weight: font.$fw-lighter;
   margin-bottom: 8px;
 }
 
 .card-subtitle {
-  font-size: $fs-normal;
-  color: $dark-grey;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-normal;
+  color: colors.$dark-grey;
+  font-weight: font.$fw-lighter;
   margin-bottom: 24px;
 }
 
@@ -23,9 +23,9 @@
   display: flex;
   justify-content: space-between;
   align-self: center;
-  font-size: $fs-regular;
-  color: $dark-grey;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-regular;
+  color: colors.$dark-grey;
+  font-weight: font.$fw-lighter;
   padding: 0 24px 0 24px;
 }
 
@@ -44,16 +44,15 @@
 }
 
 .col-header {
-  font-size: $fs-normal;
-  color: $dark-grey;
-  font-weight: $fw-normal;
+  font-size: font.$fs-normal;
+  color: colors.$dark-grey;
+  font-weight: font.$fw-normal;
   padding: 14px 40px 14px 24px;
 }
 
 .col-body {
-  font-size: $fs-small;
-  color: $dark-grey;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-small;
+  color: colors.$dark-grey;
+  font-weight: font.$fw-lighter;
   padding: 14px 40px 14px 24px;
 }
-

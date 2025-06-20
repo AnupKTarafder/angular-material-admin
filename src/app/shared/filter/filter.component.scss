@@ -1,6 +1,6 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/font';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .card,
 .filter-form {
@@ -12,7 +12,7 @@
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -20,15 +20,15 @@
 .card-title {
   margin: -30px 0 0 0;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin: 0;
   }
 }
 
 .card-subtitle {
   font-size: 12px;
-  font-weight: $fw-lighter;
-  color: $grey;
+  font-weight: font.$fw-lighter;
+  color: colors.$grey;
 }
 
 .filter-buttons {
@@ -47,7 +47,7 @@
   justify-content: space-between;
   margin: 16px 0 8px 0;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }

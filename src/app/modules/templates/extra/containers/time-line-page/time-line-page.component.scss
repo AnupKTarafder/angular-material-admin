@@ -1,6 +1,6 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
-@import "src/app/styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .time-line-block-wrapper {
   margin-top: 36px;
@@ -18,7 +18,7 @@
   align-items: flex-end;
   margin-top: 40px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 82%;
   }
 }
@@ -45,7 +45,7 @@
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  border: rgba(255,255,255,.2) 5px solid;
+  border: rgba(255, 255, 255, 0.2) 5px solid;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -54,25 +54,25 @@
 }
 
 .time-line-circle-text {
-  color: $white;
+  color: colors.$white;
   margin: 0;
   font-size: 20px;
 }
 
 .blue {
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .pink {
-  background-color: $pink;
+  background-color: colors.$pink;
 }
 
 .yellow {
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .green {
-  background-color: $green;
+  background-color: colors.$green;
 }
 
 .time-line-circle-icon {
@@ -87,22 +87,22 @@
   width: 45%;
   margin-top: 40px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 82%;
   }
 }
 
 .day {
-  font-size: $fs-normal;
-  font-weight: $fw-lighter;
-  color: $dark-grey;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-lighter;
+  color: colors.$dark-grey;
   margin: 0;
 }
 
 .time {
-  font-size: $fs-normal;
-  font-weight: $fw-normal;
-  color: $dark-grey;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-normal;
+  color: colors.$dark-grey;
   margin: 0;
 }
 
@@ -110,7 +110,7 @@
   margin-top: 0;
 }
 
-@media (max-width: $small) {
+@media (max-width: variables.$small) {
   .time-line-block:nth-child(2n + 1) {
     flex-direction: row-reverse;
 

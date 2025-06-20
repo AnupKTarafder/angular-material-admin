@@ -1,15 +1,15 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
-@import "src/app/styles/variables";
-@import "src/app/styles/sidebar";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
+@use 'src/app/styles/sidebar';
 
 .mat-mdc-list-base {
-  border-bottom: 1px solid $gray-80;
+  border-bottom: 1px solid colors.$gray-80;
   width: 100%;
   padding-bottom: 16px;
 
   &:last-child {
-    border-top: 1px solid $gray-80;
+    border-top: 1px solid colors.$gray-80;
   }
 
   & .mat-mdc-list-item {
@@ -17,7 +17,7 @@
     cursor: pointer;
     width: auto;
     padding: 0 16px;
-    font-size: $fs-small;
+    font-size: font.$fs-small;
     height: 45px;
 
     &.active {
@@ -32,15 +32,14 @@
 
 .mat-icon {
   margin-right: 24px;
-  font-size: $fs-large;
+  font-size: font.$fs-large;
   color: $sidebar-icon-color;
   padding: 0;
 }
 
-
 .sidebar-title {
   color: $sidebar-title-color;
-  font-size: $fs-small;
+  font-size: font.$fs-small;
   text-transform: uppercase;
   margin-top: 24px;
   margin-left: 36px;
@@ -67,18 +66,17 @@
   margin-left: 8px;
 
   &_yellow {
-    background-color: $yellow;
+    background-color: colors.$yellow;
   }
 
   &_blue {
-    background-color: $blue;
+    background-color: colors.$blue;
   }
 
   &_pink {
-    background-color: $pink;
+    background-color: colors.$pink;
   }
 }
-
 
 .mat-tree-item {
   display: flex;
@@ -113,7 +111,7 @@
     }
   }
 
-  &>mat-icon {
+  & > mat-icon {
     display: none;
   }
 }
@@ -138,7 +136,7 @@ mat-tree-node {
   }
 }
 
-mat-tree-node[aria-expanded="true"] {
+mat-tree-node[aria-expanded='true'] {
   & .mat-tree-item {
     & mat-icon {
       display: block;
@@ -161,20 +159,20 @@ mat-tree-node[aria-expanded="true"] {
 
 .rotateUp {
   transform: rotate(180deg);
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
 }
 
 .rotateDown {
   transform: rotate(0deg);
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
 }
 
 .mat-badge-content {
-  font-weight: $fw-normal;
+  font-weight: font.$fw-normal;
 }
 
-
-.add-section-wrapper, .chat-section-wrapper {
+.add-section-wrapper,
+.chat-section-wrapper {
   display: flex;
   align-items: center;
   padding: 8px 16px;
@@ -186,11 +184,12 @@ mat-tree-node[aria-expanded="true"] {
   padding: 8px 16px 16px 0;
 }
 
-.add-icon-wrapper, .chat-icon-wrapper {
+.add-icon-wrapper,
+.chat-icon-wrapper {
   width: 30px;
   height: 30px;
   border-radius: 50%;
-  background-color: $pink;
+  background-color: colors.$pink;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -200,22 +199,24 @@ mat-tree-node[aria-expanded="true"] {
 .chat-icon-wrapper {
   width: 45px;
   height: 45px;
-  background-color: $blue;
+  background-color: colors.$blue;
   margin-right: 8px;
   margin-left: 0;
 }
 
-.add-icon, .chat-icon {
-  color: $white;
+.add-icon,
+.chat-icon {
+  color: colors.$white;
   margin: 0;
 }
 
-.add-section-title, .chat-section-title {
+.add-section-title,
+.chat-section-title {
   margin: 0;
 }
 
 .add-section-menu {
-  background-color: $light-blue;
+  background-color: colors.$light-blue;
   padding: 24px;
   //.blueTheme, .mat-input-element {
   //  caret-color: #9013FE !important;
@@ -247,14 +248,14 @@ mat-tree-node[aria-expanded="true"] {
 //}
 
 .menu-title {
-  font-size: $fs-normal;
-  color: $white;
-  //caret-color: $yellow;
+  font-size: font.$fs-normal;
+  color: colors.$white;
+  //caret-color: colors.$yellow;
   margin: 0;
 }
 
 .form-field {
-  color: $white;
+  color: colors.$white;
 }
 
 //.mat-form-field.mat-focused .mat-form-field-label {
@@ -278,11 +279,10 @@ mat-tree-node[aria-expanded="true"] {
   box-shadow: none;
 
   &:hover {
-    background-color: #8B9BFF;
+    background-color: #8b9bff;
   }
 }
 
 .space {
   margin-bottom: 240px;
 }
-

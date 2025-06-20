@@ -1,6 +1,6 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
-@import "src/app/styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .product-info-wrapper {
   display: flex;
@@ -8,7 +8,7 @@
   overflow: hidden;
   margin-top: 24px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -16,7 +16,7 @@
 .product-image {
   width: 50%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
@@ -29,7 +29,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
@@ -48,9 +48,9 @@
 
 .product-pop {
   display: inline;
-  font-size: $fs-large;
-  font-weight: $fw-lighter;
-  color: $yellow;
+  font-size: font.$fs-large;
+  font-weight: font.$fw-lighter;
+  color: colors.$yellow;
   margin: 0 8px 0 0;
 }
 
@@ -61,30 +61,30 @@
 
 .product-title {
   font-size: 26px;
-  font-weight: $fw-lighter;
-  color: $dark-grey;
+  font-weight: font.$fw-lighter;
+  color: colors.$dark-grey;
   text-transform: uppercase;
   margin: 0 0 10px 0;
 }
 
 .product-subtitle {
-  font-size: $fs-normal;
-  font-weight: $fw-lighter;
-  color: $dark-grey;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-lighter;
+  color: colors.$dark-grey;
   margin: 0;
 }
 
 .product-price {
-  font-size: $fs-medium;
-  font-weight: $fw-normal;
-  color: $dark-grey;
+  font-size: font.$fs-medium;
+  font-weight: font.$fw-normal;
+  color: colors.$dark-grey;
   margin: 16px 0;
 }
 
 .product-size-title {
-  font-size: $fs-small;
-  font-weight: $fw-lighter;
-  color: $dark-grey;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-lighter;
+  color: colors.$dark-grey;
   margin-bottom: 4px;
 }
 
@@ -93,7 +93,7 @@
   align-items: center;
   width: 100%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
     margin-top: 24px;
   }
@@ -103,14 +103,14 @@
   margin: 0;
   width: 50%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 
   & + .product-select-field {
     margin-left: 16px;
 
-    @media (max-width: $small) {
+    @media (max-width: variables.$small) {
       margin-left: 0;
       margin-top: 16px;
     }
@@ -127,7 +127,7 @@
   justify-content: space-between;
   margin: 4px 0 16px 0;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -135,14 +135,14 @@
 .action-button {
   width: 50%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 
   & + .action-button {
     margin-left: 16px;
 
-    @media (max-width: $small) {
+    @media (max-width: variables.$small) {
       margin-top: 16px;
       margin-left: 0;
     }
@@ -175,21 +175,24 @@
 }
 
 .product-benefit {
-  font-size: $fs-normal;
-  font-weight: $fw-lighter;
-  color: $grey;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-lighter;
+  color: colors.$grey;
   margin: 0;
 }
 
 .product-text-info-wrapper {
   margin-top: 38px;
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
 }
 
 .product-text-info-content {
   display: flex;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -200,7 +203,7 @@
   & + .text-info-item-wrapper {
     margin-left: 24px;
 
-    @media (max-width: $small) {
+    @media (max-width: variables.$small) {
       margin-top: 24px;
       margin-left: 0;
     }
@@ -214,15 +217,15 @@
 }
 
 .text-info-title {
-  font-size: $fs-medium;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-medium;
+  font-weight: font.$fw-lighter;
   margin-bottom: 16px;
-  color: $dark-grey;
+  color: colors.$dark-grey;
   text-transform: uppercase;
 }
 
 .tag {
-  color: $blue;
+  color: colors.$blue;
 }
 
 .icons-wrapper {
@@ -240,7 +243,7 @@
   justify-content: center;
 
   &:hover {
-    background-color: $black-08;
+    background-color: colors.$black-08;
   }
 }
 
@@ -248,7 +251,7 @@
   padding: 0;
   width: 18px;
   height: 20px;
-  color: $light-grey;
+  color: colors.$light-grey;
 }
 
 .product-reviews {
@@ -256,14 +259,14 @@
 }
 
 .product-link {
-  color: $blue;
+  color: colors.$blue;
   text-decoration: none;
 }
 
 .similar-products-title {
   font-size: 26px;
-  font-weight: $fw-lighter;
-  color: $light-grey;
+  font-weight: font.$fw-lighter;
+  color: colors.$light-grey;
   margin: 38px 0 18px 0;
 }
 
@@ -277,7 +280,7 @@
   width: 23%;
   margin: 8px 0;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
     margin: 20px 0;
   }

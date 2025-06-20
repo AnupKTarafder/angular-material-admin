@@ -1,9 +1,10 @@
-@import "colors";
-@import "variables";
+@use 'colors';
+@use 'variables';
+@use 'font';
 
 //@mixin mat-tab-dark() {
 //  .mat-tab-label {
-//    color: $white;
+//    color: colors.$white;
 //  }
 //}
 
@@ -17,10 +18,12 @@
 }
 
 @mixin mat-tab-label-active-color($color) {
-  .icons-wrapper, .tabs-content-wrapper {
+  .icons-wrapper,
+  .tabs-content-wrapper {
     /*TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version.*/
     & .mat-tab-label-active {
-      & .tab-label, .mat-icon {
+      & .tab-label,
+      .mat-icon {
         color: $color;
       }
     }
@@ -28,7 +31,8 @@
 }
 
 @mixin mat-tab-without-border() {
-  .dashboard-mat-tab, .nav-items-group {
+  .dashboard-mat-tab,
+  .nav-items-group {
     .mat-mdc-tab-header {
       border: none;
     }
@@ -40,10 +44,10 @@
   div.mat-tab-label {
     padding: 0;
     min-width: 85px;
-    color: $dark-grey;
-    font-weight: $fw-lighter;
+    color: colors.$dark-grey;
+    font-weight: font.$fw-lighter;
 
-    @media (max-width: $small) {
+    @media (max-width: variables.$small) {
       min-width: 75px;
     }
   }
@@ -51,7 +55,7 @@
   .dashboard-mat-tab {
     /*TODO(mdc-migration): The following rule targets internal classes of tabs that may no longer apply for the MDC version.*/
     div.mat-tab-label {
-      @media (max-width: $small) {
+      @media (max-width: variables.$small) {
         min-width: 25%;
       }
     }
@@ -62,9 +66,9 @@
     div.mat-tab-label {
       padding: 0 8px;
       min-width: 85px;
-      font-weight: $fw-lighter;
+      font-weight: font.$fw-lighter;
 
-      @media (max-width: $small) {
+      @media (max-width: variables.$small) {
         min-width: 55px;
       }
     }
@@ -76,7 +80,7 @@
   div.mat-tab-label {
     padding: 0;
     min-width: 85px;
-    color: $white;
-    font-weight: $fw-lighter;
+    color: colors.$white;
+    font-weight: font.$fw-lighter;
   }
 }

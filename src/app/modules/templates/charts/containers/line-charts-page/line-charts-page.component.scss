@@ -1,11 +1,11 @@
-@import './src/app/styles/colors';
-@import './src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
 
 .cards-wrapper {
   display: flex;
   margin-top: 36px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -18,9 +18,8 @@
 .card + .card {
   margin-left: 36px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-left: 0;
     margin-top: 36px;
   }
 }
-

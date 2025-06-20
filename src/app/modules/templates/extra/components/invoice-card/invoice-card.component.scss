@@ -1,25 +1,25 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
-@import "src/app/styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .card {
   margin-top: 24px;
 }
 
 p {
-  font-size: $fs-normal;
-  font-weight: $fw-lighter;
-  color: $dark-grey;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-lighter;
+  color: colors.$dark-grey;
   margin: 0;
   line-height: 1.5;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
 }
 
 span {
-  font-weight: $fw-bold;
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
-  color: $dark-grey;
-  font-size: $fs-normal;
+  font-weight: font.$fw-bold;
+  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  color: colors.$dark-grey;
+  font-size: font.$fs-normal;
 }
 
 .card-title {
@@ -39,7 +39,7 @@ span {
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -47,27 +47,27 @@ span {
 .client-block {
   text-align: right;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     text-align: left;
     margin-top: 36px;
   }
 }
 
 .info-title {
-  font-size: $fs-large;
+  font-size: font.$fs-large;
   margin-bottom: 16px;
 }
 
 .info-name {
-  font-size: $fs-regular;
+  font-size: font.$fs-regular;
 }
 
 .company-status {
-  font-weight: $fw-bold;
+  font-weight: font.$fw-bold;
 }
 
 .link {
-  color: $blue;
+  color: colors.$blue;
   cursor: pointer;
   text-decoration: none;
 
@@ -77,7 +77,7 @@ span {
 }
 
 .contacts {
-  font-weight: $fw-lighter;
+  font-weight: font.$fw-lighter;
   text-decoration: underline dotted;
 }
 
@@ -89,23 +89,23 @@ span {
   width: 100%;
 }
 
-.mat-mdc-row:nth-child(odd){
-  background-color: $blue-white;
+.mat-mdc-row:nth-child(odd) {
+  background-color: colors.$blue-white;
 }
 
 .table-header {
   font-size: 15px;
-  font-weight: $fw-normal;
+  font-weight: font.$fw-normal;
   padding: 14px 40px 24px 14px;
-  color: $dark-grey;
+  color: colors.$dark-grey;
   text-transform: uppercase;
 }
 
 .table-body {
   font-size: 15px;
-  font-weight: $fw-lighter;
+  font-weight: font.$fw-lighter;
   padding: 14px 40px 24px 14px;
-  color: $dark-grey;
+  color: colors.$dark-grey;
 }
 
 .card-footer {
@@ -116,7 +116,7 @@ span {
   display: flex;
   justify-content: space-between;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -127,18 +127,18 @@ span {
 }
 
 .total-title-wrapper {
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-top: 24px;
   }
 }
 
 .total-title {
-  font-weight: $fw-lighter;
+  font-weight: font.$fw-lighter;
   margin: 0 16px 16px 0;
 }
 
 .total {
-  font-weight: $fw-bold;
+  font-weight: font.$fw-bold;
 }
 
 .action-block {
@@ -148,30 +148,33 @@ span {
 
 .button-wrapper {
   padding: 3.5px 12px;
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
 }
 
 .button-wrapper + .button-wrapper {
   margin-left: 16px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-left: 0;
     margin-top: 16px;
   }
 }
 
 .button-text {
-  font-size: $fs-small;
+  font-size: font.$fs-small;
   display: flex;
   align-items: center;
 }
 
 .icon {
   margin-right: 8px;
-  font-size: $fs-large;
+  font-size: font.$fs-large;
   padding: 0;
 }
 
 .white-text {
-  color: $white;
+  color: colors.$white;
 }

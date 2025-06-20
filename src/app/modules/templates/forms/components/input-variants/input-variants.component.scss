@@ -1,10 +1,10 @@
-@import "src/app/styles/variables";
+@use 'src/app/styles/variables';
 
 .checkbox-wrapper {
   margin: 24px 0;
   display: flex;
 
-  @media(max-width: $medium) {
+  @media (max-width: variables.$medium) {
     flex-direction: column;
   }
 }
@@ -26,7 +26,7 @@
 .inputs-wrapper {
   margin-top: 36px;
 
-  @media(max-width: $normal) {
+  @media (max-width: variables.$normal) {
     display: flex;
     flex-direction: column;
   }
@@ -35,7 +35,7 @@
 mat-form-field + mat-form-field {
   margin-left: 24px;
 
-  @media(max-width: $normal) {
+  @media (max-width: variables.$normal) {
     margin-top: 24px;
     margin-left: 0;
   }

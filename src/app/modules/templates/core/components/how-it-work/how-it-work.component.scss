@@ -1,12 +1,12 @@
-@import "../../../../../styles/colors";
-@import "../../../../../styles/font";
-@import "../../../../../styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 @mixin grid-item {
   width: 100%;
   height: 100%;
   border-radius: 4px;
-  color: $white;
+  color: colors.$white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -14,27 +14,27 @@
 
 .first-grid-item {
   @include grid-item;
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .second-grid-item {
   @include grid-item;
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .third-grid-item {
   @include grid-item;
-  background-color: $pink;
+  background-color: colors.$pink;
 }
 
 .grid-item-text {
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-left: 12px;
   }
 }
 
 .code-wrapper {
-  background-color: $blue-white;
+  background-color: colors.$blue-white;
   height: 145px;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -42,13 +42,13 @@
 }
 
 .code {
-  font-size: $fs-xs;
+  font-size: font.$fs-xs;
 }
 
 .blue {
-  color: $blue;
+  color: colors.$blue;
 }
 
 .pink {
-  color: $pink;
+  color: colors.$pink;
 }

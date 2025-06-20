@@ -1,9 +1,11 @@
-@import 'src/app/styles/colors';
+@use 'src/app/styles/colors';
 
 .card {
   margin-top: 24px;
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey,
-    0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
 }
 
 .mat-mdc-card-content {

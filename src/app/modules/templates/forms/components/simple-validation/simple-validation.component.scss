@@ -1,4 +1,4 @@
-@import "src/app/styles/variables";
+@use 'src/app/styles/variables';
 
 .card {
   margin-top: 24px;
@@ -14,7 +14,7 @@
   flex-direction: column;
   width: 50%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }

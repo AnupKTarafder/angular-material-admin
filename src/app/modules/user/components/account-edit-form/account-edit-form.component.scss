@@ -1,11 +1,11 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
 
 .edit-form-wrapper {
   margin: 0 auto;
   width: 600px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
@@ -15,7 +15,7 @@
   width: 600px;
   margin-bottom: 16px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
@@ -27,7 +27,7 @@
 }
 
 .reset-button {
-  border-color: $blue;
+  border-color: colors.$blue;
   box-shadow: none;
   text-transform: uppercase;
 }

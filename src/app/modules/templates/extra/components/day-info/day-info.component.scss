@@ -1,9 +1,9 @@
-@import "src/app/styles/font";
-@import "src/app/styles/colors";
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
 
 .title {
-  font-size: $fs-regular;
-  color: $dark-grey;
+  font-size: font.$fs-regular;
+  color: colors.$dark-grey;
 }
 
 .date-wrapper {

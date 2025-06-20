@@ -1,4 +1,4 @@
-@import "src/app/styles/colors";
+@use 'src/app/styles/colors';
 
 .content-wrapper {
   margin-top: 36px;
@@ -6,7 +6,10 @@
 }
 
 .card {
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
   width: 100%;
   height: fit-content;
   box-sizing: border-box;
@@ -17,7 +20,10 @@
 }
 
 .inner-card {
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey, 0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
 }
 
 .code-wrapper {
@@ -25,13 +31,13 @@
 }
 
 .text-primary {
-  color: $blue;
+  color: colors.$blue;
 }
 
 .text-info {
-  color: $violet;
+  color: colors.$violet;
 }
 
 .text-warn {
-  color: $pink;
+  color: colors.$pink;
 }

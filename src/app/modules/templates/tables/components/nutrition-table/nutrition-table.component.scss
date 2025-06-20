@@ -1,18 +1,18 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
-@import "src/app/styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .card-title {
-  font-size: $fs-regular;
-  color: $grey;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-regular;
+  color: colors.$grey;
+  font-weight: font.$fw-lighter;
   margin-bottom: 8px;
 }
 
 .card-subtitle {
-  font-size: $fs-normal;
-  color: $dark-grey;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-normal;
+  color: colors.$dark-grey;
+  font-weight: font.$fw-lighter;
   margin-bottom: 24px;
 }
 
@@ -25,12 +25,12 @@
   display: flex;
   justify-content: space-between;
   align-self: center;
-  font-size: $fs-regular;
-  color: $dark-grey;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-regular;
+  color: colors.$dark-grey;
+  font-weight: font.$fw-lighter;
   padding: 0 24px 0 24px;
 
-  @media(max-width: $small) {
+  @media (max-width: variables.$small) {
     padding: 0;
   }
 }
@@ -42,13 +42,13 @@
 
 .table-header-button {
   background-color: inherit;
-  color: $dark-grey;
+  color: colors.$dark-grey;
   box-shadow: none;
   width: 48px;
   height: 48px;
 
   &:hover {
-    background-color: $black-08;
+    background-color: colors.$black-08;
   }
 }
 
@@ -57,15 +57,15 @@
 }
 
 .col-header {
-  font-size: $fs-normal;
-  color: $dark-grey;
-  font-weight: $fw-normal;
+  font-size: font.$fs-normal;
+  color: colors.$dark-grey;
+  font-weight: font.$fw-normal;
   padding: 14px 40px 14px 24px;
 }
 
 .col-body {
-  font-size: $fs-small;
-  color: $dark-grey;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-small;
+  color: colors.$dark-grey;
+  font-weight: font.$fw-lighter;
   padding: 14px 40px 14px 24px;
 }

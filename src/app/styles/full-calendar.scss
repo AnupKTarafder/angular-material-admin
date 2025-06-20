@@ -1,10 +1,13 @@
+@use 'colors';
+@use 'font';
+
 @mixin full-calendar {
   td.fc-day.fc-today {
-    background-color: $blue;
+    background-color: colors.$blue;
     opacity: 0.2;
   }
 
   th.fc-day-header.fc-widget-header {
-    font-weight: $fw-normal;
+    font-weight: font.$fw-normal;
   }
 }

@@ -1,11 +1,11 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/variables";
-@import "src/app/styles/font";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
+@use 'src/app/styles/font';
 
 .content-wrapper {
   display: flex;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     flex-wrap: wrap;
   }
 
@@ -16,7 +16,7 @@
     & + .content-block {
       margin-left: 36px;
 
-      @media (max-width: $medium) {
+      @media (max-width: variables.$medium) {
         margin-left: 0;
         margin-top: 36px;
       }
@@ -31,14 +31,14 @@
 button + button {
   margin-left: 16px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-left: 0;
     margin-top: 8px;
   }
 }
 
 .code-wrapper {
-  background-color: $blue-white;
+  background-color: colors.$blue-white;
   height: auto;
   overflow-x: scroll;
   overflow-y: hidden;
@@ -46,7 +46,7 @@ button + button {
 }
 
 .code {
-  font-size: $fs-xs;
+  font-size: font.$fs-xs;
 }
 
 .button {
@@ -54,13 +54,13 @@ button + button {
 }
 
 .blue {
-  color: $blue;
+  color: colors.$blue;
 }
 
 .pink {
-  color: $pink;
+  color: colors.$pink;
 }
 
 .grey {
-  color: $grey;
+  color: colors.$grey;
 }

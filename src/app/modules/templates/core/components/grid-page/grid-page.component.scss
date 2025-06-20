@@ -1,11 +1,11 @@
-@import "src/app/styles/variables";
+@use 'src/app/styles/variables';
 
 .usage {
   display: flex;
   width: 100%;
   margin-top: 36px;
 
-  @media(max-width: $normal) {
+  @media (max-width: variables.$normal) {
     flex-wrap: wrap;
   }
 }
@@ -17,7 +17,7 @@
 .usage-block + .usage-block {
   margin-left: 36px;
 
-  @media(max-width: $normal) {
+  @media (max-width: variables.$normal) {
     margin-left: 0;
     margin-top: 36px;
   }

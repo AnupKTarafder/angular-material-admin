@@ -1,13 +1,13 @@
-@import "../../../../styles/colors";
-@import "../../../../styles/font";
-@import "../../../../styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .main-content-wrapper {
   display: flex;
   width: 100%;
   margin-top: 36px;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     flex-wrap: wrap;
   }
 }
@@ -17,7 +17,7 @@
   padding-right: 18px;
   box-sizing: border-box;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
     padding: 0;
   }
@@ -28,13 +28,13 @@
   padding-left: 18px;
   box-sizing: border-box;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
     margin-top: 0;
     padding: 0;
   }
 
-  @media (min-width: $medium) and (max-width: $large) {
+  @media (min-width: variables.$medium) and (max-width: variables.$large) {
     margin-top: 36px;
   }
 }
@@ -44,7 +44,7 @@
   height: fit-content;
   margin-top: 36px;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     flex-direction: column;
     height: fit-content;
   }
@@ -54,7 +54,7 @@
   width: 60%;
   margin-right: 18px;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
     margin-right: 0;
   }
@@ -65,7 +65,7 @@
   margin-left: 18px;
   height: fit-content;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
     margin-left: 0;
     margin-top: 36px;
@@ -77,20 +77,21 @@
   width: 100%;
   margin-top: 36px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
 
-.user-media, .user-projects {
+.user-media,
+.user-projects {
   width: 50%;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
     height: fit-content;
   }
 
-  @media (min-width: $medium) and (max-width: $normal) {
+  @media (min-width: variables.$medium) and (max-width: variables.$normal) {
     height: auto;
   }
 }
@@ -98,11 +99,11 @@
 .user-media {
   margin-right: 18px;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     margin-right: 0;
   }
 
-  @media (min-width: $medium) and (max-width: $normal) {
+  @media (min-width: variables.$medium) and (max-width: variables.$normal) {
     margin-right: 8px;
   }
 }
@@ -110,11 +111,11 @@
 .user-projects {
   margin-left: 18px;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     margin-left: 0;
   }
 
-  @media (min-width: $medium) and (max-width: $normal) {
+  @media (min-width: variables.$medium) and (max-width: variables.$normal) {
     margin-left: 8px;
   }
 }
@@ -131,17 +132,19 @@
 }
 
 .calendar-array-wrapper {
-  color: $gray-70;
+  color: colors.$gray-70;
   cursor: pointer;
   font-size: 20px;
 }
 
 .calendar-date-title {
-  font-family: Fira Sans, sans-serif;
-  font-weight: $fw-lighter;
-  font-size: $fs-normal;
+  font-family:
+    Fira Sans,
+    sans-serif;
+  font-weight: font.$fw-lighter;
+  font-size: font.$fs-normal;
   line-height: 18px;
-  color: $grey;
+  color: colors.$grey;
   text-align: center;
   margin: 0;
 }
@@ -158,16 +161,18 @@
 }
 
 .views-title {
-  font-family: Fira Sans, sans-serif;
-  font-weight: $fw-normal;
-  font-size: $fs-regular;
+  font-family:
+    Fira Sans,
+    sans-serif;
+  font-weight: font.$fw-normal;
+  font-size: font.$fs-regular;
   line-height: 25px;
-  color: $dark-grey;
+  color: colors.$dark-grey;
   margin: 0;
 }
 
 .views-title-icon {
-  color: $gray-70;
+  color: colors.$gray-70;
 }
 
 .views-content {
@@ -178,15 +183,16 @@
 }
 
 .views-info-wrapper {
-
 }
 
 .views-value {
-  font-family: Fira Sans, sans-serif;
-  font-weight: $fw-normal;
-  font-size: $fs-large;
+  font-family:
+    Fira Sans,
+    sans-serif;
+  font-weight: font.$fw-normal;
+  font-size: font.$fs-large;
   line-height: 34px;
-  color: $dark-grey;
+  color: colors.$dark-grey;
   margin: 0 8px 0 0;
   display: inline;
 }
@@ -196,16 +202,18 @@
 }
 
 .views-percent {
-  font-family: Fira Sans, sans-serif;
-  font-weight: $fw-normal;
-  font-size: $fs-xs;
+  font-family:
+    Fira Sans,
+    sans-serif;
+  font-weight: font.$fw-normal;
+  font-size: font.$fs-xs;
   line-height: 9px;
-  color: $green;
+  color: colors.$green;
 }
 
 .views-button {
   font-size: 12px;
-  border-color: $blue;
+  border-color: colors.$blue;
   box-shadow: none;
 }
 
@@ -220,7 +228,7 @@
 }
 
 .update-card {
-  background-color: #536DFE;
+  background-color: #536dfe;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -233,16 +241,18 @@
 }
 
 .update-title {
-  font-family: Fira Sans, sans-serif;
-  font-weight: $fw-normal;
-  font-size: $fs-regular;
+  font-family:
+    Fira Sans,
+    sans-serif;
+  font-weight: font.$fw-normal;
+  font-size: font.$fs-regular;
   line-height: 23px;
-  color: $white;
+  color: colors.$white;
   margin: 0 0 0 12px;
 }
 
 .update-button {
   box-shadow: none;
-  color: $white;
-  border-color: $white !important;
+  color: colors.$white;
+  border-color: colors.$white !important;
 }

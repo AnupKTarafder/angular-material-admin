@@ -1,5 +1,5 @@
-@import 'src/app/styles/variables';
-@import 'src/app/styles/colors';
+@use 'src/app/styles/variables';
+@use 'src/app/styles/colors';
 
 .layout {
   width: 100%;
@@ -11,19 +11,19 @@
   margin-top: 64px;
   width: 240px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 218px;
   }
 }
 
 .layout-content {
-  background-color: $background-color;
+  background-color: colors.$background-color;
   margin-top: 64px;
   height: -webkit-fill-available;
   padding: $sidebar-content-padding;
   box-sizing: border-box;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
     padding: $sidebar-content-mobile-padding;
   }

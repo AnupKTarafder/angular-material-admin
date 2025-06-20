@@ -1,6 +1,6 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/font';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .search {
   display: flex;
@@ -14,10 +14,10 @@
   flex-direction: row-reverse;
 
   &:hover {
-    background-color: $black-08;
+    background-color: colors.$black-08;
   }
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     display: none;
   }
 }
@@ -26,14 +26,14 @@
   animation: 0.3s open_search;
   width: 250px;
   padding-left: 22.4px;
-  background-color: $black-08;
+  background-color: colors.$black-08;
 }
 
 .search-input {
-  color: $white;
+  color: colors.$white;
   font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
   line-height: 19px;
-  font-size: $fs-small;
+  font-size: font.$fs-small;
   background-color: transparent;
   border: none;
   outline: none;
@@ -41,13 +41,13 @@
   width: 100%;
 
   &::-webkit-input-placeholder {
-    color: $white-35;
+    color: colors.$white-35;
   }
 }
 
 .search-icon {
   padding: 0 7px 3px 0;
-  color: $white-35;
+  color: colors.$white-35;
 }
 
 .open-search {

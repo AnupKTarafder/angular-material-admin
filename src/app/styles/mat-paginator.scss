@@ -1,3 +1,4 @@
+@use 'colors';
 @mixin mat-paginator() {
   .mat-mdc-paginator {
     background: transparent;
@@ -15,6 +16,6 @@
 @mixin mat-paginator-dark() {
   .mat-mdc-paginator {
     background: transparent;
-    color: $white;
+    color: colors.$white;
   }
 }

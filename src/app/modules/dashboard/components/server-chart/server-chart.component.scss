@@ -1,13 +1,13 @@
-@import '../../../../styles/colors';
-@import '../../../../styles/font';
-@import '../../../../styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .server-chart {
   display: flex;
   flex-direction: column;
   height: 192px;
 
-  @media (min-width: 1280px) and (max-width: $xxl) {
+  @media (min-width: 1280px) and (max-width: variables.$xxl) {
     height: 220px;
   }
 
@@ -18,8 +18,8 @@
     width: 100%;
 
     &-title {
-      font-size: $fs-regular;
-      font-weight: $fw-lighter;
+      font-size: font.$fs-regular;
+      font-weight: font.$fw-lighter;
       margin: 0;
       line-height: 40px;
       white-space: nowrap;
@@ -41,20 +41,20 @@
       justify-content: space-between;
 
       &-text-wrapper {
-        @media (min-width: 1280px) and (max-width: $xxl) {
+        @media (min-width: 1280px) and (max-width: variables.$xxl) {
           width: 50%;
         }
       }
 
       &-text {
         width: 100%;
-        color: $grey;
-        font-weight: $fw-lighter;
-        font-size: $fs-small;
+        color: colors.$grey;
+        font-weight: font.$fw-lighter;
+        font-size: font.$fs-small;
         padding-right: 16px;
         margin: 0;
 
-        @media (min-width: 1280px) and (max-width: $xxl) {
+        @media (min-width: 1280px) and (max-width: variables.$xxl) {
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;
@@ -63,6 +63,3 @@
     }
   }
 }
-
-
-

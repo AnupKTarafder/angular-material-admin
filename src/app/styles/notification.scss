@@ -1,3 +1,5 @@
+@use 'colors';
+
 @mixin notification {
   .toast-top-center {
     top: 76px;
@@ -21,6 +23,6 @@
   }
 
   .toast-container .ngx-toastr:hover {
-    box-shadow: 0 0 12px $light-grey;
+    box-shadow: 0 0 12px colors.$light-grey;
   }
 }

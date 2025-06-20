@@ -1,4 +1,4 @@
-@import "src/app/styles/variables";
+@use 'src/app/styles/variables';
 
 .gallery {
   display: flex;
@@ -16,12 +16,12 @@
     margin-right: 0;
   }
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
     margin-right: 0;
   }
 
-  @media (min-width: $small) and (max-width: $medium) {
+  @media (min-width: variables.$small) and (max-width: variables.$medium) {
     width: 22%;
   }
 }

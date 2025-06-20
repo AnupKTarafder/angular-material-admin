@@ -1,6 +1,6 @@
-@import '../../../../styles/colors';
-@import '../../../../styles/variables';
-@import '../../../../styles/font';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
+@use 'src/app/styles/font';
 
 .performance-chart {
   display: flex;
@@ -8,7 +8,7 @@
   height: 192px;
   justify-content: space-between;
 
-  @media (min-width: 1280px) and (max-width: $xxl) {
+  @media (min-width: 1280px) and (max-width: variables.$xxl) {
     height: 220px;
   }
 
@@ -19,7 +19,7 @@
     width: 100%;
 
     &-title {
-      font-size: $fs-regular;
+      font-size: font.$fs-regular;
       font-weight: 400;
       margin: 0;
       line-height: 40px;
@@ -51,7 +51,7 @@
 
         &-text {
           margin-left: 8px;
-          color: $grey;
+          color: colors.$grey;
         }
       }
     }
@@ -60,8 +60,8 @@
   &__progress-title {
     margin: 20px 0 5px 0;
     font-weight: 400;
-    font-size: $fs-medium;
-    color: $grey;
+    font-size: font.$fs-medium;
+    color: colors.$grey;
   }
 
   &__progress-bar {
@@ -74,17 +74,17 @@
 }
 
 .blue {
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .pink {
-  background-color: $pink;
+  background-color: colors.$pink;
 }
 
 .green {
-  background-color: $green;
+  background-color: colors.$green;
 }
 
 .yellow {
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }

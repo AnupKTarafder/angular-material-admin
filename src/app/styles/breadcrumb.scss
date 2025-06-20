@@ -1,7 +1,7 @@
-@import "colors";
+@use 'colors';
 
-$breadcrumb-title-color: $grey;
-$breadcrumb-active-title-color: $blue;
+$breadcrumb-title-color: colors.$grey;
+$breadcrumb-active-title-color: colors.$blue;
 
 @mixin breadcrumb {
   .breadcrumb-list.mat-mdc-list-base {
@@ -18,7 +18,7 @@ $breadcrumb-active-title-color: $blue;
 @mixin breadcrumb-dark {
   .breadcrumb-list.mat-mdc-list-base {
     & .mat-mdc-list-item {
-      color: $white;
+      color: colors.$white;
 
       &.active {
         color: $breadcrumb-active-title-color;

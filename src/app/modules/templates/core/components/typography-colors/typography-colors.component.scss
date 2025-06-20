@@ -1,37 +1,44 @@
-@import "../../../../../styles/colors";
-@import "../../../../../styles/variables";
-
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
 
 .typography-card {
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px #b2b2b21a,
+    0 1px 8px 0 #9a9a9a1a;
   width: 100%;
   box-sizing: border-box;
 }
 
 .typography-content {
-
   &__wrapper {
     display: flex;
     padding: 0 8px;
 
-    @media (max-width: $small) {
+    @media (max-width: variables.$small) {
       flex-wrap: wrap;
     }
   }
 
   &__item-wrapper {
-    box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px #B2B2B21A, 0 1px 8px 0 #9A9A9A1A;
+    box-shadow:
+      0 3px 11px 0 colors.$shadow-white,
+      0 3px 3px -2px #b2b2b21a,
+      0 1px 8px 0 #9a9a9a1a;
     width: 100%;
     margin: 16px;
   }
 
-  &__headings, &__colors, &__settings, &__size {
+  &__headings,
+  &__colors,
+  &__settings,
+  &__size {
     margin-top: 8px;
-    border: 1px dashed $blue;
+    border: 1px dashed colors.$blue;
     padding: 32px 16px;
 
     h1 {
-      @media (max-width: $small) {
+      @media (max-width: variables.$small) {
         line-height: 46px;
       }
     }
@@ -39,27 +46,27 @@
 
   &__colors {
     &_blue {
-      color: $blue;
+      color: colors.$blue;
     }
 
     &_green {
-      color: $green;
+      color: colors.$green;
     }
 
     &_pink {
-      color: $pink;
+      color: colors.$pink;
     }
 
     &_yellow {
-      color: $yellow;
+      color: colors.$yellow;
     }
 
     &_light-blue {
-      color: $light-blue;
+      color: colors.$light-blue;
     }
 
     &_violet {
-      color: $violet;
+      color: colors.$violet;
     }
   }
 }

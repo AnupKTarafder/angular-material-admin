@@ -1,11 +1,11 @@
-@import "../../../../styles/colors";
-@import "../../../../styles/font";
-@import "../../../../styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .revenue-chart {
   height: 192px;
 
-  @media (min-width: 1280px) and (max-width: $xxl) {
+  @media (min-width: 1280px) and (max-width: variables.$xxl) {
     height: 220px;
   }
 
@@ -16,8 +16,8 @@
     width: 100%;
 
     &-title {
-      font-size: $fs-regular;
-      font-weight: $fw-lighter;
+      font-size: font.$fs-regular;
+      font-weight: font.$fw-lighter;
       margin: 0;
       line-height: 40px;
       white-space: nowrap;
@@ -33,13 +33,12 @@
     &-chart {
       height: 140px;
       width: 60%;
-      max-width: 218px
+      max-width: 218px;
     }
   }
 }
 
 .legend-wrapper {
-
 }
 
 .legend-item-wrapper {
@@ -55,24 +54,24 @@
 
 .legend-text {
   margin: 0 0 0 8px;
-  font-size: $fs-normal;
-  font-width: $fw-lighter;
-  color: $grey;
+  font-size: font.$fs-normal;
+  font-width: font.$fw-lighter;
+  color: colors.$grey;
   white-space: nowrap;
 }
 
 .blue {
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .pink {
-  background-color: $pink;
+  background-color: colors.$pink;
 }
 
 .yellow {
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .green {
-  background-color: $green;
+  background-color: colors.$green;
 }

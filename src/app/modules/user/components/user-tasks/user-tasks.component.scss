@@ -1,6 +1,6 @@
-@import "../../../../styles/colors";
-@import "../../../../styles/font";
-@import "../../../../styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .user-tasks-card {
   height: 100%;
@@ -14,7 +14,7 @@
 }
 
 .user-tasks-title {
-  margin-bottom: 0
+  margin-bottom: 0;
 }
 
 .task-wrapper {
@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid $gray-80;
+  border-bottom: 1px solid colors.$gray-80;
 }
 
 .task-inner-wrapper {
@@ -31,48 +31,48 @@
 }
 
 .task-time {
-  font-weight: $fw-normal;
+  font-weight: font.$fw-normal;
   font-size: 10px;
   line-height: 20px;
-  color: $grey;
+  color: colors.$grey;
   margin: 0;
 }
 
 .task-circle {
   width: 6px;
   height: 6px;
-  background-color: $gray-06;
+  background-color: colors.$gray-06;
   margin-left: 14px;
   border-radius: 50%;
 }
 
 .blue {
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .yellow {
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .green {
-  background-color: $green;
+  background-color: colors.$green;
 }
 
 .pink {
-  background-color: $pink;
+  background-color: colors.$pink;
 }
 
 .task-text {
-  font-weight: $fw-normal;
-  font-size: $fs-small;
+  font-weight: font.$fw-normal;
+  font-size: font.$fs-small;
   line-height: 20px;
-  color: $grey;
+  color: colors.$grey;
   margin: 0 0 0 8px;
 }
 
 .task-done {
   text-decoration-line: line-through;
-  color: $gray-06;
+  color: colors.$gray-06;
 }
 
 .task-settings {
@@ -84,11 +84,11 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  color: $light-grey;
-  font-size: $fs-medium;
+  color: colors.$light-grey;
+  font-size: font.$fs-medium;
 
   &:hover {
-    background-color: $blue;
-    color: $white-35;
+    background-color: colors.$blue;
+    color: colors.$white-35;
   }
 }

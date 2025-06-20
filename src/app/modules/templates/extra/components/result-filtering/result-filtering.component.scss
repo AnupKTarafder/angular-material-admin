@@ -1,27 +1,26 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/font';
-
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
 
 .title {
-  font-weight: $fw-lighter;
-  font-size: $fs-medium;
-  color: $dark-grey;
+  font-weight: font.$fw-lighter;
+  font-size: font.$fs-medium;
+  color: colors.$dark-grey;
   margin: 0;
 }
 
 .title-bold {
-  font-weight: $fw-normal;
+  font-weight: font.$fw-normal;
 }
 
 .subtitle {
-  color: $dark-grey;
+  color: colors.$dark-grey;
 }
 
 .list-wrapper {
   cursor: pointer;
 
   &:hover {
-    background-color: $white-blue;
+    background-color: colors.$white-blue;
   }
 }
 
@@ -33,7 +32,7 @@
 }
 
 .list-title {
-  color: $dark-grey;
+  color: colors.$dark-grey;
   margin: 0;
 }
 

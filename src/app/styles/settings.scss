@@ -1,6 +1,6 @@
-@import 'src/app/styles/colors';
+@use 'src/app/styles/colors';
 
-$background-color: $blue;
+$background-color: colors.$blue;
 
 @function changeColor($color) {
   @return $color;

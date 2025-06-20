@@ -1,14 +1,14 @@
-@import "./src/app/styles/font";
-@import "./src/app/styles/colors";
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
 
 .title {
-  font-size: $fs-large;
-  color: $dark-grey;
+  font-size: font.$fs-large;
+  color: colors.$dark-grey;
 }
 
 .text {
-  font-size: $fs-normal;
-  color: $grey;
+  font-size: font.$fs-normal;
+  color: colors.$grey;
 }
 
 .button-wrapper {

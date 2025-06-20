@@ -1,25 +1,27 @@
-@import "src/app/styles/variables";
+@use 'src/app/styles/variables';
 
 .forms-wrapper {
   display: flex;
   margin-top: 24px;
   width: 100%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
 
 .right-from-wrapper {
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-top: 24px;
   }
 }
 
-.left-from, .right-from-wrapper, .right-from {
+.left-from,
+.right-from-wrapper,
+.right-from {
   width: 50%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
@@ -27,14 +29,13 @@
 .left-from {
   margin-right: 24px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-right: 0;
   }
 }
 
 .right-from {
-
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-left: 0;
     margin-top: 36px;
   }

@@ -1,6 +1,6 @@
-@import "../../../../styles/colors";
-@import "../../../../styles/font";
-@import "../../../../styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .visits-chart {
   display: flex;
@@ -8,7 +8,7 @@
   flex-direction: column;
   justify-content: space-between;
 
-  @media (min-width: 1280px) and (max-width: $xxl) {
+  @media (min-width: 1280px) and (max-width: variables.$xxl) {
     height: 220px;
   }
 
@@ -21,7 +21,7 @@
 
   &__title {
     font-size: 20px;
-    font-weight: $fw-lighter;
+    font-weight: font.$fw-lighter;
     margin: 0;
     line-height: 40px;
     white-space: nowrap;
@@ -43,11 +43,11 @@
 
       &-title {
         margin: 0;
-        font-weight: $fw-normal;
-        font-size: $fs-large;
+        font-weight: font.$fw-normal;
+        font-size: font.$fs-large;
         line-height: 1.5;
         letter-spacing: 0.15px;
-        color: $dark-grey;
+        color: colors.$dark-grey;
       }
 
       &-chart {
@@ -60,9 +60,9 @@
       justify-content: space-between;
 
       &-title {
-        margin:0;
-        color: $light-grey;
-        font-weight: $fw-lighter;
+        margin: 0;
+        color: colors.$light-grey;
+        font-weight: font.$fw-lighter;
         font-size: 12px;
       }
 
@@ -73,11 +73,11 @@
       }
 
       &-data {
-        margin:0;
+        margin: 0;
         line-height: 1.5;
-        font-weight: $fw-lighter;
-        font-size: $fs-normal;
-        color: $dark-grey;
+        font-weight: font.$fw-lighter;
+        font-size: font.$fs-normal;
+        color: colors.$dark-grey;
       }
 
       &-icon {
@@ -91,13 +91,13 @@
 }
 
 .blue {
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .yellow {
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .green {
-  background-color: $green;
+  background-color: colors.$green;
 }

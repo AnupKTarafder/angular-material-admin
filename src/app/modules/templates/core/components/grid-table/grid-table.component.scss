@@ -1,5 +1,5 @@
-@import "src/app/styles/font";
-@import "src/app/styles/colors";
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
 
 .card {
   margin-top: 36px;
@@ -17,20 +17,20 @@
 }
 
 .table-header-title {
-  color: $dark-grey;
-  font-size: $fs-normal;
+  color: colors.$dark-grey;
+  font-size: font.$fs-normal;
   margin: 0;
 }
 
 .table-header-subtitle {
-  color: $dark-grey;
-  font-size: $fs-xs;
+  color: colors.$dark-grey;
+  font-size: font.$fs-xs;
   margin: 0;
 }
 
 .table-body {
-  color: $dark-grey;
-  font-size: $fs-small;
+  color: colors.$dark-grey;
+  font-size: font.$fs-small;
   margin: 0;
   padding: 14px 40px 14px 24px;
   word-wrap: unset;
@@ -38,9 +38,9 @@
 }
 
 .table-body-row {
-  color: $dark-grey;
+  color: colors.$dark-grey;
   margin: 0;
   padding: 14px 40px 14px 24px;
-  font-size: $fs-normal;
-  font-weight: $fw-normal;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-normal;
 }

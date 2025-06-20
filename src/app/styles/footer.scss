@@ -1,3 +1,5 @@
+@use 'variables';
+
 @mixin footer($color) {
   .footer {
     &__link-item {
@@ -9,7 +11,7 @@
       box-shadow: none;
 
       &:hover {
-        background-color: $header-button-background-color-hover;
+        background-color: variables.$header-button-background-color-hover;
       }
 
       &:not([class*=mat-elevation-z]) {

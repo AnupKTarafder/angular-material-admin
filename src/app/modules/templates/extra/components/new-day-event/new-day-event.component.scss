@@ -1,19 +1,19 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
-@import "src/app/styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .event-wrapper {
   width: 317px;
 }
 
 .title {
-  font-size: $fs-regular;
-  color: $dark-grey;
+  font-size: font.$fs-regular;
+  color: colors.$dark-grey;
 }
 
 .subtitle {
-  font-size: $fs-small;
-  color: $dark-grey;
+  font-size: font.$fs-small;
+  color: colors.$dark-grey;
 }
 
 .form {
@@ -22,11 +22,11 @@
 
 .button {
   background-color: transparent;
-  color: $dark-grey;
+  color: colors.$dark-grey;
   box-shadow: none;
 
   &:hover {
-    background-color: $header-button-background-color-hover;
+    background-color: variables.$header-button-background-color-hover;
   }
 }
 

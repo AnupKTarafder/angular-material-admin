@@ -1,5 +1,5 @@
-@import "src/app/styles/font";
-@import "src/app/styles/colors";
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
 
 .product-card {
   padding: 0;
@@ -20,18 +20,18 @@
   z-index: 1;
   top: 12px;
   left: 12px;
-  font-size: $fs-small;
-  font-weight: $fw-lighter;
-  color: $white;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-lighter;
+  color: colors.$white;
   margin: 0;
 }
 
 .Sale {
-  background-color: $pink;
+  background-color: colors.$pink;
 }
 
 .New {
-  background-color: $green;
+  background-color: colors.$green;
 }
 
 .product-title-wrapper {
@@ -39,23 +39,23 @@
 }
 
 .product-title {
-  font-size: $fs-medium;
-  font-weight: $fw-lighter;
-  color: $dark-grey;
+  font-size: font.$fs-medium;
+  font-weight: font.$fw-lighter;
+  color: colors.$dark-grey;
   margin-bottom: 8px;
 }
 
 .product-title {
-  font-size: $fs-medium;
-  font-weight: $fw-lighter;
-  color: $dark-grey;
+  font-size: font.$fs-medium;
+  font-weight: font.$fw-lighter;
+  color: colors.$dark-grey;
   margin-bottom: 8px;
 }
 
 .product-subtitle {
-  font-size: $fs-small;
-  font-weight: $fw-lighter;
-  color: $grey;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-lighter;
+  color: colors.$grey;
   margin: 0;
 }
 
@@ -67,9 +67,9 @@
 }
 
 .product-price {
-  font-size: $fs-normal;
-  font-weight: $fw-bold;
-  color: $dark-grey;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-bold;
+  color: colors.$dark-grey;
   margin: 0;
 }
 
@@ -80,9 +80,9 @@
 }
 
 .product-pop {
-  font-size: $fs-normal;
-  font-weight: $fw-lighter;
-  color: $yellow;
+  font-size: font.$fs-normal;
+  font-weight: font.$fw-lighter;
+  color: colors.$yellow;
   margin: 0;
 }
 

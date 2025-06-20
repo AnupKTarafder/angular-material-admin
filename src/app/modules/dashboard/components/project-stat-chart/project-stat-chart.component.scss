@@ -1,6 +1,6 @@
-@import "../../../../styles/colors";
-@import "../../../../styles/variables";
-@import "../../../../styles/font";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
+@use 'src/app/styles/font';
 
 .project-stat {
   display: flex;
@@ -10,30 +10,30 @@
     height: 208px;
     width: 100%;
 
-    @media (min-width: $small) and (max-width: $normal) {
+    @media (min-width: variables.$small) and (max-width: variables.$normal) {
       margin-top: 24px;
     }
 
     & + .project-stat__item {
       margin-left: 24px;
 
-      @media (max-width: $small) {
+      @media (max-width: variables.$small) {
         margin-top: 24px;
         margin-left: 0;
       }
 
-      @media (min-width: $small) and (max-width: $normal) {
+      @media (min-width: variables.$small) and (max-width: variables.$normal) {
         &:last-child {
           margin-left: 0;
         }
       }
     }
 
-    @media (min-width: $small) and (max-width: $large) {
+    @media (min-width: variables.$small) and (max-width: variables.$large) {
       width: 41.3%;
     }
 
-    @media (min-width: $large) and (max-width: $normal) {
+    @media (min-width: variables.$large) and (max-width: variables.$normal) {
       width: 43.6%;
     }
   }
@@ -46,16 +46,16 @@
   }
 
   &__title-text {
-    font-weight: $fw-lighter;
-    font-size: $fs-medium;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-medium;
     margin: 0;
   }
 
-  @media (min-width: $small) and (max-width: $normal) {
+  @media (min-width: variables.$small) and (max-width: variables.$normal) {
     justify-content: start;
   }
 
-  @media (max-width: $normal) {
+  @media (max-width: variables.$normal) {
     flex-wrap: wrap;
   }
 }
@@ -77,25 +77,25 @@
   }
 
   &__total-info-users {
-    color: $grey;
-    font-weight: $fw-lighter;
-    font-size: $fs-xxxl;
+    color: colors.$grey;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-xxxl;
     margin: 0;
     height: 45px;
     letter-spacing: 0.15px;
   }
 
   &__total-info-percent {
-    color: $green;
-    font-weight: $fw-lighter;
-    font-size: $fs-small;
+    color: colors.$green;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-small;
     margin: 0 0 0 5px;
   }
 
   &__total-info-percent-warn {
-    color: $pink;
-    font-weight: $fw-lighter;
-    font-size: $fs-small;
+    color: colors.$pink;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-small;
     margin: 0 0 0 5px;
   }
 
@@ -117,25 +117,25 @@
   }
 
   &__stat-value {
-    font-weight: $fw-lighter;
-    font-size: $fs-regular;
-    color: $dark-grey;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-regular;
+    color: colors.$dark-grey;
     margin: 0;
   }
 
   &__stat-icon {
     transform: rotate(45deg);
-    color: $green;
+    color: colors.$green;
   }
 
   &__stat-icon-warn {
     transform: rotate(135deg);
-    color: $pink;
+    color: colors.$pink;
   }
 
   &__stat-item-title {
-    color: $light-grey;
-    font-weight: $fw-lighter;
+    color: colors.$light-grey;
+    font-weight: font.$fw-lighter;
     font-size: 12px;
     margin: 0;
   }

@@ -1,19 +1,19 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/font";
-@import "src/app/styles/variables";
-@import "src/app/styles/sidebar";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
+@use 'src/app/styles/sidebar';
 
 .header {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: $normal) {
+  @media (max-width: variables.$normal) {
     flex-wrap: wrap;
     height: 100px;
   }
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     height: 150px;
   }
 }
@@ -22,7 +22,7 @@
   display: flex;
   align-items: center;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     overflow: hidden;
   }
 }
@@ -35,7 +35,7 @@
 .header-title {
   margin-left: 24px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     text-overflow: ellipsis;
   }
 }
@@ -44,12 +44,12 @@
   display: flex;
   align-items: center;
 
-  @media (max-width: $normal) {
+  @media (max-width: variables.$normal) {
     justify-content: space-between;
     width: 100%;
   }
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
   }
 }
@@ -72,7 +72,7 @@ a {
   justify-content: center;
 
   &:hover {
-    background-color: $black-04;
+    background-color: colors.$black-04;
   }
 }
 
@@ -81,10 +81,10 @@ a {
 }
 
 .documentation-sidebar {
-  height:calc(100vh - 64px);
+  height: calc(100vh - 64px);
   width: 240px;
 
-  @media(max-width: $normal) {
+  @media (max-width: variables.$normal) {
     margin-top: 64px;
   }
 }
@@ -112,7 +112,7 @@ a {
     background-color: $sidebar-background-color-hover;
   }
 
-  &>.documentation-sidebar-icon {
+  & > .documentation-sidebar-icon {
     margin-right: 0;
   }
 }
@@ -130,7 +130,7 @@ a {
     background-color: $sidebar-background-color-hover;
   }
 
-  &>.documentation-sidebar-icon {
+  & > .documentation-sidebar-icon {
     margin-right: 0;
   }
 }
@@ -141,13 +141,13 @@ a {
 }
 
 .documentation-sidebar-icon {
-  color: $light-grey;
+  color: colors.$light-grey;
   margin-right: 24px;
 }
 
 .documentation-sidebar-text {
-  font-size: $fs-small;
-  font-weight: $fw-lighter;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-lighter;
   margin: 0;
 }
 
@@ -157,12 +157,12 @@ a {
 
 .rotateUp {
   transform: rotate(180deg);
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
 }
 
 .rotateDown {
   transform: rotate(0deg);
-  transition: transform .3s linear;
+  transition: transform 0.3s linear;
 }
 
 .circle {
@@ -174,7 +174,8 @@ a {
 }
 
 .mat-mdc-list-base {
-  & .mat-mdc-list-item, .mat-mdc-menu-trigger {
+  & .mat-mdc-list-item,
+  .mat-mdc-menu-trigger {
     color: $sidebar-title-color;
 
     &.active {
@@ -182,7 +183,7 @@ a {
       color: $sidebar-font-color-active;
 
       & .mat-icon {
-        color: $blue;
+        color: colors.$blue;
       }
     }
 
@@ -204,14 +205,14 @@ mat-tree-node {
       color: $sidebar-font-color-active;
     }
 
-    & div.circle{
-      background-color: $blue;
+    & div.circle {
+      background-color: colors.$blue;
     }
   }
 
-  &[aria-expanded="true"] {
+  &[aria-expanded='true'] {
     & mat-icon:first-child {
-      color: $blue;
+      color: colors.$blue;
     }
 
     & p {

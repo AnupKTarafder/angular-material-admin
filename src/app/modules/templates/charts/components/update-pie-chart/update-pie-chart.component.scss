@@ -1,11 +1,11 @@
-@import "src/app/styles/variables";
+@use 'src/app/styles/variables';
 
 .button-wrapper {
   display: flex;
   justify-content: space-between;
   align-items: center;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     flex-wrap: wrap;
     justify-content: center;
   }

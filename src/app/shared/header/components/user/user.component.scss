@@ -1,13 +1,13 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/font';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .avatar {
   width: 40px;
   height: 40px;
   margin-right: 16px;
   box-shadow: none;
-  font-size: $fs-regular;
+  font-size: font.$fs-regular;
 }
 
 .user-wrapper {
@@ -24,19 +24,19 @@
 }
 
 .user-button {
-  background-color: $blue;
+  background-color: colors.$blue;
   box-shadow: none;
   margin-left: 16px;
 
   &__icon {
-    color: $white-35;
+    color: colors.$white-35;
   }
 
   &:hover {
-    background-color: $black-08;
+    background-color: colors.$black-08;
   }
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     margin-top: 0;
   }
 }
@@ -47,21 +47,21 @@
 
   &__name {
     margin-bottom: 4px;
-    font-weight: $fw-lighter;
-    font-size: $fs-large;
-    color: $dark-grey;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-large;
+    color: colors.$dark-grey;
   }
 
   &__link {
-    color: $blue;
-    font-weight: $fw-lighter;
-    font-size: $fs-small;
+    color: colors.$blue;
+    font-weight: font.$fw-lighter;
+    font-size: font.$fs-small;
     text-decoration: none;
   }
 }
 
 .user-menu-icon {
-  color: $light-grey;
+  color: colors.$light-grey;
   margin-right: 16px;
   opacity: 0.8;
 }
@@ -74,18 +74,18 @@
 
 .sign-button {
   border: 1px solid;
-  color: $blue;
-  background-color: $white;
+  color: colors.$blue;
+  background-color: colors.$white;
   width: 80%;
 }
 
 .user-menu {
   &__item-title {
-    color: $light-grey;
+    color: colors.$light-grey;
 
     &:hover {
-      color: $dark-grey;
-      background-color: $blue-white;
+      color: colors.$dark-grey;
+      background-color: colors.$blue-white;
 
       & .user-menu-icon {
         color: #536dfe;
@@ -95,16 +95,16 @@
 }
 
 .greeting-text {
-  font-size: $fs-small;
-  font-weight: $fw-lighter;
-  color: $white;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-lighter;
+  color: colors.$white;
   margin: 0 0 0 8px;
 }
 
 .user-name {
-  font-size: $fs-small;
-  color: $white;
+  font-size: font.$fs-small;
+  color: colors.$white;
   margin: 0;
-  font-weight: $fw-bold;
+  font-weight: font.$fw-bold;
   font-family: Arial, sans-serif;
 }

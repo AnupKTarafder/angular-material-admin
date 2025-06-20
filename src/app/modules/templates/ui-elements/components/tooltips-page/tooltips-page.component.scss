@@ -1,6 +1,6 @@
-@import 'src/app/styles/font';
-@import 'src/app/styles/colors';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
 
 .content-wrapper {
   margin-top: 36px;
@@ -9,7 +9,7 @@
 .cards-wrapper {
   display: flex;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     flex-wrap: wrap;
   }
 
@@ -22,14 +22,14 @@
   width: 50%;
   box-sizing: border-box;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
   }
 
   + .card {
     margin-left: 36px;
 
-    @media (max-width: $medium) {
+    @media (max-width: variables.$medium) {
       margin-left: 0;
       margin-top: 36px;
     }
@@ -46,7 +46,7 @@
   align-items: center;
   margin: 16px 16px 0 0;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
   }
 }
@@ -64,7 +64,7 @@
 }
 
 .popover-button {
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
   }
 }
@@ -78,7 +78,7 @@ mat-card-content.content {
   display: flex;
   justify-content: start;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     flex-wrap: wrap;
   }
 }
@@ -89,14 +89,14 @@ mat-card-content.content {
 }
 
 .button {
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
   }
 
   & + .button {
     margin-left: 16px;
 
-    @media (max-width: $medium) {
+    @media (max-width: variables.$medium) {
       margin-left: 0;
       margin-top: 16px;
     }
@@ -107,15 +107,15 @@ mat-card-content.content {
   padding: 6px 16px;
   margin: 16px 16px 0 0;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     width: 100%;
   }
 }
 
 .tooltip-blue {
-  background-color: $blue;
+  background-color: colors.$blue;
 }
 
 .tooltip-pink {
-  background-color: $pink;
+  background-color: colors.$pink;
 }

@@ -1,5 +1,5 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
 
 .settings-button {
   box-shadow: none;
@@ -7,7 +7,7 @@
   color: $settings-button-color;
 
   &:hover {
-    background-color: $blue;
+    background-color: colors.$blue;
     color: $settings-button-color-hover;
   }
 
@@ -20,7 +20,7 @@
   position: absolute;
 
   &__item {
-    color: $dark-grey;
+    color: colors.$dark-grey;
 
     &:hover {
       background-color: $settings-menu-background-color-hover;

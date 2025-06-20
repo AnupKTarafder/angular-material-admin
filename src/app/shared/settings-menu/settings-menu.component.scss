@@ -1,5 +1,5 @@
-@import 'src/app/styles/colors';
-@import 'src/app/styles/font';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
 
 .settings-wrapper {
   z-index: 10000;
@@ -9,13 +9,15 @@
   right: 0;
   position: fixed;
   border-radius: 50% 0 0 50%;
-  color: $white;
+  color: colors.$white;
   display: flex;
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  box-shadow: 0 3px 5px -1px rgba(0, 0, 0, 0.2),
-    0px 6px 10px 0px rgba(0, 0, 0, 0.14), 0px 1px 18px 0px rgba(0, 0, 0, 0.12);
+  box-shadow:
+    0 3px 5px -1px rgba(0, 0, 0, 0.2),
+    0px 6px 10px 0px rgba(0, 0, 0, 0.14),
+    0px 1px 18px 0px rgba(0, 0, 0, 0.12);
 }
 
 .settings-menu-wrapper {
@@ -23,10 +25,10 @@
 }
 
 .menu-title {
-  color: $dark-grey;
+  color: colors.$dark-grey;
   margin: 0;
-  font-size: $fs-small;
-  font-weight: $fw-bold;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-bold;
   line-height: 1.43;
   text-transform: uppercase;
   text-align: center;
@@ -46,7 +48,7 @@
   border: none;
   height: 1px;
   flex-shrink: 0;
-  background-color: $black-12;
+  background-color: colors.$black-12;
 }
 
 .slide-wrapper {

@@ -1,11 +1,11 @@
-@import "../../../../styles/colors";
-@import "../../../../styles/font";
-@import "../../../../styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
+@use 'src/app/styles/variables';
 
 .user-card {
   padding: 27px 24px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     padding: 22px 20px;
   }
 }
@@ -22,7 +22,7 @@
   width: 50%;
   margin-right: 18px;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: auto;
   }
 }
@@ -30,18 +30,18 @@
 .avatar-wrapper {
   width: 185px;
   height: 185px;
-  border: 3px dotted $pink;
+  border: 3px dotted colors.$pink;
   border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 95px;
     height: 95px;
   }
 
-  @media (min-width: $medium) and (max-width: $normal){
+  @media (min-width: variables.$medium) and (max-width: variables.$normal) {
     width: 95px;
     height: 95px;
   }
@@ -52,12 +52,12 @@
   height: 164px;
   border-radius: 50%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 85px;
     height: 85px;
   }
 
-  @media (min-width: $medium) and (max-width: $normal){
+  @media (min-width: variables.$medium) and (max-width: variables.$normal) {
     width: 85px;
     height: 85px;
   }
@@ -70,7 +70,7 @@
 .avatar-badge {
   width: 44px;
   height: 21px;
-  font-weight: $fw-bold;
+  font-weight: font.$fw-bold;
   font-size: 12px;
   line-height: 16px;
   min-height: 21px;
@@ -79,32 +79,32 @@
 .user-info-wrapper {
   width: 50%;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: auto;
   }
 }
 
 .user-name {
-  font-weight: $fw-bold;
-  font-size: $fs-xl;
+  font-weight: font.$fw-bold;
+  font-size: font.$fs-xl;
   line-height: 38px;
   margin-bottom: 14px;
 }
 
 .user-position {
-  font-weight: $fw-normal;
+  font-weight: font.$fw-normal;
   font-size: 12px;
   line-height: 14px;
-  color: #27282C;
+  color: #27282c;
   opacity: 0.5;
   margin-bottom: 4px;
 }
 
 .user-site {
-  font-weight: $fw-lighter;
-  font-size: $fs-normal;
+  font-weight: font.$fw-lighter;
+  font-size: font.$fs-normal;
   line-height: 19px;
-  color: $blue;
+  color: colors.$blue;
   text-decoration: none;
 
   &:hover {
@@ -116,7 +116,7 @@
   margin-top: 27px;
   width: 183px;
 
-  @media (min-width: 1280px) and (max-width: $xxl) {
+  @media (min-width: 1280px) and (max-width: variables.$xxl) {
     margin-top: 20px;
     width: auto;
   }
@@ -127,8 +127,8 @@
   height: 19px;
   border-radius: 2px;
   min-height: 19px;
-  font-weight: $fw-bold;
-  font-size: $fs-xs;
+  font-weight: font.$fw-bold;
+  font-size: font.$fs-xs;
   line-height: 14px;
   padding: 12px;
   letter-spacing: 0.6px;
@@ -136,40 +136,40 @@
 
 /* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version. */
 .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary.blue {
-  background-color: $blue-20;
-  color: $blue;
+  background-color: colors.$blue-20;
+  color: colors.$blue;
 }
 
 /* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version. */
 .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary.pink {
-  background-color: $pink-20;
-  color: $pink;
+  background-color: colors.$pink-20;
+  color: colors.$pink;
 }
 
 /* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version. */
 .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary.yellow {
-  background-color: $yellow-20;
-  color: $yellow;
+  background-color: colors.$yellow-20;
+  color: colors.$yellow;
 }
 
 /* TODO(mdc-migration): The following rule targets internal classes of chips that may no longer apply for the MDC version. */
 .mat-mdc-chip.mat-mdc-standard-chip.mat-chip-selected.mat-primary.green {
-  background-color: $green-20;
-  color: $green;
+  background-color: colors.$green-20;
+  color: colors.$green;
 }
 
 .icons-wrapper {
   display: flex;
   margin-top: 42px;
 
-  @media (min-width: 1280px) and (max-width: $xxl) {
+  @media (min-width: 1280px) and (max-width: variables.$xxl) {
     margin-top: 18px;
   }
 }
 
 .icon {
   font-size: 16px;
-  color: #9B9B9B;
+  color: #9b9b9b;
   padding: 0;
 
   & + .icon {

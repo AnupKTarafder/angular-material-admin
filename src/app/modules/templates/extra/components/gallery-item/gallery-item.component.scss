@@ -1,5 +1,5 @@
-@import "src/app/styles/colors";
-@import "src/app/styles/variables";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
 
 .card {
   width: 100%;
@@ -35,7 +35,7 @@
   box-shadow: none;
 
   &:hover {
-    background-color: $header-button-background-color-hover;
+    background-color: variables.$header-button-background-color-hover;
   }
 }
 
@@ -48,9 +48,9 @@
 }
 
 .icon-liked {
-  color: $pink;
+  color: colors.$pink;
 }
 
 .icon-commented {
-  color: $blue;
+  color: colors.$blue;
 }

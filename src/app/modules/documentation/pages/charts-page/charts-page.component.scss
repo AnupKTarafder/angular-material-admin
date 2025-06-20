@@ -1,4 +1,4 @@
-@import 'src/app/styles/colors';
+@use 'src/app/styles/colors';
 
 .charts-page {
   padding: 24px;
@@ -9,12 +9,12 @@
 }
 
 .link {
-  color: $blue;
+  color: colors.$blue;
   text-decoration: none;
 }
 
 .code {
-  background-color: $blue-white;
+  background-color: colors.$blue-white;
   height: auto;
   overflow-x: scroll;
   overflow-y: hidden;

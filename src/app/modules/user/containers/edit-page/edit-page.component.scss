@@ -1,8 +1,9 @@
-@import "src/app/styles/variables";
-@import "src/app/styles/font";
-@import "src/app/styles/colors";
+@use 'src/app/styles/variables';
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
 
-.edit-nav-card, .form-card {
+.edit-nav-card,
+.form-card {
   margin-top: 24px;
 }
 
@@ -25,11 +26,11 @@
 
 .nav-item-title {
   margin: 0 0 0 8px;
-  font-size: $fs-small;
-  font-weight: $fw-normal;
+  font-size: font.$fs-small;
+  font-weight: font.$fw-normal;
   text-transform: uppercase;
 
-  @media(max-width: $small) {
+  @media (max-width: variables.$small) {
     display: none;
   }
 }

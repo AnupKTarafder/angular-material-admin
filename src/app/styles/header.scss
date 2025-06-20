@@ -1,11 +1,14 @@
+@use 'colors';
+@use 'variables';
+
 //== Header
 
-$header-height: 64px;
-$header-button-background-color: transparent;
-$header-button-background-color-hover: $black-08;
-$header-button-font-color: $white;
-$header-button-box-shadow: none;
-$header-title-font-color: $white;
+$header-height: variables.$header-height;
+$header-button-background-color: variables.$header-button-background-color;
+$header-button-background-color-hover: variables.$header-button-background-color-hover;
+$header-button-font-color: variables.$header-button-font-color;
+$header-button-box-shadow: variables.$header-button-box-shadow;
+$header-title-font-color: variables.$header-title-font-color;
 
 $header-background-dark-theme: #31313C;
 $header-title-color-dark-theme: #889AFF;

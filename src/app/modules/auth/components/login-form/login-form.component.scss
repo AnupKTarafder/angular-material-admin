@@ -1,5 +1,5 @@
-@import '../../../../styles/colors';
-@import '../../../../styles/font';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
 
 .form {
   width: 100%;
@@ -21,7 +21,7 @@
 
   &__forget {
     font-size: 12px;
-    font-weight: $fw-lighter;
-    color: $blue;
+    font-weight: font.$fw-lighter;
+    color: colors.$blue;
   }
 }

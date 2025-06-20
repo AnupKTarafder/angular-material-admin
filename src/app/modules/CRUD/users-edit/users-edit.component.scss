@@ -1,11 +1,13 @@
-@import 'src/app/styles/font';
-@import 'src/app/styles/colors';
-@import 'src/app/styles/variables';
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
+@use 'src/app/styles/variables';
 
 .card {
   margin-top: 24px;
-  box-shadow: 0 3px 11px 0 $shadow-white, 0 3px 3px -2px $shadow-grey,
-    0 1px 8px 0 $shadow-dark-grey;
+  box-shadow:
+    0 3px 11px 0 colors.$shadow-white,
+    0 3px 3px -2px colors.$shadow-grey,
+    0 1px 8px 0 colors.$shadow-dark-grey;
 }
 
 .input-wrapper {
@@ -15,29 +17,29 @@
   justify-content: space-between;
   margin: 16px 0 8px 0;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 100%;
   }
 }
 
 .input-title {
-  font-size: $fs-regular;
-  color: $dark-grey;
+  font-size: font.$fs-regular;
+  color: colors.$dark-grey;
   margin: 0 16px 0 0;
 }
 
 .input-field {
   width: 80%;
-  font-size: $fs-xs;
+  font-size: font.$fs-xs;
 
-  @media (max-width: $small) {
+  @media (max-width: variables.$small) {
     width: 80%;
   }
 }
 
 .input-text,
 textarea {
-  font-size: $fs-regular;
+  font-size: font.$fs-regular;
 }
 
 /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
@@ -75,7 +77,7 @@ button.mat-mdc-unelevated-button + button.mat-flat-button {
   margin: 18px 0;
   display: flex;
 
-  @media (max-width: $medium) {
+  @media (max-width: variables.$medium) {
     flex-direction: column;
   }
 }
@@ -86,8 +88,8 @@ button.mat-mdc-unelevated-button + button.mat-flat-button {
 }
 
 .checkbox-item-title {
-  font-size: $fs-regular;
-  color: $dark-grey;
+  font-size: font.$fs-regular;
+  color: colors.$dark-grey;
   margin: 0 !important;
 }
 
@@ -105,21 +107,21 @@ button.mat-mdc-unelevated-button + button.mat-flat-button {
 .inputs-wrapper {
   margin-top: 36px;
 
-  @media (max-width: $normal) {
+  @media (max-width: variables.$normal) {
     display: flex;
     flex-direction: column;
   }
 }
 
 .mat-success {
-  background-color: $green;
+  background-color: colors.$green;
   color: white;
 }
 
 mat-form-field + mat-form-field {
   margin-left: 24px;
 
-  @media (max-width: $normal) {
+  @media (max-width: variables.$normal) {
     margin-top: 24px;
     margin-left: 0;
   }

@@ -1,3 +1,6 @@
+@use 'font';
+@use 'colors';
+
 @mixin calendar {
   .cal-month-view {
     background: transparent;
@@ -10,7 +13,7 @@
   span.cal-day-number {
     margin: 0 !important;
     font-family: Fira Sans, sans-serif !important;
-    font-weight: $fw-normal !important;
+    font-weight: font.$fw-normal !important;
     font-size: 12px !important;
     line-height: 14px !important;
     text-align: center !important;
@@ -19,7 +22,7 @@
   }
 
   .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
-    color: $dark-grey;
+    color: colors.$dark-grey;
   }
 
   .cal-month-view .cal-days .cal-cell-row {
@@ -39,7 +42,7 @@
   }
 
   div.cal-cell-row.cal-header {
-    color: $white-gray;
+    color: colors.$white-gray;
     margin-bottom: -10px;
 
     &:hover {
@@ -66,7 +69,7 @@
   .cal-month-view .cal-day-cell.cal-today {
     background-color: #8B9BFF;
     border-radius: 50%;
-    color: $white;
+    color: colors.$white;
     min-width: 20px;
     min-height: 20px;
     max-width: 20px;
@@ -95,6 +98,6 @@
 
 @mixin calendar-dark {
   .cal-month-view .cal-day-cell.cal-weekend .cal-day-number {
-    color: $white;
+    color: colors.$white;
   }
 }

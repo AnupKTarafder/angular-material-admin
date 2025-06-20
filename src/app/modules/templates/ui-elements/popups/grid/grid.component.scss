@@ -1,9 +1,9 @@
-@import "./src/app/styles/colors";
-@import "./src/app/styles/font";
+@use 'src/app/styles/colors';
+@use 'src/app/styles/font';
 
 .title {
-  font-size: $fs-regular;
-  color: $dark-grey;
+  font-size: font.$fs-regular;
+  color: colors.$dark-grey;
 }
 
 .button-wrapper {
@@ -13,14 +13,14 @@
 }
 
 .button + .button {
-    margin-left: 8px;
+  margin-left: 8px;
 }
 
 @mixin grid-item-2 {
   width: 93px;
   height: 100%;
   border-radius: 4px;
-  color: $white;
+  color: colors.$white;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -28,16 +28,16 @@
 
 .first-grid-item-2 {
   @include grid-item-2;
-  background-color: $blue;
+  background-color: colors.$blue;
   justify-self: flex-end;
 }
 
 .second-grid-item-2 {
   @include grid-item-2;
-  background-color: $yellow;
+  background-color: colors.$yellow;
 }
 
 .third-grid-item-2 {
   @include grid-item-2;
-  background-color: $pink;
+  background-color: colors.$pink;
 }

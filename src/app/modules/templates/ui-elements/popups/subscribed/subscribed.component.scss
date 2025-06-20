@@ -1,14 +1,14 @@
-@import "./src/app/styles/font";
-@import "./src/app/styles/colors";
+@use 'src/app/styles/font';
+@use 'src/app/styles/colors';
 
 .title {
-  font-size: $fs-regular;
-  color: $dark-grey;
+  font-size: font.$fs-regular;
+  color: colors.$dark-grey;
 }
 
 .text {
-  font-size: $fs-normal;
-  color: $grey;
+  font-size: font.$fs-normal;
+  color: colors.$grey;
 }
 
 .button-wrapper {
@@ -17,12 +17,12 @@
 }
 
 .button {
-  color: $blue;
+  color: colors.$blue;
   background-color: transparent;
   box-shadow: none;
 
   &:hover {
-    background-color: $white-gray;
+    background-color: colors.$white-gray;
   }
 
   & + .button {
