@@ -5,14 +5,10 @@ import { Email } from '../../../../modules/auth/models';
 @Component({
   selector: 'app-email',
   templateUrl: './email.component.html',
-  styleUrls: ['./email.component.scss']
+  styleUrls: ['./email.component.scss'],
+  standalone: false,
 })
 export class EmailComponent {
   @Input() emails: Email[];
-  public colors: string[] = [
-    'yellow',
-    'green',
-    'blue',
-    'ping'
-  ];
+  public colors: string[] = ['yellow', 'green', 'blue', 'ping'];
 }

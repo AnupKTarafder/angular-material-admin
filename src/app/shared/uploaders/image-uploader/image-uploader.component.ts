@@ -1,15 +1,15 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
-import { AppConfig } from '../../../app.config';
+import { AppConfig } from 'src/app/app.config';
 import { v4 as uuidv4 } from 'uuid';
 import { ImageUploaderService } from '../../services/image-uploader.service';
 import { ImageInterface } from '../../models/image.interface';
 
 @Component({
-    selector: 'app-image-uploader',
-    templateUrl: './image-uploader.component.html',
-    styleUrls: ['./image-uploader.component.scss'],
-    standalone: false
+  selector: 'app-image-uploader',
+  templateUrl: './image-uploader.component.html',
+  styleUrls: ['./image-uploader.component.scss'],
+  standalone: false,
 })
 export class ImageUploaderComponent implements OnInit {
   @Input() entityName: string;
@@ -29,7 +29,7 @@ export class ImageUploaderComponent implements OnInit {
 
   constructor(
     private appConfig: AppConfig,
-    private imageUploaderService: ImageUploaderService,
+    private imageUploaderService: ImageUploaderService
   ) {
     this.config = appConfig.getConfig();
   }

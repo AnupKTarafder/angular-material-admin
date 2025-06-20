@@ -9,10 +9,10 @@ import { MatInputModule } from '@angular/material/input';
 import { MatBadgeModule } from '@angular/material/badge';
 
 import { HeaderComponent } from './containers';
-import { UserComponent, SearchComponent } from './components';
-import { NotificationsComponent } from './components/notifications/notifications.component';
+import { NotificationsComponent, SearchComponent, UserComponent } from './components';
 import { ShortNamePipe } from './pipes';
 import { RouterModule } from '@angular/router';
+import { EmailComponent } from './components/';
 
 @NgModule({
   declarations: [
@@ -21,8 +21,16 @@ import { RouterModule } from '@angular/router';
     UserComponent,
     SearchComponent,
     ShortNamePipe,
+    EmailComponent,
   ],
-  exports: [HeaderComponent, ShortNamePipe, SearchComponent],
+  exports: [
+    HeaderComponent,
+    NotificationsComponent,
+    UserComponent,
+    SearchComponent,
+    ShortNamePipe,
+    EmailComponent,
+  ],
   imports: [
     CommonModule,
     MatToolbarModule,
