@@ -23,12 +23,7 @@ import { UserRoutingModule } from './user-routing.module';
 import { SharedModule } from '../../shared/shared.module';
 import { DeleteUserPopupComponent } from './popups';
 
-import {
-  ListPageComponent,
-  EditPageComponent,
-  AddPageComponent,
-  ProfilePageComponent
-} from './containers';
+import { ListPageComponent, EditPageComponent, AddPageComponent, ProfilePageComponent } from './containers';
 
 import {
   AccountEditFormComponent,
@@ -41,10 +36,11 @@ import {
   UserInfoComponent,
   UserMediaComponent,
   UserProjectsComponent,
-  UserTasksComponent
+  UserTasksComponent,
 } from './components';
-import {MatMenuModule} from '@angular/material/menu';
-import {CalendarModule} from 'angular-calendar';
+import { MatMenuModule } from '@angular/material/menu';
+import { CalendarModule, DateAdapter } from 'angular-calendar';
+import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 
 @NgModule({
   declarations: [
@@ -63,7 +59,7 @@ import {CalendarModule} from 'angular-calendar';
     UserInfoComponent,
     UserMediaComponent,
     UserProjectsComponent,
-    UserTasksComponent
+    UserTasksComponent,
   ],
   imports: [
     CommonModule,
@@ -87,7 +83,10 @@ import {CalendarModule} from 'angular-calendar';
     ReactiveFormsModule,
     NgApexchartsModule,
     MatMenuModule,
-    CalendarModule
-  ]
+    CalendarModule.forRoot({
+      provide: DateAdapter,
+      useFactory: adapterFactory,
+    }),
+  ],
 })
-export class UserModule { }
+export class UserModule {}

@@ -1,17 +1,16 @@
 import { Component, OnInit } from '@angular/core';
-import {routes} from '../../../../consts';
+import { routes } from '../../../../consts';
 
 @Component({
   selector: 'app-overview-page',
   templateUrl: './overview-page.component.html',
-  styleUrls: ['./overview-page.component.scss']
+  styleUrls: ['./overview-page.component.scss'],
+  standalone: false,
 })
 export class OverviewPageComponent implements OnInit {
   public routes: typeof routes = routes;
 
-  constructor() { }
+  constructor() {}
 
-  ngOnInit(): void {
-  }
-
+  ngOnInit(): void {}
 }

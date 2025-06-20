@@ -1,10 +1,11 @@
 import { Component } from '@angular/core';
-import {routes} from '../../../../consts';
+import { routes } from '../../../../consts';
 
 @Component({
   selector: 'app-tables-page',
   templateUrl: './tables-page.component.html',
-  styleUrls: ['./tables-page.component.scss']
+  styleUrls: ['./tables-page.component.scss'],
+  standalone: false,
 })
 export class TablesPageComponent {
   public routes: typeof routes = routes;
