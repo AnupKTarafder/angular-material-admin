@@ -22,6 +22,7 @@ import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { FormsModule } from '@angular/forms';
 import { HTTP_INTERCEPTORS, provideHttpClient, withInterceptorsFromDi } from '@angular/common/http';
 import { HttpInterceptorService } from './shared/services/http-interceptor.service';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({ declarations: [AppComponent, NotFoundComponent],
     bootstrap: [AppComponent], imports: [BrowserModule,
@@ -43,7 +44,8 @@ import { HttpInterceptorService } from './shared/services/http-interceptor.servi
         MatMenuModule,
         MatRadioModule,
         MatSlideToggleModule,
-        FormsModule], providers: [
+        FormsModule,
+        FontAwesomeModule], providers: [
         {
             provide: HTTP_INTERCEPTORS,
             useClass: HttpInterceptorService,
