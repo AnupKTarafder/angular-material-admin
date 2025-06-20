@@ -1,3 +1,4 @@
+@use "sass:map";
 @use 'palettes';
 @use 'mat-card';
 @use 'mat-paginator';
@@ -24,7 +25,7 @@
 @use '@angular/material' as mat;
 
 @function ama-light-theme($primary, $accent, $warn, $success, $info, $primary-light) {
-  @return map-merge(
+  @return map.merge(
     mat.m2-define-light-theme($primary, $accent, $warn),
     (
       success: $success,

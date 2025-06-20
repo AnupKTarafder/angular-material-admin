@@ -1,20 +1,15 @@
+@use 'sass:map';
 @use '@angular/material' as mat;
 @use 'sass:meta';
-@include meta.load-css('@fullcalendar/core/main.css');
-@include meta.load-css('@fullcalendar/daygrid/main.css');
-@include meta.load-css('@fullcalendar/timegrid/main.css');
-@include meta.load-css('../node_modules/angular-calendar/css/angular-calendar.css');
-@include meta.load-css('../node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css');
-@include meta.load-css('../node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css');
-
-@use './src/app/styles/colors' as colors;
+@use 'src/app/styles/colors' as colors;
 @use './src/app/styles/variables' as variables;
 @use './src/app/styles/font' as font;
 @use './src/app/styles/header' as header;
 @use './src/app/styles/sidebar' as sidebar;
 @use './src/app/styles/settings' as settings;
 @use './src/app/styles/footer' as footer;
-@use './src/app/styles/themes' as themes;
+@use './src/app/styles/themes';
+@use './src/app/styles/palettes';
 @use './src/app/styles/scrollbar' as scrollbar;
 @use './src/app/styles/calendar' as calendar;
 @use './src/app/styles/mat-tab' as mat-tab;
@@ -25,15 +20,22 @@
 @use './src/app/styles/notification' as notification;
 @use './src/app/styles/full-calendar' as full-calendar;
 
+@include meta.load-css('@fullcalendar/core/main.css');
+@include meta.load-css('@fullcalendar/daygrid/main.css');
+@include meta.load-css('@fullcalendar/timegrid/main.css');
+@include meta.load-css('../node_modules/angular-calendar/css/angular-calendar.css');
+@include meta.load-css('../node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.carousel.min.css');
+@include meta.load-css('../node_modules/ngx-owl-carousel-o/lib/styles/prebuilt-themes/owl.theme.default.min.css');
+
 // Include the core styles for Angular Material
 // We're using the default core which includes styles for both M2 and M3
 @include mat.core();
 
 // Define color palettes for M3 theme
 $ama-color-config: (
-  primary: themes.$ama-blue,
-  tertiary: themes.$ama-yellow,
-  error: themes.$ama-pink,
+  primary: palettes.$ama-blue,
+  tertiary: palettes.$ama-yellow,
+  error: palettes.$ama-pink,
 );
 
 // Define typography config for M3 theme
@@ -87,12 +89,12 @@ $ama-m3-theme-config: (
 @include mat.tree-theme($ama-m3-theme-config);
 
 // Keep M2 palettes for custom components that still use them
-$ama-primary: mat.m2-define-palette(themes.$ama-blue);
-$ama-primary-light: mat.m2-define-palette(themes.$ama-light-blue);
-$ama-accent: mat.m2-define-palette(themes.$ama-yellow);
-$ama-warn: mat.m2-define-palette(themes.$ama-pink);
-$ama-success: mat.m2-define-palette(themes.$ama-green);
-$ama-info: mat.m2-define-palette(themes.$ama-violet);
+$ama-primary: mat.m2-define-palette(palettes.$ama-blue);
+$ama-primary-light: mat.m2-define-palette(palettes.$ama-light-blue);
+$ama-accent: mat.m2-define-palette(palettes.$ama-yellow);
+$ama-warn: mat.m2-define-palette(palettes.$ama-pink);
+$ama-success: mat.m2-define-palette(palettes.$ama-green);
+$ama-info: mat.m2-define-palette(palettes.$ama-violet);
 
 // Legacy M2 theme function for custom components
 @function ama-light-theme($primary, $accent, $warn, $success, $info, $primary-light) {
@@ -106,7 +108,7 @@ $ama-info: mat.m2-define-palette(themes.$ama-violet);
     )
   );
 
-  @return map-merge(
+  @return map.merge(
     $base-theme,
     (
       success: $success,
@@ -136,9 +138,9 @@ $ama-badge-theme: ama-light-theme($ama-primary, $ama-accent, $ama-warn, $ama-suc
 
 // Define a custom badge theme mixin that adds support for our custom colors
 @mixin custom-badge-theme($theme) {
-  $success: map-get($theme, success);
-  $info: map-get($theme, info);
-  $primary-light: map-get($theme, primary-light);
+  $success: map.get($theme, success);
+  $info: map.get($theme, info);
+  $primary-light: map.get($theme, primary-light);
 
   // Add custom color variants
   .mat-badge-success {
@@ -184,7 +186,7 @@ $ama-radio-button-theme: ama-light-theme(
 
 // Define a custom radio button theme mixin that customizes the accent color to use success
 @mixin custom-radio-theme($theme) {
-  $success: map-get($theme, success);
+  $success: map.get($theme, success);
 
   // Override the accent color to use success
   .mat-mdc-radio-button {
@@ -221,8 +223,8 @@ $ama-chip-theme: ama-light-theme($ama-primary, $ama-accent, $ama-warn, $ama-succ
 
 // Define a custom chips theme mixin that adds support for our custom colors
 @mixin custom-chips-theme($theme) {
-  $success: map-get($theme, success);
-  $info: map-get($theme, info);
+  $success: map.get($theme, success);
+  $info: map.get($theme, info);
 
   // Add custom color variants for selected chips
   .mat-mdc-chip.mat-mdc-standard-chip.mat-mdc-chip-selected {
@@ -272,8 +274,8 @@ $ama-button-theme: ama-light-theme($ama-primary, $ama-accent, $ama-warn, $ama-su
 
 // Define a custom button theme mixin that adds support for our custom colors
 @mixin custom-button-theme($theme) {
-  $success: map-get($theme, success);
-  $info: map-get($theme, info);
+  $success: map.get($theme, success);
+  $info: map.get($theme, info);
 
   // Add custom color variants for buttons
   .mat-mdc-button,
