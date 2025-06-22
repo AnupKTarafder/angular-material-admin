@@ -24,7 +24,7 @@ Looking for a perfect codebase generator for your Startup? Try [Flatlogic AI Web
 1. **Clone the repo**  
    ```bash
    git clone https://github.com/AnupKTarafder/angular-material-admin.git
-   cd angular-material-admin-full
+   cd angular-material-admin
    ```
 2. **Install dependencies**  
    ```bash
