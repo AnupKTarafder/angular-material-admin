@@ -116,7 +116,7 @@
   margin-top: 27px;
   width: 183px;
 
-  @media (min-width: 1280px) and (max-width: variables.$xxl) {
+  @media (width >= 1280px) and (max-width: variables.$xxl) {
     margin-top: 20px;
     width: auto;
   }
@@ -162,7 +162,7 @@
   display: flex;
   margin-top: 42px;
 
-  @media (min-width: 1280px) and (max-width: variables.$xxl) {
+  @media (width >= 1280px) and (max-width: variables.$xxl) {
     margin-top: 18px;
   }
 }

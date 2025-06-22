@@ -6,7 +6,7 @@
   margin: 24px 0;
 
   @media (max-width: variables.$normal) {
-    margin: 0 0 24px 0;
+    margin: 0 0 24px;
   }
 
   &__header {
@@ -35,6 +35,7 @@
   &__content {
     height: 380px;
     width: 100%;
+
     @media (max-width: variables.$small) {
       overflow-x: scroll;
     }

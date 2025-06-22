@@ -6,13 +6,15 @@
     background: transparent;
   }
 
-  mwl-calendar-month-view .cal-month-view .cal-cell-row, mwl-calendar-month-view .cal-month-view .cal-cell-row mwl-calendar-month-cell, mwl-calendar-month-view .cal-month-view .cal-cell-row mwl-calendar-month-cell .cal-cell-top {
+  mwl-calendar-month-view .cal-month-view .cal-cell-row,
+  mwl-calendar-month-view .cal-month-view .cal-cell-row mwl-calendar-month-cell,
+  mwl-calendar-month-view .cal-month-view .cal-cell-row mwl-calendar-month-cell .cal-cell-top {
     min-height: 17px;
   }
 
   span.cal-day-number {
     margin: 0 !important;
-    font-family: Fira Sans, sans-serif !important;
+    font-family: 'Fira Sans', sans-serif !important;
     font-weight: font.$fw-normal !important;
     font-size: 12px !important;
     line-height: 14px !important;
@@ -50,8 +52,9 @@
     }
   }
 
-  .cal-month-view .cal-cell-row .cal-cell:hover, .cal-month-view .cal-cell.cal-has-events.cal-open {
-    background-color: #8B9BFF;
+  .cal-month-view .cal-cell-row .cal-cell:hover,
+  .cal-month-view .cal-cell.cal-has-events.cal-open {
+    background-color: #8b9bff;
   }
 
   .cal-month-view .cal-day-cell {
@@ -67,7 +70,7 @@
   }
 
   .cal-month-view .cal-day-cell.cal-today {
-    background-color: #8B9BFF;
+    background-color: #8b9bff;
     border-radius: 50%;
     color: colors.$white;
     min-width: 20px;

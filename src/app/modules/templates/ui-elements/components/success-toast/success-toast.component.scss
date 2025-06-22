@@ -2,11 +2,11 @@
 @use 'src/app/styles/toasrt';
 
 .toastr-wrapper {
-  @include toasrt.toastr-wrapper();
+  @include toasrt.toastr-wrapper;
 }
 
 .toastr-wrapper-icon {
-  @include toasrt.toastr-wrapper-icon();
+  @include toasrt.toastr-wrapper-icon;
 }
 
 .toastr-content {

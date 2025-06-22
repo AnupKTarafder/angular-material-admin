@@ -1,7 +1,7 @@
 @use 'colors';
 @use 'variables';
 
-//== Header
+// == Header
 
 $header-height: variables.$header-height;
 $header-button-background-color: variables.$header-button-background-color;
@@ -9,10 +9,8 @@ $header-button-background-color-hover: variables.$header-button-background-color
 $header-button-font-color: variables.$header-button-font-color;
 $header-button-box-shadow: variables.$header-button-box-shadow;
 $header-title-font-color: variables.$header-title-font-color;
-
-$header-background-dark-theme: #31313C;
-$header-title-color-dark-theme: #889AFF;
-
+$header-background-dark-theme: #31313c;
+$header-title-color-dark-theme: #889aff;
 
 @mixin header() {
   .header {
@@ -24,7 +22,7 @@ $header-title-color-dark-theme: #889AFF;
         background-color: $header-button-background-color-hover;
       }
 
-      &:not([class*=mat-elevation-z]) {
+      &:not([class*='mat-elevation-z']) {
         box-shadow: inherit;
       }
     }
@@ -47,7 +45,7 @@ $header-title-color-dark-theme: #889AFF;
         background-color: $header-button-background-color-hover;
       }
 
-      &:not([class*=mat-elevation-z]) {
+      &:not([class*='mat-elevation-z']) {
         box-shadow: inherit;
       }
     }

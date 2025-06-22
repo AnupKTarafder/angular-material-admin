@@ -39,18 +39,21 @@
 
 .first-grid-item {
   @include grid-item;
+
   background-color: colors.$blue;
   align-self: flex-start;
 }
 
 .second-grid-item {
   @include grid-item;
+
   background-color: colors.$yellow;
   align-self: center;
 }
 
 .third-grid-item {
   @include grid-item;
+
   background-color: colors.$pink;
   align-self: flex-end;
 }
@@ -67,26 +70,28 @@
 
 .first-grid-item-2 {
   @include grid-item-2;
+
   background-color: colors.$blue;
   justify-self: flex-end;
 }
 
 .second-grid-item-2 {
   @include grid-item-2;
+
   background-color: colors.$yellow;
 }
 
 .third-grid-item-2 {
   @include grid-item-2;
+
   background-color: colors.$pink;
 }
 
 .code-wrapper {
   background-color: colors.$blue-white;
   height: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  padding: 16px 16px 0 16px;
+  overflow: scroll hidden;
+  padding: 16px 16px 0;
 }
 
 .code {

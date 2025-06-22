@@ -15,7 +15,7 @@
 }
 
 .email-menu-header {
-  padding: 16px 16px 0 16px;
+  padding: 16px 16px 0;
 
   &__title {
     margin: 0;
@@ -28,7 +28,7 @@
     color: colors.$pink;
     font-weight: font.$fw-lighter;
     font-size: font.$fs-small;
-    margin: 4px 0 16px 0;
+    margin: 4px 0 16px;
   }
 }
 

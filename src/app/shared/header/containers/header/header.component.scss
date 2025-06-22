@@ -7,7 +7,7 @@
   justify-content: space-between;
   position: fixed;
   z-index: 2;
-  height: $header-height;
+  height: variables.$header-height;
 
   &__title {
     display: flex;
@@ -15,8 +15,8 @@
   }
 
   &__title-button {
-    background-color: $header-button-background-color;
-    box-shadow: $header-button-box-shadow;
+    background-color: variables.$header-button-background-color;
+    box-shadow: variables.$header-button-box-shadow;
 
     &:hover {
       background-color: variables.$header-button-background-color-hover;
@@ -28,11 +28,11 @@
   }
 
   &__title-button-icon {
-    color: $header-button-font-color;
+    color: variables.$header-button-font-color;
   }
 
   &__title-text {
-    color: $header-title-font-color;
+    color: variables.$header-title-font-color;
     margin-left: 32px;
     font-weight: font.$fw-lighter;
 

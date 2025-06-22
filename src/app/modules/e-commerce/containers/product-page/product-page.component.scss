@@ -64,7 +64,7 @@
   font-weight: font.$fw-lighter;
   color: colors.$dark-grey;
   text-transform: uppercase;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
 }
 
 .product-subtitle {
@@ -125,7 +125,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 4px 0 16px 0;
+  margin: 4px 0 16px;
 
   @media (max-width: variables.$small) {
     flex-wrap: wrap;
@@ -163,7 +163,7 @@
 .card-wrapper {
   display: flex;
   align-items: center;
-  margin: 0 0 10px 0;
+  margin: 0 0 10px;
 }
 
 .card {
@@ -267,7 +267,7 @@
   font-size: 26px;
   font-weight: font.$fw-lighter;
   color: colors.$light-grey;
-  margin: 38px 0 18px 0;
+  margin: 38px 0 18px;
 }
 
 .similar-products-wrapper {

@@ -24,8 +24,7 @@
 
   &__content {
     height: auto;
-    overflow-y: hidden;
-    overflow-x: scroll;
+    overflow: scroll hidden;
 
     @media (max-width: variables.$small) {
       height: auto;
@@ -59,7 +58,7 @@
     padding: 5px 10px;
     font-size: 13px;
     box-sizing: border-box;
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
     font-weight: font.$fw-lighter;
     line-height: 1.75;
     letter-spacing: 0.45px;

@@ -1,5 +1,6 @@
 @use 'colors';
-$dark-primary-text: rgba(black, 0.87);
+
+$dark-primary-text: rgb(black, 0.87);
 $light-primary-text: white;
 
 @function create-palette($color) {

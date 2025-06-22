@@ -20,11 +20,11 @@
   background-color: colors.$background-color;
   margin-top: 64px;
   height: -webkit-fill-available;
-  padding: $sidebar-content-padding;
+  padding: variables.$sidebar-content-padding;
   box-sizing: border-box;
 
   @media (max-width: variables.$small) {
     width: 100%;
-    padding: $sidebar-content-mobile-padding;
+    padding: variables.$sidebar-content-mobile-padding;
   }
 }

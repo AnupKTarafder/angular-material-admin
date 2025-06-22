@@ -7,7 +7,7 @@
   flex-direction: column;
   height: 192px;
 
-  @media (min-width: 1280px) and (max-width: variables.$xxl) {
+  @media (width >= 1280px) and (max-width: variables.$xxl) {
     height: 220px;
   }
 
@@ -41,7 +41,7 @@
       justify-content: space-between;
 
       &-text-wrapper {
-        @media (min-width: 1280px) and (max-width: variables.$xxl) {
+        @media (width >= 1280px) and (max-width: variables.$xxl) {
           width: 50%;
         }
       }
@@ -54,7 +54,7 @@
         padding-right: 16px;
         margin: 0;
 
-        @media (min-width: 1280px) and (max-width: variables.$xxl) {
+        @media (width >= 1280px) and (max-width: variables.$xxl) {
           white-space: nowrap;
           text-overflow: ellipsis;
           overflow: hidden;

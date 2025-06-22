@@ -5,7 +5,7 @@
 .revenue-chart {
   height: 192px;
 
-  @media (min-width: 1280px) and (max-width: variables.$xxl) {
+  @media (width >= 1280px) and (max-width: variables.$xxl) {
     height: 220px;
   }
 
@@ -39,6 +39,7 @@
 }
 
 .legend-wrapper {
+  // will add later
 }
 
 .legend-item-wrapper {

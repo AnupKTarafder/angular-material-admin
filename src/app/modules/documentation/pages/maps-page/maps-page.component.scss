@@ -16,8 +16,7 @@
 .code {
   background-color: colors.$blue-white;
   line-height: 33px;
-  overflow-x: scroll;
-  overflow-y: hidden;
+  overflow: scroll hidden;
   padding: 8px 16px;
   display: block;
 }

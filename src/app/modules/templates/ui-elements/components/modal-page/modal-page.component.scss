@@ -40,9 +40,8 @@ button + button {
 .code-wrapper {
   background-color: colors.$blue-white;
   height: auto;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  padding: 16px 16px 0 16px;
+  overflow: scroll hidden;
+  padding: 16px 16px 0;
 }
 
 .code {

@@ -28,16 +28,19 @@
 
 .first-grid-item-2 {
   @include grid-item-2;
+
   background-color: colors.$blue;
   justify-self: flex-end;
 }
 
 .second-grid-item-2 {
   @include grid-item-2;
+
   background-color: colors.$yellow;
 }
 
 .third-grid-item-2 {
   @include grid-item-2;
+
   background-color: colors.$pink;
 }

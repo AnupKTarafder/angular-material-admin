@@ -22,5 +22,5 @@
 }
 
 :host {
-  @include toastr($pink);
+  @include toasrt.toastr(colors.$pink);
 }

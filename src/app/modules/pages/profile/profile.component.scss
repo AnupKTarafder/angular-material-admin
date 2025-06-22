@@ -1,7 +1,6 @@
 @use 'src/app/styles/font';
 @use 'src/app/styles/colors';
 @use 'src/app/styles/variables';
-@use 'src/app/styles/variables';
 
 .card {
   margin-top: 24px;
@@ -16,7 +15,7 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin: 16px 0 8px 0;
+  margin: 16px 0 8px;
 
   @media (max-width: variables.$small) {
     width: 100%;
@@ -51,7 +50,7 @@ textarea {
 
 /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
 .mat-form-field-appearance-outline .mat-form-field-infix {
-  padding: 20px 0 16px 0;
+  padding: 20px 0 16px;
   border: none;
 }
 

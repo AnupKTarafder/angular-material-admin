@@ -6,7 +6,8 @@
   margin: 24px 0;
   height: 460px;
   background-size: cover;
-  background: url('/assets/ui-elements/cards/mac.png') round;
+  background-repeat: round;
+  background-image: url('/assets/ui-elements/cards/mac.png');
   color: colors.$white;
 
   @media (max-width: variables.$small) {
@@ -107,7 +108,7 @@ div + mat-card {
     font-weight: font.$fw-lighter;
     color: colors.$dark-grey;
     margin-bottom: 32px;
-    font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+    font-family: Roboto, Helvetica, Arial, sans-serif;
     line-height: 1.43;
     letter-spacing: 0.48px;
   }
@@ -128,6 +129,7 @@ div + mat-card {
   margin: 0;
   display: flex;
   align-items: center;
+  gap: 8px;
 
   p {
     font-size: font.$fs-regular;
@@ -141,10 +143,6 @@ div + mat-card {
       cursor: pointer;
       text-decoration: underline;
     }
-  }
-
-  p + p {
-    margin-left: 8px;
   }
 }
 
@@ -197,6 +195,7 @@ div + mat-card {
     0 3px 3px -2px colors.$shadow-grey,
     0 1px 8px 0 colors.$shadow-dark-grey;
   padding: 0;
+
   /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
   mat-card-title {
     margin: 0;
@@ -271,6 +270,7 @@ div + mat-card {
   padding: 0;
   height: fit-content;
   overflow: hidden;
+
   /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
   mat-card-title {
     margin: 0;
@@ -283,6 +283,7 @@ div + mat-card {
   .img {
     width: 100%;
   }
+
   /* TODO(mdc-migration): The following rule targets internal classes of card that may no longer apply for the MDC version. */
   mat-card-content {
     margin: 0;

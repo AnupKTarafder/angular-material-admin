@@ -1,6 +1,6 @@
 @use 'src/app/styles/colors';
 
-//== Sidebar
+// == Sidebar
 
 $sidebar-font-color: colors.$gray-08;
 $sidebar-font-color-active: colors.$dark-grey;
@@ -9,7 +9,6 @@ $sidebar-background-color-hover: colors.$blue-white;
 $sidebar-icon-color: colors.$gray-06;
 $sidebar-title-color: $sidebar-font-color;
 $sidebar-circle-color: colors.$light-grey;
-
 $sidebar-background-dark-theme: #23232d;
 $sidebar-background-hover-dark-theme: #13131a;
 $sidebar-background-active-dark-theme: #13131a;

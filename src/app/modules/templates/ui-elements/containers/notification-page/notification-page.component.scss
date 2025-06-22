@@ -38,7 +38,7 @@
     padding: 8px;
 
     @media (max-width: variables.$small) {
-      padding: 0 0 16px 0;
+      padding: 0 0 16px;
     }
   }
 
@@ -86,6 +86,7 @@
 
   &__center-top-item {
     @extend .select-position__item;
+
     border-left: 1px dashed colors.$blue;
     border-right: 1px dashed colors.$blue;
     border-top: none;
@@ -94,6 +95,7 @@
 
   &__center-bottom-item {
     @extend .select-position__item;
+
     border-left: 1px dashed colors.$blue;
     border-right: 1px dashed colors.$blue;
     border-top: 1px dashed colors.$blue;
@@ -102,6 +104,7 @@
 
   &__item-top {
     @extend .select-position__item;
+
     border-left: none;
     border-right: none;
     border-top: none;
@@ -110,6 +113,7 @@
 
   &__item-bottom {
     @extend .select-position__item;
+
     border-left: none;
     border-right: none;
     border-top: 1px dashed colors.$blue;
@@ -159,16 +163,15 @@
   margin-top: 49px;
   font-size: font.$fs-xs;
   display: block;
-  overflow-x: auto;
+  overflow: auto hidden;
   padding: 16px;
   color: colors.$dark-grey;
   background: colors.$blue-white;
   height: 240px;
-  overflow-y: hidden;
 }
 
 .code {
-  text-wrap: none;
+  text-wrap: nowrap;
 }
 
 .blue {

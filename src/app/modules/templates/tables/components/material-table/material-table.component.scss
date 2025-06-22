@@ -27,8 +27,7 @@
   }
 
   &__content {
-    overflow-y: hidden;
-    overflow-x: scroll;
+    overflow: scroll hidden;
 
     @media (max-width: variables.$small) {
       height: auto;

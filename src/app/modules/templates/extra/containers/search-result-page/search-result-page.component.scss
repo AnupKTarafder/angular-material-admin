@@ -46,7 +46,7 @@ app-type-item-select + app-time-period-select {
 }
 
 .result-title {
-  margin: 8px 0 0 0;
+  margin: 8px 0 0;
   color: colors.$dark-grey;
 }
 
@@ -73,6 +73,6 @@ app-type-item-select + app-time-period-select {
 
   @media (max-width: variables.$small) {
     width: 100%;
-    margin: 36px 0 0 0;
+    margin: 36px 0 0;
   }
 }

@@ -22,5 +22,5 @@
 }
 
 :host {
-  @include toastr($blue);
+  @include toasrt.toastr(colors.$blue);
 }

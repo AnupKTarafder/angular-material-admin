@@ -13,11 +13,11 @@
 
 .customer-info {
   display: flex;
-  padding: 24px 24px 16px 24px;
+  padding: 24px 24px 16px;
 }
 
 .comments {
-  padding: 0 24px 24px 24px;
+  padding: 0 24px 24px;
 }
 
 .avatar {
@@ -71,7 +71,7 @@
 }
 
 .content {
-  margin: 12px 0 0 0;
+  margin: 12px 0 0;
 }
 
 .content-img {
@@ -96,7 +96,7 @@
 .content-text {
   font-size: font.$fs-normal;
   color: colors.$dark-grey;
-  font-family: 'Roboto', 'Helvetica', 'Arial', sans-serif;
+  font-family: Roboto, Helvetica, Arial, sans-serif;
   font-weight: font.$fw-lighter;
   line-height: 1.5;
   letter-spacing: 0.00938em;
@@ -153,12 +153,12 @@
 }
 
 .icon {
-  color: rgba(110, 110, 110, 0.6);
+  color: rgb(110 110 110 / 60%);
 }
 
 .comment-wrapper {
   display: flex;
-  margin: 0 -8px 0 -8px;
+  margin: 0 -8px;
   padding: 16px 24px;
   border-top: 1px solid colors.$white-gray;
   border-bottom: 1px solid colors.$white-gray;
@@ -171,7 +171,7 @@
 .comment-name {
   font-size: 12.32px;
   font-weight: font.$fw-lighter;
-  margin: 0 0 4px 0;
+  margin: 0 0 4px;
   color: colors.$dark-grey;
 }
 
@@ -181,7 +181,7 @@
 }
 
 .custom-comment-wrapper {
-  padding: 8px 16px 0 16px;
+  padding: 8px 16px 0;
   height: 50px;
 
   @media (max-width: variables.$medium) {

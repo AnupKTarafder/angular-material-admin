@@ -4,11 +4,11 @@
 .settings-button {
   box-shadow: none;
   background-color: transparent;
-  color: $settings-button-color;
+  color: variables.$settings-button-color;
 
   &:hover {
     background-color: colors.$blue;
-    color: $settings-button-color-hover;
+    color: variables.$settings-button-color-hover;
   }
 
   &__icon {
@@ -23,7 +23,7 @@
     color: colors.$dark-grey;
 
     &:hover {
-      background-color: $settings-menu-background-color-hover;
+      background-color: variables.$settings-menu-background-color-hover;
     }
   }
 }

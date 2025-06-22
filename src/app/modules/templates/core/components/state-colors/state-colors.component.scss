@@ -49,11 +49,13 @@
 
 .pre-usage {
   @include pre;
+
   width: 260px;
 }
 
 .pre-hex {
   @include pre;
+
   width: 55px;
 }
 

@@ -13,20 +13,21 @@
 
 .first-grid-item {
   @include grid-item;
+
   background-color: colors.$blue;
 }
 
 .second-grid-item {
   @include grid-item;
+
   background-color: colors.$pink;
 }
 
 .code-wrapper {
   background-color: colors.$blue-white;
   height: 145px;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  padding: 16px 16px 0 16px;
+  overflow: scroll hidden;
+  padding: 16px 16px 0;
 }
 
 .code {

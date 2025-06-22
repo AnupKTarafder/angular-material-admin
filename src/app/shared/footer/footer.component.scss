@@ -2,7 +2,7 @@
 @use 'src/app/styles/variables';
 
 .footer {
-  height: $footer-height;
+  height: variables.$footer-height;
   margin-top: 40px;
   display: flex;
   justify-content: space-between;
@@ -44,11 +44,11 @@
   height: 46px;
 
   &:hover {
-    background-color: $footer-icon-background-color-hover;
+    background-color: variables.$footer-icon-background-color-hover;
   }
 }
 
 .mat-icon {
-  color: $footer-icon-color;
-  padding: 3px 0 0 0;
+  color: variables.$footer-icon-color;
+  padding: 3px 0 0;
 }

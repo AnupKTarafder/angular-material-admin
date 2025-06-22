@@ -10,7 +10,7 @@
 @mixin toastr($color) {
   position: relative;
   overflow: hidden;
-  margin: 16px 0 6px 0;
+  margin: 16px 0 6px;
   pointer-events: all;
   cursor: pointer;
   width: 257px;

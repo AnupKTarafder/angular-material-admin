@@ -1,4 +1,4 @@
-@use "sass:map";
+@use 'sass:map';
 @use 'palettes';
 @use 'mat-card';
 @use 'mat-paginator';
@@ -35,9 +35,11 @@
   );
 }
 
-/***********************************/
+/**********************************  */
+
 /**        BLUE THEME            **/
-/**********************************/
+
+/*********************************  */
 
 $blue-theme-primary: mat.m2-define-palette(palettes.$ama-blue);
 $blue-theme-primary-light: mat.m2-define-palette(palettes.$ama-light-blue);
@@ -45,7 +47,13 @@ $blue-theme-accent: mat.m2-define-palette(palettes.$ama-yellow);
 $blue-theme-warn: mat.m2-define-palette(palettes.$ama-pink);
 $blue-theme-success: mat.m2-define-palette(palettes.$ama-green);
 $blue-theme-info: mat.m2-define-palette(palettes.$ama-violet);
-
+$ama-typography-config: (
+  plain-family: roboto,
+  brand-family: roboto,
+  bold-weight: 700,
+  medium-weight: 500,
+  regular-weight: 400,
+);
 $blue-theme: ama-light-theme(
   $blue-theme-primary,
   $blue-theme-accent,
@@ -55,36 +63,46 @@ $blue-theme: ama-light-theme(
   $blue-theme-primary-light
 );
 
+@mixin _common-theme($theme, $color) {
+  @include mat.theme(
+    (
+      color: $theme,
+      typography: $ama-typography-config,
+    )
+  );
+  @include header.header;
+  @include mat-card.mat-card;
+  @include mat-paginator.mat-paginator;
+  @include mat-table.mat-table;
+  @include mat-toolbar.mat-toolbar;
+  @include mat-button.mat-button;
+  @include mat-button-toggle.mat-toggle;
+  @include mat-spinner.mat-spinner;
+  @include mat-tab.mat-tab-without-border;
+  @include mat-tab.mat-tab-color-label($color);
+  @include mat-tab.mat-tab-label-active-color($color);
+  @include mat-tooltip.mat-tooltip;
+  @include mat-expansion-panel.mat-expansion-panel;
+  @include breadcrumb.breadcrumb;
+  @include mat-badge.mat-badge;
+  @include sidebar.sidebar($color);
+  @include footer.footer($color);
+  @include settings.settings($color);
+  @include mat-select.mat-select;
+  @include mat-tab.mat-tab-label;
+}
+
 @mixin blueTheme() {
   .blueTheme {
-    @include mat.theme($blue-theme);
-
-    @include header.header();
-    @include mat-card.mat-card();
-    @include mat-paginator.mat-paginator();
-    @include mat-table.mat-table();
-    @include mat-toolbar.mat-toolbar();
-    @include mat-button.mat-button();
-    @include mat-button-toggle.mat-toggle();
-    @include mat-spinner.mat-spinner;
-    @include mat-tab.mat-tab-without-border();
-    @include mat-tab.mat-tab-color-label(colors.$blue);
-    @include mat-tab.mat-tab-label-active-color(colors.$blue);
-    @include mat-tooltip.mat-tooltip;
-    @include mat-expansion-panel.mat-expansion-panel;
-    @include breadcrumb.breadcrumb();
-    @include mat-badge.mat-badge();
-    @include sidebar.sidebar(colors.$blue);
-    @include footer.footer(colors.$blue);
-    @include settings.settings(colors.$blue);
-    @include mat-select.mat-select;
-    @include mat-tab.mat-tab-label;
+    @include _common-theme($blue-theme, colors.$blue);
   }
 }
 
-/***********************************/
+/**********************************  */
+
 /**        PINK THEME            **/
-/**********************************/
+
+/*********************************  */
 
 $pink-theme-primary: mat.m2-define-palette(palettes.$ama-pink);
 $pink-theme-primary-light: mat.m2-define-palette(palettes.$ama-light-blue);
@@ -92,7 +110,6 @@ $pink-theme-accent: mat.m2-define-palette(palettes.$ama-yellow);
 $pink-theme-warn: mat.m2-define-palette(palettes.$ama-blue);
 $pink-theme-success: mat.m2-define-palette(palettes.$ama-green);
 $pink-theme-info: mat.m2-define-palette(palettes.$ama-violet);
-
 $pink-theme: ama-light-theme(
   $pink-theme-primary,
   $pink-theme-accent,
@@ -104,33 +121,15 @@ $pink-theme: ama-light-theme(
 
 @mixin pinkTheme() {
   .pinkTheme {
-    @include mat.theme($pink-theme);
-
-    @include header.header();
-    @include mat-card.mat-card();
-    @include mat-paginator.mat-paginator();
-    @include mat-table.mat-table();
-    @include mat-button-toggle.mat-toggle();
-    @include mat-spinner.mat-spinner;
-    @include mat-button.mat-button();
-    @include mat-tooltip.mat-tooltip;
-    @include mat-expansion-panel.mat-expansion-panel;
-    @include mat-tab.mat-tab-without-border();
-    @include mat-tab.mat-tab-color-label(colors.$pink);
-    @include mat-tab.mat-tab-label-active-color(colors.$pink);
-    @include breadcrumb.breadcrumb();
-    @include sidebar.sidebar(colors.$pink);
-    @include mat-badge.mat-badge();
-    @include footer.footer(colors.$pink);
-    @include settings.settings(colors.$pink);
-    @include mat-select.mat-select;
-    @include mat-tab.mat-tab-label;
+    @include _common-theme($pink-theme, colors.$pink);
   }
 }
 
-/***********************************/
+/**********************************  */
+
 /**       GREEN THEME            **/
-/**********************************/
+
+/*********************************  */
 
 $green-theme-primary: mat.m2-define-palette(palettes.$ama-green);
 $green-theme-primary-light: mat.m2-define-palette(palettes.$ama-light-blue);
@@ -138,7 +137,6 @@ $green-theme-accent: mat.m2-define-palette(palettes.$ama-yellow);
 $green-theme-warn: mat.m2-define-palette(palettes.$ama-pink);
 $green-theme-success: mat.m2-define-palette(palettes.$ama-blue);
 $green-theme-info: mat.m2-define-palette(palettes.$ama-violet);
-
 $green-theme: ama-light-theme(
   $green-theme-primary,
   $green-theme-accent,
@@ -150,68 +148,54 @@ $green-theme: ama-light-theme(
 
 @mixin greenTheme() {
   .greenTheme {
-    @include mat.theme($green-theme);
-
-    @include header.header();
-    @include mat-card.mat-card();
-    @include mat-paginator.mat-paginator();
-    @include mat-table.mat-table();
-    @include mat-tab.mat-tab-without-border();
-    @include mat-button-toggle.mat-toggle();
-    @include mat-spinner.mat-spinner;
-    @include mat-tooltip.mat-tooltip;
-    @include mat-tab.mat-tab-label-active-color(colors.$green);
-    @include mat-expansion-panel.mat-expansion-panel;
-    @include mat-tab.mat-tab-color-label(colors.$green);
-    @include breadcrumb.breadcrumb();
-    @include sidebar.sidebar(colors.$green);
-    @include mat-badge.mat-badge();
-    @include mat-button.mat-button();
-    @include footer.footer(colors.$green);
-    @include settings.settings(colors.$green);
-    @include mat-select.mat-select;
-    @include mat-tab.mat-tab-label;
+    @include _common-theme($green-theme, colors.$green);
   }
 }
 
-/***********************************/
+/**********************************  */
+
 /**          DARK MODE           **/
-/**********************************/
+
+/*********************************  */
 
 @mixin darkMode() {
   .darkMode {
-    @include header.header-dark();
-    @include mat-card.mat-card-dark();
-    @include sidebar.sidebar-dark();
-    @include scrollbar.scrollbar-dark();
-    @include breadcrumb.breadcrumb-dark();
-    @include mat-paginator.mat-paginator-dark();
-    @include mat-table.mat-table-dark();
-    @include mat-tab.mat-tab-without-border();
-    @include mat-button-toggle.mat-toggle();
+    @include header.header-dark;
+    @include mat-card.mat-card-dark;
+    @include sidebar.sidebar-dark;
+    @include scrollbar.scrollbar-dark;
+    @include breadcrumb.breadcrumb-dark;
+    @include mat-paginator.mat-paginator-dark;
+    @include mat-table.mat-table-dark;
+    @include mat-tab.mat-tab-without-border;
+    @include mat-button-toggle.mat-toggle;
     @include mat-tooltip.mat-tooltip;
     @include mat-tab.mat-tab-label-active-color(colors.$white);
-    @include mat-badge.mat-badge();
-    @include mat-select.mat-select-dark();
-    @include mat-form-field.mat-form-field-dark-theme();
+    @include mat-badge.mat-badge;
+    @include mat-select.mat-select-dark;
+    @include mat-form-field.mat-form-field-dark-theme;
     @include mat-expansion-panel.mat-expansion-panel-dark;
     @include mat-select.mat-select;
     @include mat-tab.mat-tab-label-dark;
     @include mat-button.mat-button-dark;
     @include calendar.calendar-dark;
-    /*TODO(mdc-migration): The following rule targets internal classes of checkbox that may no longer apply for the MDC version.*/
+
+    /* TODO(mdc-migration): The following rule targets internal classes of checkbox that may no longer apply for the MDC version. */
     .mat-checkbox-frame {
       border-color: colors.$white;
     }
-    /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
+
+    /* TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version. */
     .mat-radio-outer-circle {
       border-color: colors.$white;
     }
-    /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
+
+    /* TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version. */
     .mat-mdc-radio-button.mat-radio-disabled .mat-radio-outer-circle {
       border-color: colors.$white-50;
     }
-    /*TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version.*/
+
+    /* TODO(mdc-migration): The following rule targets internal classes of radio that may no longer apply for the MDC version. */
     .mat-mdc-radio-button.mat-radio-disabled .mat-radio-label-content {
       color: colors.$white-50;
     }
