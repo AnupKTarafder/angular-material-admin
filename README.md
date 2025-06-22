@@ -1,3 +1,6 @@
+# Updates for the following package to the latest angular with replacement to deprecated libraries. 
+I will try to maintain this as long as possible. However, any PRs are welcome that will increase functionality and compatibility. 
+
 # 🚀 Angular Material Admin - A Free Angular Material Dashboard!
 
 [View Demo](https://flatlogic.com/templates/angular-material-admin-full/demo) | [Download](https://github.com/flatlogic/angular-material-admin-full/archive/refs/heads/master.zip) | [More Templates](https://flatlogic.com/templates) | [Discord Community](https://discord.gg/flatlogic-community) | [Support Forum](https://flatlogic.com/forum)
