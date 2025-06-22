@@ -1,31 +1,38 @@
-import {AfterViewInit, Component, ElementRef, OnInit, ViewChild} from '@angular/core';
-import dayGridPlugin, {DayGridView} from '@fullcalendar/daygrid';
-import {PluginDef} from '@fullcalendar/core/plugin-system';
-import {colors, routes} from '../../../../../consts';
-import {Calendar, EventApi, View} from '@fullcalendar/core';
-import {UntypedFormBuilder, UntypedFormGroup} from '@angular/forms';
-import {MatDialog} from '@angular/material/dialog';
-import {DayInfoComponent} from '../../components/day-info/day-info.component';
-import {NewDayEventComponent} from '../../components/new-day-event/new-day-event.component';
-import {FullCalendarComponent} from '@fullcalendar/angular';
+import { AfterViewInit, Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import dayGridPlugin from '@fullcalendar/daygrid';
+import { colors, routes } from '../../../../../consts';
+import { Calendar, CalendarOptions, EventApi, PluginDef, ViewApi as View } from '@fullcalendar/core';
+import { UntypedFormBuilder, UntypedFormGroup } from '@angular/forms';
+import { MatDialog } from '@angular/material/dialog';
+import { DayInfoComponent } from '../../components/day-info/day-info.component';
+import { NewDayEventComponent } from '../../components/new-day-event/new-day-event.component';
+import { FullCalendarComponent } from '@fullcalendar/angular';
 
 import timeGridPlugin from '@fullcalendar/timegrid';
 
-
 import interactionPlugin, { Draggable } from '@fullcalendar/interaction';
-import {take} from 'rxjs/operators';
+import { take } from 'rxjs/operators';
+import { DayGridView } from '@fullcalendar/daygrid/internal';
 
 enum CalendarViewsTypes {
   month = 'dayGridMonth',
   weeks = 'timeGridWeek',
-  days = 'timeGridDay'
+  days = 'timeGridDay',
+}
+
+interface DragEventExtended extends DragEvent {
+  date?: Date;
+  dateStr?: string;
+  allDay?: boolean;
+  draggedEl?: HTMLElement;
+  jsEvent?: MouseEvent;
 }
 
 @Component({
-    selector: 'app-calendar-page',
-    templateUrl: './calendar-page.component.html',
-    styleUrls: ['./calendar-page.component.scss'],
-    standalone: false
+  selector: 'app-calendar-page',
+  templateUrl: './calendar-page.component.html',
+  styleUrls: ['./calendar-page.component.scss'],
+  standalone: false,
 })
 export class CalendarPageComponent implements OnInit, AfterViewInit {
   @ViewChild('calendar', { static: false }) public calendarComponent: FullCalendarComponent;
@@ -46,14 +53,15 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
   public m = this.currentDate.getMonth();
   public y = this.currentDate.getFullYear();
 
-  public events = [{
-    title: 'All Day Event',
-    start: new Date(this.y, this.m, 1),
-    backgroundColor: colors.BLUE,
-    textColor: '#fff',
-    borderColor: 'transparent',
-    description: 'Will be busy throughout the whole day'
-  },
+  public events: CalendarOptions['events'] = [
+    {
+      title: 'All Day Event',
+      start: new Date(this.y, this.m, 1),
+      backgroundColor: colors.BLUE,
+      textColor: '#fff',
+      borderColor: 'transparent',
+      description: 'Will be busy throughout the whole day',
+    },
     {
       title: 'Long Event',
       start: new Date(this.y, this.m, this.d + 5),
@@ -61,27 +69,27 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
       textColor: '#fff',
       borderColor: 'transparent',
       end: new Date(this.y, this.m, this.d + 7),
-      description: 'This conference should be worse visiting'
+      description: 'This conference should be worse visiting',
     },
     {
-      id: 999,
+      id: '999',
       title: 'Blah Blah Car',
       start: new Date(this.y, this.m, this.d - 3, 16, 0),
       backgroundColor: colors.YELLOW,
       textColor: '#fff',
       borderColor: 'transparent',
       allDay: false,
-      description: 'Agree with this guy on arrival time'
+      description: 'Agree with this guy on arrival time',
     },
     {
-      id: 1000,
+      id: '1000',
       title: 'Buy this template',
       start: new Date(this.y, this.m, this.d + 3, 12, 0),
       allDay: false,
       backgroundColor: colors.GREEN,
       textColor: '#fff',
       borderColor: 'transparent',
-      description: 'Make sure everything is consistent first'
+      description: 'Make sure everything is consistent first',
     },
     {
       title: 'Got to school',
@@ -90,7 +98,7 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
       backgroundColor: colors.GREEN,
       textColor: '#fff',
       borderColor: 'transparent',
-      description: 'Time to go back'
+      description: 'Time to go back',
     },
     {
       title: 'Study some Node',
@@ -99,13 +107,14 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
       backgroundColor: colors.BLUE,
       textColor: '#fff',
       borderColor: 'transparent',
-      description: 'Node.js is a platform built ' +
-        'on Chrome\'s JavaScript runtime for easily' +
+      description:
+        'Node.js is a platform built ' +
+        "on Chrome's JavaScript runtime for easily" +
         ' building fast, scalable network applications.' +
         ' Node.js uses an event-driven, non-blocking' +
         ' I/O model that makes it lightweight and' +
         ' efficient, perfect for data-intensive real-time' +
-        ' applications that run across distributed devices.'
+        ' applications that run across distributed devices.',
     },
     {
       title: 'Click for Flatlogic',
@@ -115,20 +124,33 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
       backgroundColor: colors.PINK,
       textColor: '#fff',
       borderColor: 'transparent',
-      description: 'Creative solutions'
-    }];
+      description: 'Creative solutions',
+    },
+  ];
+
+  options: CalendarOptions = {
+    events: this.events,
+    droppable: true,
+    initialView: 'dayGridMonth',
+    plugins: this.calendarPlugins,
+    drop: this.onDrop.bind(this),
+    select: this.onSelect.bind(this),
+    selectable: true,
+    editable: true,
+    eventClick: this.onEventClick.bind(this),
+  };
 
   constructor(
     private fb: UntypedFormBuilder,
     public dialog: MatDialog
-  ) { }
+  ) {}
 
   ngOnInit(): void {
     this.eventForm = this.fb.group({
       title: [null],
       start: [null],
       end: [null],
-      allDay: [true]
+      allDay: [true],
     });
   }
 
@@ -139,25 +161,21 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
       eventData: function (el: HTMLElement) {
         return {
           title: el.innerText,
-          className: el.dataset['eventClass']
+          className: el.dataset['eventClass'],
         };
-      }
+      },
     });
   }
 
-
-  public onDrop({ draggedEl }: {
-    date: Date;
-    dateStr: string;
-    allDay: boolean;
-    draggedEl: HTMLElement;
-    jsEvent: MouseEvent;
-    view: View;
-  }): void {
+  public onDrop({ draggedEl }: DragEventExtended): void {
     draggedEl.parentNode.removeChild(draggedEl);
   }
 
-  public onSelect({ start, end, allDay }: {
+  public onSelect({
+    start,
+    end,
+    allDay,
+  }: {
     start: Date;
     end: Date;
     startStr: string;
@@ -170,17 +188,12 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
     this.eventForm.patchValue({
       start,
       end,
-      allDay
+      allDay,
     });
     this.openNewEventDialog();
   }
 
-  public onEventClick({ event }: {
-    el: HTMLElement;
-    event: EventApi;
-    jsEvent: MouseEvent;
-    view: DayGridView;
-  }): void {
+  public onEventClick({ event }: { el: HTMLElement; event: EventApi; jsEvent: MouseEvent; view: DayGridView }): void {
     this.currentEvent = event;
     this.openDayInfoDialog(event);
   }
@@ -190,21 +203,20 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
       width: '300px',
       data: {
         start: event.start,
-        title: event._def.title,
-        description: event._def.extendedProps.description
-      }
+        title: event.title,
+        description: event.extendedProps.description,
+      },
     });
   }
 
   public openNewEventDialog(): void {
     const dialogRef = this.dialog.open(NewDayEventComponent, {
-      data: {event: ''}
+      data: { event: '' },
     });
 
-    dialogRef.afterClosed()
-      .pipe(
-        take(1)
-      )
+    dialogRef
+      .afterClosed()
+      .pipe(take(1))
       .subscribe((result: string) => {
         const title: string = result;
         const { start, end, allDay, backgroundColor, textColor } = this.eventForm.value;
@@ -216,7 +228,7 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
             end,
             allDay,
             backgroundColor,
-            textColor
+            textColor,
           });
         }
       });
@@ -231,7 +243,6 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
     this.calendarApi.today();
   }
 
-
   public prev(): void {
     this.calendarApi.prev();
   }
@@ -239,6 +250,4 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
   public next(): void {
     this.calendarApi.next();
   }
-
-
 }

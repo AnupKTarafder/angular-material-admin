@@ -34,28 +34,20 @@ import {
   ModalPageComponent,
   TooltipsPageComponent,
   TabsPageComponent,
-  WidgetPageComponent
+  WidgetPageComponent,
 } from './components';
 import { NavbarPageComponent } from './components/navbar-page/navbar-page.component';
 
-import {
-  LocationComponent,
-  LongContentComponent,
-  FormComponent,
-  SubscribedComponent,
-  GridComponent
-} from './popups';
+import { LocationComponent, LongContentComponent, FormComponent, SubscribedComponent, GridComponent } from './popups';
 
-
-import { MatTooltip, MatTooltipModule } from '@angular/material/tooltip';
+import { MatTooltipModule } from '@angular/material/tooltip';
 
 import { MatExpansionModule } from '@angular/material/expansion';
 import { ProgressPageComponent } from './components';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
-
-import { PopoverModule } from 'ngx-smart-popover';
+import { PopoverModule } from '@easiangular/ngx-smart-popover';
 
 @NgModule({
   declarations: [
@@ -77,31 +69,31 @@ import { PopoverModule } from 'ngx-smart-popover';
     TooltipsPageComponent,
     TabsPageComponent,
     ProgressPageComponent,
-    WidgetPageComponent
+    WidgetPageComponent,
   ],
-    imports: [
-      CarouselModule,
-      CommonModule,
-      UiElementsRoutingModule,
-      MatToolbarModule,
-      SharedModule,
-      MatButtonModule,
-      MatCardModule,
-      MatTabsModule,
-      MatIconModule,
-      MatBadgeModule,
-      MatChipsModule,
-      MatDialogModule,
-      MatFormFieldModule,
-      MatInputModule,
-      FormsModule,
-      MatGridListModule,
-      MatTooltipModule,
-      MatExpansionModule,
-      MatProgressSpinnerModule,
-      MatProgressBarModule,
-      MatMenuModule,
-      PopoverModule
-    ]
+  imports: [
+    CarouselModule,
+    CommonModule,
+    UiElementsRoutingModule,
+    MatToolbarModule,
+    SharedModule,
+    MatButtonModule,
+    MatCardModule,
+    MatTabsModule,
+    MatIconModule,
+    MatBadgeModule,
+    MatChipsModule,
+    MatDialogModule,
+    MatFormFieldModule,
+    MatInputModule,
+    FormsModule,
+    MatGridListModule,
+    MatTooltipModule,
+    MatExpansionModule,
+    MatProgressSpinnerModule,
+    MatProgressBarModule,
+    MatMenuModule,
+    PopoverModule,
+  ],
 })
-export class UiElementsModule { }
+export class UiElementsModule {}

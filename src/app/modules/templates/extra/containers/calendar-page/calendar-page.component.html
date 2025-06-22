@@ -43,17 +43,8 @@
       </div>
     </div>
     <full-calendar
-      defaultView="dayGridMonth"
       #calendar
-      [plugins]="calendarPlugins"
-      [events]="events"
-      (drop)="onDrop($event)"
-      [droppable]="true"
-      (select)="onSelect($event)"
-      [selectable]="true"
-      [editable]="true"
-      (eventClick)="onEventClick($event)"
-      [header]="null"
+      [options]="options"
     ></full-calendar>
   </mat-card>
 </div>
