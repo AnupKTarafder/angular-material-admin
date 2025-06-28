@@ -82,8 +82,6 @@ export class DailyLineChartComponent implements OnInit, OnChanges, AfterViewInit
   }
 
   public ngAfterViewInit() {
-    debugger;
-
     this.chartObj = new ApexCharts(this.chart.nativeElement, this.chartOptions);
     this.chartObj.render();
     this.updateChartOptions();

@@ -19,6 +19,9 @@
             "outputPath": {
               "base": "build"
             },
+            "allowedCommonJsDependencies": [
+              "polylabel"
+            ],
             "index": "src/index.html",
             "tsConfig": "tsconfig.app.json",
             "aot": true,
