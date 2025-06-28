@@ -4,10 +4,10 @@ import { AuthService } from '../../../shared/services/auth.service';
 import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
-    selector: 'app-home',
-    templateUrl: './home.component.html',
-    styleUrls: ['./home.component.scss'],
-    standalone: false
+  selector: 'app-home',
+  templateUrl: './home.component.html',
+  styleUrls: ['./home.component.scss'],
+  standalone: false,
 })
 export class HomeComponent implements OnInit {
   public routes: typeof routes = routes;
@@ -15,15 +15,15 @@ export class HomeComponent implements OnInit {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {
     if (this.authService.isAuthenticated()) {
       this.authService.receiveLogin();
     }
 
     this.route.queryParams.subscribe((params) => {
-      if (params.token) {
-        this.authService.receiveToken(params.token);
+      if (params['token']) {
+        this.authService.receiveToken(params['token']);
       }
     });
   }

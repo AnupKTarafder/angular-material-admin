@@ -23,14 +23,13 @@ import {
   RevenueChartComponent,
   DailyLineChartComponent,
   SupportRequestsComponent,
-  ProjectStatChartComponent
+  ProjectStatChartComponent,
 } from './components';
 import { SharedModule } from '../../shared/shared.module';
 import { DashboardService } from './services';
-import {MatTabsModule} from '@angular/material/tabs';
-import {MatCheckboxModule} from '@angular/material/checkbox';
-import {MatSortModule} from '@angular/material/sort';
-
+import { MatTabsModule } from '@angular/material/tabs';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSortModule } from '@angular/material/sort';
 
 @NgModule({
   declarations: [
@@ -41,34 +40,32 @@ import {MatSortModule} from '@angular/material/sort';
     RevenueChartComponent,
     DailyLineChartComponent,
     SupportRequestsComponent,
-    ProjectStatChartComponent
+    ProjectStatChartComponent,
   ],
-    imports: [
-        CommonModule,
-        MatTableModule,
-        NgxEchartsModule,
-        TrendModule,
-        MatCardModule,
-        MatIconModule,
-        MatMenuModule,
-        MatButtonModule,
-        MatProgressBarModule,
-        MatToolbarModule,
-        MatGridListModule,
-        MatSelectModule,
-        MatInputModule,
-        NgApexchartsModule,
-        FormsModule,
-        SharedModule,
-        MatTabsModule,
-        MatCheckboxModule,
-        MatSortModule
-    ],
-  exports: [
-    DailyLineChartComponent
+  imports: [
+    CommonModule,
+    MatTableModule,
+    NgxEchartsModule.forRoot({
+      echarts: () => import('echarts'),
+    }),
+    TrendModule,
+    MatCardModule,
+    MatIconModule,
+    MatMenuModule,
+    MatButtonModule,
+    MatProgressBarModule,
+    MatToolbarModule,
+    MatGridListModule,
+    MatSelectModule,
+    MatInputModule,
+    NgApexchartsModule,
+    FormsModule,
+    SharedModule,
+    MatTabsModule,
+    MatCheckboxModule,
+    MatSortModule,
   ],
-  providers: [
-    DashboardService
-  ]
+  exports: [DailyLineChartComponent],
+  providers: [DashboardService],
 })
-export class DashboardModule { }
+export class DashboardModule {}

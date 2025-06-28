@@ -204,7 +204,7 @@ export class CalendarPageComponent implements OnInit, AfterViewInit {
       data: {
         start: event.start,
         title: event.title,
-        description: event.extendedProps.description,
+        description: event.extendedProps['description'],
       },
     });
   }

@@ -16,7 +16,7 @@
           class="input-field text-field"
           >
           <input
-            (keyup)="onKeyUp($event.target.value, i, filter)"
+            (keyup)="onKeyUp($event.target['value'], i, filter)"
             matInput
             placeholder="Contains"
             class="input-text"
@@ -29,7 +29,7 @@
           class="input-field number-field"
           >
           <input
-            (keyup)="onKeyUp('', i, filter, $event.target.value)"
+            (keyup)="onKeyUp('', i, filter, $event.target['value'])"
             matInput
             placeholder="From"
             class="input-number"
@@ -42,7 +42,7 @@
           class="input-field number-field"
           >
           <input
-            (keyup)="onKeyUp('', i, filter, '', $event.target.value)"
+            (keyup)="onKeyUp('', i, filter, '', $event.target['value'])"
             matInput
             placeholder="To"
             class="input-number"

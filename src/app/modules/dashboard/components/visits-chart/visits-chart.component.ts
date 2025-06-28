@@ -1,14 +1,14 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild} from '@angular/core';
+import { AfterViewInit, Component, ElementRef, Input, OnChanges, SimpleChanges, ViewChild } from '@angular/core';
 
 import { VisitsChartData } from '../../models';
 import { colors } from '../../../../consts';
 import { ChartOptions } from '../../../templates/charts/models/chart-options';
 
 @Component({
-    selector: 'app-visits-chart',
-    templateUrl: './visits-chart.component.html',
-    styleUrls: ['./visits-chart.component.scss'],
-    standalone: false
+  selector: 'app-visits-chart',
+  templateUrl: './visits-chart.component.html',
+  styleUrls: ['./visits-chart.component.scss'],
+  standalone: false,
 })
 export class VisitsChartComponent implements OnChanges, AfterViewInit {
   @Input() visitsChartData: VisitsChartData;
@@ -26,26 +26,19 @@ export class VisitsChartComponent implements OnChanges, AfterViewInit {
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    if (changes.currentTheme.currentValue && this.chartObj) {
+    if (changes['currentTheme'].currentValue && this.chartObj) {
       this.chartObj.updateOptions({
         fill: {
           colors: [
-            this.currentTheme === 'blue'
-              ? colors.BLUE
-              : this.currentTheme === 'green'
-              ? colors.GREEN
-              : colors.PINK
-          ]
-        }
+            this.currentTheme === 'blue' ? colors.BLUE : this.currentTheme === 'green' ? colors.GREEN : colors.PINK,
+          ],
+        },
       });
     }
   }
 
   public ngAfterViewInit() {
-    this.chartObj = new ApexCharts(
-      this.chart.nativeElement,
-      this.chartOptions
-    );
+    this.chartObj = new ApexCharts(this.chart.nativeElement, this.chartOptions);
 
     this.chartObj.render();
   }
@@ -57,7 +50,7 @@ export class VisitsChartComponent implements OnChanges, AfterViewInit {
         height: 130,
         width: 130,
         type: 'radialBar',
-        offsetY: -10
+        offsetY: -10,
       },
       plotOptions: {
         radialBar: {
@@ -67,7 +60,7 @@ export class VisitsChartComponent implements OnChanges, AfterViewInit {
             name: {
               fontSize: '16px',
               color: undefined,
-              offsetY: 120
+              offsetY: 120,
             },
             value: {
               offsetY: 76,
@@ -75,24 +68,20 @@ export class VisitsChartComponent implements OnChanges, AfterViewInit {
               color: undefined,
               formatter(val) {
                 return val + '%';
-              }
+              },
             },
-            show: false
-          }
-        }
+            show: false,
+          },
+        },
       },
       fill: {
         colors: [
-          this.currentTheme === 'blue'
-            ? colors.BLUE
-            : this.currentTheme === 'green'
-            ? colors.GREEN
-            : colors.PINK
-        ]
+          this.currentTheme === 'blue' ? colors.BLUE : this.currentTheme === 'green' ? colors.GREEN : colors.PINK,
+        ],
       },
       stroke: {
-        dashArray: 3
-      }
+        dashArray: 3,
+      },
     };
   }
 }

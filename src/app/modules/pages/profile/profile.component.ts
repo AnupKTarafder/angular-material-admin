@@ -1,11 +1,6 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  UntypedFormBuilder,
-  FormControl,
-  UntypedFormGroup,
-  Validators,
-} from '@angular/forms';
+import { UntypedFormBuilder, FormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { AuthService } from '../../../shared/services/auth.service';
 import { UsersService } from '../../../shared/services/users.service';
@@ -13,11 +8,11 @@ import { DataFormatterService } from '../../../shared/services/data-formatter.se
 import { routes } from '../../../consts';
 
 @Component({
-    selector: '[profile]',
-    templateUrl: './profile.component.html',
-    encapsulation: ViewEncapsulation.None,
-    styleUrls: ['./profile.component.scss'],
-    standalone: false
+  selector: '[profile]',
+  templateUrl: './profile.component.html',
+  encapsulation: ViewEncapsulation.None,
+  styleUrls: ['./profile.component.scss'],
+  standalone: false,
 })
 export class ProfileComponent {
   public routes: typeof routes = routes;
@@ -35,7 +30,7 @@ export class ProfileComponent {
     private dataFormatterService: DataFormatterService,
 
     private authService: AuthService,
-    private usersService: UsersService,
+    private usersService: UsersService
   ) {
     this.form = this.formBuilder.group({
       id: [''],
@@ -64,15 +59,13 @@ export class ProfileComponent {
     this.form.value.avatar.push(val);
   }
   avatarDel(id) {
-    this.form.value.avatar = this.form.value.avatar.filter(
-      (img) => img.id !== id,
-    );
+    this.form.value.avatar = this.form.value.avatar.filter((img) => img.id !== id);
   }
 
   onSave(): void {
     const currentUser = this.form.value;
-    if (this.form.controls.email) {
-      currentUser.email = this.form.controls.email.value;
+    if (this.form.controls['email']) {
+      currentUser.email = this.form.controls['email'].value;
     }
     this.usersService.update(currentUser, currentUser.id).subscribe({
       next: (res) => {

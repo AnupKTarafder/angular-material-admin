@@ -12,10 +12,10 @@ import { MatPaginator } from '@angular/material/paginator';
 import { FilterConfig, FilterItems } from '../../../shared/models/common';
 
 @Component({
-    selector: 'app-users-list',
-    templateUrl: './users-list.component.html',
-    styleUrls: ['./users-list.component.scss'],
-    standalone: false
+  selector: 'app-users-list',
+  templateUrl: './users-list.component.html',
+  styleUrls: ['./users-list.component.scss'],
+  standalone: false,
 })
 export class UsersListComponent implements OnInit {
   @ViewChild(MatPaginator, { static: true }) paginator: MatPaginator;
@@ -51,7 +51,7 @@ export class UsersListComponent implements OnInit {
     private toastr: ToastrService,
     public dialog: MatDialog,
     public dataFormatterService: DataFormatterService,
-    private usersService: UsersService,
+    private usersService: UsersService
   ) {}
 
   ngOnInit(): void {
@@ -93,10 +93,9 @@ export class UsersListComponent implements OnInit {
       width: '512px',
     });
 
-    this.deleteConfirmSubscription =
-      dialogRef.componentInstance.deleteConfirmed.subscribe((result) => {
-        this.onDelete(this.selectedId);
-      });
+    this.deleteConfirmSubscription = dialogRef.componentInstance.deleteConfirmed.subscribe((result) => {
+      this.onDelete(this.selectedId);
+    });
   }
 
   onDelete(id: string): void {
@@ -129,7 +128,7 @@ export class UsersListComponent implements OnInit {
   }
 
   redirectToSwagger() {
-    return process.env.NODE_ENV === 'production'
+    return process.env['NODE_ENV'] === 'production'
       ? window.location.origin + '/api-docs/#/Users'
       : 'http://localhost:8080/api-docs/#/Users';
   }

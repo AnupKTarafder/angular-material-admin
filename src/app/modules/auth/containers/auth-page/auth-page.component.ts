@@ -5,10 +5,10 @@ import { routes } from '../../../../consts';
 import { AuthService } from '../../../../shared/services/auth.service';
 
 @Component({
-    selector: 'app-auth-page',
-    templateUrl: './auth-page.component.html',
-    styleUrls: ['./auth-page.component.scss'],
-    standalone: false
+  selector: 'app-auth-page',
+  templateUrl: './auth-page.component.html',
+  styleUrls: ['./auth-page.component.scss'],
+  standalone: false,
 })
 export class AuthPageComponent {
   public todayDate: Date = new Date();
@@ -17,15 +17,15 @@ export class AuthPageComponent {
   constructor(
     private authService: AuthService,
     private router: Router,
-    private route: ActivatedRoute,
+    private route: ActivatedRoute
   ) {
     if (this.authService.isAuthenticated()) {
       this.authService.receiveLogin();
     }
 
     this.route.queryParams.subscribe((params) => {
-      if (params.token) {
-        this.authService.receiveToken(params.token);
+      if (params['token']) {
+        this.authService.receiveToken(params['token']);
       }
     });
   }

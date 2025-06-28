@@ -1,13 +1,26 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core';
 import {
   ApexAxisChartSeries,
   ApexChart,
-  ApexDataLabels, ApexFill, ApexGrid,
-  ApexLegend, ApexMarkers,
-  ApexNonAxisChartSeries, ApexResponsive,
+  ApexDataLabels,
+  ApexFill,
+  ApexGrid,
+  ApexLegend,
+  ApexMarkers,
+  ApexNonAxisChartSeries,
+  ApexResponsive,
   ApexStroke,
   ApexTooltip,
-  ApexXAxis
+  ApexXAxis,
 } from 'ng-apexcharts';
 
 import { HeatmapChartData } from '../../models';
@@ -30,10 +43,10 @@ type ChartOptions = {
 };
 
 @Component({
-    selector: 'app-heatmap-chart',
-    templateUrl: './heatmap-chart.component.html',
-    styleUrls: ['./heatmap-chart.component.scss'],
-    standalone: false
+  selector: 'app-heatmap-chart',
+  templateUrl: './heatmap-chart.component.html',
+  styleUrls: ['./heatmap-chart.component.scss'],
+  standalone: false,
 })
 export class HeatmapChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() heatmapChartData: HeatmapChartData;
@@ -45,29 +58,26 @@ export class HeatmapChartComponent implements OnInit, OnChanges, AfterViewInit {
   public chartObj: ApexCharts;
 
   public ngOnInit(): void {
-    this.initChart()
+    this.initChart();
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    if (changes.currentTheme.currentValue && this.chartObj) {
+    if (changes['currentTheme'].currentValue && this.chartObj) {
       this.chartObj.updateOptions({
         colors: [
-          changes.currentTheme.currentValue === 'blue'
+          changes['currentTheme'].currentValue === 'blue'
             ? colors.BLUE
             : this.currentTheme === 'green'
-            ? colors.GREEN
-            : colors.PINK
+              ? colors.GREEN
+              : colors.PINK,
         ],
-      })
+      });
     }
   }
 
   public ngAfterViewInit() {
     // @ts-ignore
-    this.chartObj = new ApexCharts(
-      this.chart.nativeElement,
-      this.apexHeatmapChartOptions
-    )
+    this.chartObj = new ApexCharts(this.chart.nativeElement, this.apexHeatmapChartOptions);
 
     this.chartObj.render();
   }
@@ -79,24 +89,18 @@ export class HeatmapChartComponent implements OnInit, OnChanges, AfterViewInit {
         height: 350,
         type: 'heatmap',
         toolbar: {
-          show: false
-        }
+          show: false,
+        },
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
-      colors: [
-        this.currentTheme === 'blue'
-          ? colors.BLUE
-          : this.currentTheme === 'green'
-          ? colors.GREEN
-          : colors.PINK
-      ],
+      colors: [this.currentTheme === 'blue' ? colors.BLUE : this.currentTheme === 'green' ? colors.GREEN : colors.PINK],
       xaxis: {
         labels: {
-          rotate: 0
-        }
-      }
+          rotate: 0,
+        },
+      },
     };
   }
 }

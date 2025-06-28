@@ -1,11 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import {
-  UntypedFormBuilder,
-  FormControl,
-  UntypedFormGroup,
-  Validators,
-} from '@angular/forms';
+import { UntypedFormBuilder, FormControl, UntypedFormGroup, Validators } from '@angular/forms';
 import { ToastrService } from 'ngx-toastr';
 import { routes, AUTO_COMPLETE_LIMIT } from '../../../consts';
 import { DataFormatterService } from '../../../shared/services/data-formatter.service';
@@ -13,18 +8,17 @@ import { AutoCompleteItem } from '../../../shared/models/common';
 import { UsersService } from '../../../shared/services/users.service';
 
 @Component({
-    selector: 'app-users-edit',
-    templateUrl: './users-edit.component.html',
-    styleUrls: ['./users-edit.component.scss'],
-    standalone: false
+  selector: 'app-users-edit',
+  templateUrl: './users-edit.component.html',
+  styleUrls: ['./users-edit.component.scss'],
+  standalone: false,
 })
 export class UsersEditComponent implements OnInit {
-  selectedUsers;
   loading = false;
   public routes: typeof routes = routes;
   form: UntypedFormGroup;
   AUTO_COMPLETE_LIMIT = AUTO_COMPLETE_LIMIT;
-  selectedId = this.route.snapshot.params.id;
+  selectedId: string;
 
   imgFile: string;
 
@@ -35,8 +29,10 @@ export class UsersEditComponent implements OnInit {
     private toastr: ToastrService,
     private dataFormatterService: DataFormatterService,
 
-    private usersService: UsersService,
+    private usersService: UsersService
   ) {
+    this.selectedId = this.route.snapshot.params['id'];
+
     this.form = this.formBuilder.group({
       firstName: [''],
 
@@ -64,9 +60,7 @@ export class UsersEditComponent implements OnInit {
     this.form.value.avatar.push(val);
   }
   avatarDel(id) {
-    this.form.value.avatar = this.form.value.avatar.filter(
-      (img) => img.id !== id,
-    );
+    this.form.value.avatar = this.form.value.avatar.filter((img) => img.id !== id);
   }
 
   onSave(): void {

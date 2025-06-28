@@ -1,14 +1,23 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild} from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core';
 
-import {ChartOptions} from '../../models/chart-options';
+import { ChartOptions } from '../../models/chart-options';
 import { colors } from '../../../../../consts';
-import {BarChartData} from '../../models/bar-chart-data';
+import { BarChartData } from '../../models/bar-chart-data';
 
 @Component({
-    selector: 'app-bar-chart',
-    templateUrl: './bar-chart.component.html',
-    styleUrls: ['./bar-chart.component.scss'],
-    standalone: false
+  selector: 'app-bar-chart',
+  templateUrl: './bar-chart.component.html',
+  styleUrls: ['./bar-chart.component.scss'],
+  standalone: false,
 })
 export class BarChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() barChartData: BarChartData;
@@ -25,25 +34,22 @@ export class BarChartComponent implements OnInit, OnChanges, AfterViewInit {
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    if (changes.currentTheme.currentValue && this.chartObj) {
+    if (changes['currentTheme'].currentValue && this.chartObj) {
       this.chartObj.updateOptions({
         colors: [
-          changes.currentTheme.currentValue === 'blue'
+          changes['currentTheme'].currentValue === 'blue'
             ? colors.BLUE
             : this.currentTheme === 'green'
-            ? colors.GREEN
-            : colors.PINK
-        ]
-      })
+              ? colors.GREEN
+              : colors.PINK,
+        ],
+      });
     }
   }
 
   public ngAfterViewInit() {
     // @ts-ignore
-    this.chartObj = new ApexCharts(
-      this.chart.nativeElement,
-      this.apexBarChartOptions
-    )
+    this.chartObj = new ApexCharts(this.chart.nativeElement, this.apexBarChartOptions);
 
     this.chartObj.render();
   }
@@ -52,30 +58,24 @@ export class BarChartComponent implements OnInit, OnChanges, AfterViewInit {
     this.apexBarChartOptions = {
       series: this.barChartData.series,
       chart: {
-        type: "bar",
+        type: 'bar',
         height: 350,
         toolbar: {
-          show: false
-        }
+          show: false,
+        },
       },
       plotOptions: {
         bar: {
-          horizontal: true
-        }
+          horizontal: true,
+        },
       },
-      colors: [
-        this.currentTheme === 'blue'
-          ? colors.BLUE
-          : this.currentTheme === 'green'
-          ? colors.GREEN
-          : colors.PINK
-      ],
+      colors: [this.currentTheme === 'blue' ? colors.BLUE : this.currentTheme === 'green' ? colors.GREEN : colors.PINK],
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
       xaxis: {
-        categories: this.barChartData.categories
-      }
+        categories: this.barChartData.categories,
+      },
     };
   }
 }

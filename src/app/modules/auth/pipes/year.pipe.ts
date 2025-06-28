@@ -2,11 +2,11 @@ import { Pipe, PipeTransform } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
 @Pipe({
-    name: 'year',
-    standalone: false
+  name: 'year',
+  standalone: false,
 })
 export class YearPipe extends DatePipe implements PipeTransform {
-  transform(date: Date): any {
+  override transform(date: Date): any {
     return super.transform(date, 'y');
   }
 }

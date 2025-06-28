@@ -1,0 +1,28 @@
+@use 'sass:map';
+@use 'palettes';
+@use 'mat-card';
+@use 'mat-paginator';
+@use 'mat-table';
+@use 'breadcrumb';
+@use 'mat-select';
+@use 'mat-tab';
+@use 'mat-toolbar';
+@use 'mat-button';
+@use 'mat-badge';
+@use 'mat-button-toggle';
+@use 'mat-form-field';
+@use 'mat-expansion-panel';
+@use 'mat-spinner';
+@use 'mat-tooltip';
+@use 'calendar';
+@use 'full-calendar';
+@use 'colors';
+@use 'header';
+@use 'sidebar';
+@use 'footer';
+@use 'settings';
+@use 'scrollbar';
+@use '@angular/material' as mat;
+
+.blue-theme {
+}

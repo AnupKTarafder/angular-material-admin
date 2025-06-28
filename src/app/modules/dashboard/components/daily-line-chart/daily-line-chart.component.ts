@@ -72,17 +72,19 @@ export class DailyLineChartComponent implements OnInit, OnChanges, AfterViewInit
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    if (changes.currentTheme && changes.currentTheme.currentValue && this.chartObj) {
+    const { currentTheme, currentMode } = changes;
+    if (currentTheme && currentTheme.currentValue && this.chartObj) {
       this.updateChartOptions();
     }
-    if (changes.currentMode && changes.currentMode.currentValue && this.chartObj) {
+    if (currentMode && currentMode.currentValue && this.chartObj) {
       this.updateChartOptions();
     }
   }
 
   public ngAfterViewInit() {
-    this.chartObj = new ApexCharts(this.chart.nativeElement, this.chartOptions);
+    debugger;
 
+    this.chartObj = new ApexCharts(this.chart.nativeElement, this.chartOptions);
     this.chartObj.render();
     this.updateChartOptions();
   }

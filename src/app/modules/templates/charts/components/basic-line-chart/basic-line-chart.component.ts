@@ -1,14 +1,23 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild} from '@angular/core';
-import {LineChartData} from '../../models';
-import {ChartOptions} from '../../models/chart-options';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core';
+import { LineChartData } from '../../models';
+import { ChartOptions } from '../../models/chart-options';
 
 import { colors } from '../../../../../consts';
 
 @Component({
-    selector: 'app-basic-line-chart',
-    templateUrl: './basic-line-chart.component.html',
-    styleUrls: ['./basic-line-chart.component.scss'],
-    standalone: false
+  selector: 'app-basic-line-chart',
+  templateUrl: './basic-line-chart.component.html',
+  styleUrls: ['./basic-line-chart.component.scss'],
+  standalone: false,
 })
 export class BasicLineChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() basicLineChartData: LineChartData;
@@ -25,38 +34,31 @@ export class BasicLineChartComponent implements OnInit, OnChanges, AfterViewInit
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    if (changes.currentTheme.currentValue && this.chartObj) {
+    if (changes['currentTheme'].currentValue && this.chartObj) {
       this.chartObj.updateOptions({
         colors: [
-          changes.currentTheme.currentValue === 'blue'
+          changes['currentTheme'].currentValue === 'blue'
             ? colors.BLUE
             : this.currentTheme === 'green'
-            ? colors.GREEN
-            : colors.PINK
+              ? colors.GREEN
+              : colors.PINK,
         ],
         grid: {
           row: {
             colors: [
-              this.currentTheme === 'blue'
-                ? colors.BLUE
-                : this.currentTheme === 'green'
-                ? colors.GREEN
-                : colors.PINK,
-              "transparent"
+              this.currentTheme === 'blue' ? colors.BLUE : this.currentTheme === 'green' ? colors.GREEN : colors.PINK,
+              'transparent',
             ],
-            opacity: 0.2
-          }
-        }
-      })
+            opacity: 0.2,
+          },
+        },
+      });
     }
   }
 
   public ngAfterViewInit() {
     // @ts-ignore
-    this.chartObj = new ApexCharts(
-      this.chart.nativeElement,
-      this.apexBasicLineChartOptions
-    )
+    this.chartObj = new ApexCharts(this.chart.nativeElement, this.apexBasicLineChartOptions);
 
     this.chartObj.render();
   }
@@ -66,43 +68,33 @@ export class BasicLineChartComponent implements OnInit, OnChanges, AfterViewInit
       series: this.basicLineChartData.series,
       chart: {
         height: 350,
-        type: "line",
+        type: 'line',
         zoom: {
-          enabled: false
+          enabled: false,
         },
         toolbar: {
-          show: false
-        }
+          show: false,
+        },
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
-      colors: [
-        this.currentTheme === 'blue'
-          ? colors.BLUE
-          : this.currentTheme === 'green'
-          ? colors.GREEN
-          : colors.PINK
-      ],
+      colors: [this.currentTheme === 'blue' ? colors.BLUE : this.currentTheme === 'green' ? colors.GREEN : colors.PINK],
       stroke: {
-        curve: "straight"
+        curve: 'straight',
       },
       grid: {
         row: {
           colors: [
-            this.currentTheme === 'blue'
-              ? colors.BLUE
-              : this.currentTheme === 'green'
-              ? colors.GREEN
-              : colors.PINK,
-            "transparent"
+            this.currentTheme === 'blue' ? colors.BLUE : this.currentTheme === 'green' ? colors.GREEN : colors.PINK,
+            'transparent',
           ],
-          opacity: 0.2
-        }
+          opacity: 0.2,
+        },
       },
       xaxis: {
-        categories: this.basicLineChartData.categories
-      }
+        categories: this.basicLineChartData.categories,
+      },
     };
   }
 }

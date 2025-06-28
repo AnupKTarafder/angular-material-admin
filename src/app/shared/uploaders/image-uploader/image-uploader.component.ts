@@ -1,6 +1,6 @@
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { UntypedFormControl, UntypedFormGroup, Validators } from '@angular/forms';
-import { AppConfig } from 'src/app/app.config';
+import { AppConfig } from '@app/app.config';
 import { v4 as uuidv4 } from 'uuid';
 import { ImageUploaderService } from '../../services/image-uploader.service';
 import { ImageInterface } from '../../models/image.interface';

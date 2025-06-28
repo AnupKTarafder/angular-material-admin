@@ -1,23 +1,23 @@
-import {Component, OnChanges, OnInit, SimpleChanges} from '@angular/core';
-import {ChartOptions} from '../../../templates/charts/models/chart-options';
+import { Component, OnChanges, OnInit, SimpleChanges } from '@angular/core';
+import { ChartOptions } from '../../../templates/charts/models/chart-options';
 
-import {colors} from '../../../../consts';
-import {CalendarDateFormatter} from 'angular-calendar';
-import {CustomDateFormatter} from '../../service';
-import {routes} from '../../../../consts';
-import {SharedService} from '../../../../shared/services/shared.service';
+import { colors } from '../../../../consts';
+import { CalendarDateFormatter } from 'angular-calendar';
+import { CustomDateFormatter } from '../../service';
+import { routes } from '../../../../consts';
+import { SharedService } from '../../../../shared/services/shared.service';
 
 @Component({
-    selector: 'app-profile-page',
-    templateUrl: './profile-page.component.html',
-    styleUrls: ['./profile-page.component.scss'],
-    providers: [
-        {
-            provide: CalendarDateFormatter,
-            useClass: CustomDateFormatter,
-        },
-    ],
-    standalone: false
+  selector: 'app-profile-page',
+  templateUrl: './profile-page.component.html',
+  styleUrls: ['./profile-page.component.scss'],
+  providers: [
+    {
+      provide: CalendarDateFormatter,
+      useClass: CustomDateFormatter,
+    },
+  ],
+  standalone: false,
 })
 export class ProfilePageComponent implements OnInit, OnChanges {
   public apexPieChartOptions: Partial<ChartOptions>;
@@ -38,7 +38,7 @@ export class ProfilePageComponent implements OnInit, OnChanges {
       },
       start: new Date(this.NOW.getFullYear(), this.NOW.getMonth(), 2),
       draggable: false,
-      allDay: true
+      allDay: true,
     },
     {
       id: 2,
@@ -47,7 +47,7 @@ export class ProfilePageComponent implements OnInit, OnChanges {
       },
       start: new Date(this.NOW.getFullYear(), this.NOW.getMonth(), 5),
       draggable: false,
-      allDay: true
+      allDay: true,
     },
     {
       id: 3,
@@ -56,7 +56,7 @@ export class ProfilePageComponent implements OnInit, OnChanges {
       },
       start: new Date(this.NOW.getFullYear(), this.NOW.getMonth(), 18),
       draggable: false,
-      allDay: true
+      allDay: true,
     },
     {
       id: 4,
@@ -66,24 +66,25 @@ export class ProfilePageComponent implements OnInit, OnChanges {
       start: new Date(this.NOW.getFullYear(), this.NOW.getMonth(), 28),
       draggable: false,
       allDay: true,
-      actions: [{
-        label: 'action',
-        onClick: () => {
-          if (Boolean(document)) {
-            const a: HTMLAnchorElement = document.createElement('a');
-            a.href = 'http://www.flatlogic.com';
-            a.target = '_blank';
-            a.click();
-            a.remove();
-          }
-        }
-      }]
-    }
+      actions: [
+        {
+          label: 'action',
+          onClick: () => {
+            if (Boolean(document)) {
+              const a: HTMLAnchorElement = document.createElement('a');
+              a.href = 'http://www.flatlogic.com';
+              a.target = '_blank';
+              a.click();
+              a.remove();
+            }
+          },
+        },
+      ],
+    },
   ];
   public isDarkMode = false;
 
-  constructor(private service: SharedService) {
-  }
+  constructor(private service: SharedService) {}
 
   public ngOnInit(): void {
     this.initChart();
@@ -96,63 +97,55 @@ export class ProfilePageComponent implements OnInit, OnChanges {
   }
 
   public initChart2(data: number[], color: string): Partial<ChartOptions> {
-    return  {
+    return {
       series: [
         {
           name: 'STOCK ABC',
-          data
-        }
+          data,
+        },
       ],
       chart: {
         type: 'area',
         height: 100,
         zoom: {
-          enabled: false
+          enabled: false,
         },
         toolbar: {
           show: false,
-        }
+        },
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
       stroke: {
         curve: 'smooth',
-        width: 2
+        width: 2,
       },
       fill: {
         type: 'solid',
-        opacity: 0.3
+        opacity: 0.3,
       },
       colors: [color],
-      labels:  [
-        '13 Nov 2020',
-        '14 Nov 2020',
-        '15 Nov 2020',
-        '16 Nov 2020',
-        '17 Nov 2020',
-        '18 Nov 2020',
-        '19 Nov 2020',
-      ],
+      labels: ['13 Nov 2020', '14 Nov 2020', '15 Nov 2020', '16 Nov 2020', '17 Nov 2020', '18 Nov 2020', '19 Nov 2020'],
       xaxis: {
         type: 'datetime',
         labels: {
-          show: false
+          show: false,
         },
         axisBorder: {
-          show: false
+          show: false,
         },
         axisTicks: {
-          show: false
-        }
+          show: false,
+        },
       },
       yaxis: {
         opposite: true,
-        show: false
+        show: false,
       },
       legend: {
         horizontalAlign: 'left',
-        show: false
+        show: false,
       },
       grid: {
         show: false,
@@ -160,8 +153,8 @@ export class ProfilePageComponent implements OnInit, OnChanges {
           bottom: 0,
           left: 0,
           right: 0,
-          top: 0
-        }
+          top: 0,
+        },
       },
     };
   }
@@ -174,20 +167,15 @@ export class ProfilePageComponent implements OnInit, OnChanges {
         height: 110,
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
-      colors: [
-        colors.BLUE,
-        colors.YELLOW,
-        colors.GREEN,
-        colors.PINK
-      ],
+      colors: [colors.BLUE, colors.YELLOW, colors.GREEN, colors.PINK],
       legend: {
         position: 'right',
         offsetY: -15,
         itemMargin: {
           horizontal: 5,
-          vertical: 2
+          vertical: 2,
         },
       },
       labels: ['New', 'In Progress', 'Completed', 'Canceled'],
@@ -195,9 +183,9 @@ export class ProfilePageComponent implements OnInit, OnChanges {
   }
 
   ngOnChanges(changes: SimpleChanges): void {
-    if (changes.currentMode && changes.currentMode.currentValue) {
-      this.isDarkMode = changes.currentMode.currentValue;
+    const { currentMode } = changes;
+    if (currentMode && currentMode.currentValue) {
+      this.isDarkMode = currentMode.currentValue;
     }
   }
-
 }

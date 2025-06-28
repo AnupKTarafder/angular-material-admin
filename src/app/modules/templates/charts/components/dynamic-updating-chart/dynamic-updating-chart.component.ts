@@ -1,15 +1,23 @@
-import {AfterViewInit, Component, ElementRef, Input, OnChanges, OnInit, SimpleChanges, ViewChild} from '@angular/core';
-import {LineChartData} from '../../models';
-import {ChartOptions} from '../../models/chart-options';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  Input,
+  OnChanges,
+  OnInit,
+  SimpleChanges,
+  ViewChild,
+} from '@angular/core';
+import { LineChartData } from '../../models';
+import { ChartOptions } from '../../models/chart-options';
 
-import {colors} from '../../../../../consts';
-
+import { colors } from '../../../../../consts';
 
 @Component({
-    selector: 'app-dynamic-updating-chart',
-    templateUrl: './dynamic-updating-chart.component.html',
-    styleUrls: ['./dynamic-updating-chart.component.scss'],
-    standalone: false
+  selector: 'app-dynamic-updating-chart',
+  templateUrl: './dynamic-updating-chart.component.html',
+  styleUrls: ['./dynamic-updating-chart.component.scss'],
+  standalone: false,
 })
 export class DynamicUpdatingChartComponent implements OnInit, OnChanges, AfterViewInit {
   @Input() dynamicUpdatingChartData: LineChartData;
@@ -28,25 +36,22 @@ export class DynamicUpdatingChartComponent implements OnInit, OnChanges, AfterVi
   }
 
   public ngOnChanges(changes: SimpleChanges): void {
-    if (changes.currentTheme && changes.currentTheme.currentValue && this.chartObj) {
+    if (changes['currentTheme'] && changes['currentTheme'].currentValue && this.chartObj) {
       this.chartObj.updateOptions({
         colors: [
-          changes.currentTheme.currentValue === 'blue'
+          changes['currentTheme'].currentValue === 'blue'
             ? colors.BLUE
             : this.currentTheme === 'green'
-            ? colors.GREEN
-            : colors.PINK
+              ? colors.GREEN
+              : colors.PINK,
         ],
-      })
+      });
     }
   }
 
   public ngAfterViewInit() {
     // @ts-ignore
-    this.chartObj = new ApexCharts(
-      this.chart.nativeElement,
-      this.apexDynamicUpdatingChartOptions
-    )
+    this.chartObj = new ApexCharts(this.chart.nativeElement, this.apexDynamicUpdatingChartOptions);
 
     this.chartObj.render();
 
@@ -66,11 +71,11 @@ export class DynamicUpdatingChartComponent implements OnInit, OnChanges, AfterVi
             Math.round(Math.random() * 100),
             Math.round(Math.random() * 100),
             Math.round(Math.random() * 100),
-            Math.round(Math.random() * 100)
-          ]
-        }
-      ]
-    }
+            Math.round(Math.random() * 100),
+          ],
+        },
+      ],
+    };
 
     this.chartObj.updateSeries(this.apexDynamicUpdatingChartOptions.series);
   }
@@ -87,30 +92,24 @@ export class DynamicUpdatingChartComponent implements OnInit, OnChanges, AfterVi
             Math.round(Math.random() * 100),
             Math.round(Math.random() * 100),
             Math.round(Math.random() * 100),
-            Math.round(Math.random() * 100)
-          ]
-        }
+            Math.round(Math.random() * 100),
+          ],
+        },
       ],
       chart: {
         height: 350,
         type: 'area',
         toolbar: {
-          show: false
-        }
+          show: false,
+        },
       },
       legend: {
-        show: false
+        show: false,
       },
       dataLabels: {
-        enabled: false
+        enabled: false,
       },
-      colors: [
-        this.currentTheme === 'blue'
-          ? colors.BLUE
-          : this.currentTheme === 'green'
-          ? colors.GREEN
-          : colors.PINK
-      ],
+      colors: [this.currentTheme === 'blue' ? colors.BLUE : this.currentTheme === 'green' ? colors.GREEN : colors.PINK],
       stroke: {
         curve: 'smooth',
       },
@@ -123,14 +122,14 @@ export class DynamicUpdatingChartComponent implements OnInit, OnChanges, AfterVi
           '2018-09-19T03:30:00.000Z',
           '2018-09-19T04:30:00.000Z',
           '2018-09-19T05:30:00.000Z',
-          '2018-09-19T06:30:00.000Z'
-        ]
+          '2018-09-19T06:30:00.000Z',
+        ],
       },
       tooltip: {
         x: {
-          format: 'dd/MM/yy HH:mm'
-        }
-      }
+          format: 'dd/MM/yy HH:mm',
+        },
+      },
     };
   }
 }

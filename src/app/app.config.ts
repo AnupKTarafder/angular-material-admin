@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { environment } from '../environments/environment';
 
-const hostApi = process.env.NODE_ENV === 'development' ? 'http://localhost' : 'https://sing-generator-node.herokuapp.com';
-const portApi = process.env.NODE_ENV === 'development' ? '8080' : '';
+const isDev = process.env['NODE_ENV'] === 'development';
+
+const hostApi = isDev ? 'http://localhost' : 'https://sing-generator-node.herokuapp.com';
+const portApi = isDev ? '8080' : '';
 const baseURLApi = `${hostApi}${portApi ? `:${portApi}` : ``}`;
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class AppConfig {
   config = {
@@ -18,12 +20,11 @@ export class AppConfig {
     baseURLApi,
     auth: {
       email: 'admin@flatlogic.com',
-      password: 'password'
+      password: 'password',
     },
   };
 
-  constructor() {
-  }
+  constructor() {}
 
   getConfig(): Object {
     return this.config;
