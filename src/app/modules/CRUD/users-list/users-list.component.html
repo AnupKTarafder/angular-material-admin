@@ -189,7 +189,7 @@
             class="table-body"
             (click)="edit(row)"
             >
-            @if (row.avatar.length) {
+            @if (row.avatar?.length) {
               <img
                 [src]="dataFormatterService.oneImageFormatter(row.avatar)"
                 alt="..."

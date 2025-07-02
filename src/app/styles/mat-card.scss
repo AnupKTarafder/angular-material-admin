@@ -14,7 +14,11 @@ $card-background-dark-theme: #23232d;
 
 @mixin mat-card() {
   .mat-mdc-card {
-    color: $card-font-color;
+    --mdc-elevated-card-container-color: #{colors.$white};
+    --mdc-outlined-card-container-color: #{colors.$white};
+    --mdc-elevated-card-label-text-color: #{$card-font-color};
+    --mdc-outlined-card-label-text-color: #{$card-font-color};
+
     margin: 0;
     box-shadow: $card-shadow;
     padding: $card-padding;
@@ -35,8 +39,10 @@ $card-background-dark-theme: #23232d;
 
 @mixin mat-card-dark() {
   .mat-mdc-card {
-    color: colors.$white;
-    background-color: $card-background-dark-theme;
+    --mdc-elevated-card-container-color: #{$card-background-dark-theme};
+    --mdc-outlined-card-container-color: #{$card-background-dark-theme};
+    --mdc-elevated-card-label-text-color: #{colors.$white};
+    --mdc-outlined-card-label-text-color: #{colors.$white};
 
     & p {
       color: colors.$white;

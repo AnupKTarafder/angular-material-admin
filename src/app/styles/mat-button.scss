@@ -10,8 +10,11 @@ $raised-button-shadow:
   .mat-mdc-raised-button,
   .mat-mdc-fab,
   .mat-mdc-mini-fab {
-    color: colors.$dark-grey;
-    background-color: colors.$default;
+    --mdc-text-button-label-text-color: #{colors.$dark-grey};
+    --mdc-filled-button-container-color: #{colors.$default};
+    --mdc-protected-button-container-color: #{colors.$default};
+    --mdc-fab-container-color: #{colors.$default};
+
     letter-spacing: 0.02857em;
     text-transform: uppercase;
     box-shadow: none;

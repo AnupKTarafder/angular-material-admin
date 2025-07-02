@@ -2,7 +2,7 @@
 
 @mixin mat-table() {
   .mat-mdc-table {
-    background: transparent;
+    --mdc-data-table-container-color: transparent;
 
     tr {
       &:hover {
@@ -20,21 +20,19 @@
 
 @mixin mat-table-dark() {
   .mat-mdc-table {
-    background: transparent;
+    --mdc-data-table-container-color: transparent;
+    --mdc-data-table-header-row-text-color: #d6d6d6;
+    --mdc-data-table-row-text-color: #{colors.$white};
 
     th {
-      color: #d6d6d6;
-
       &.mat-mdc-header-cell {
-        border-color: colors.$white-70;
+        --mdc-data-table-header-cell-border-bottom-color: #{colors.$white-70};
       }
     }
 
     td {
-      color: colors.$white;
-
       &.mat-mdc-cell {
-        border-color: colors.$white-70;
+        --mdc-data-table-cell-border-bottom-color: #{colors.$white-70};
       }
     }
   }

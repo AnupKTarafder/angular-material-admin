@@ -1,52 +1,40 @@
 import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root',
 })
 export class SharedService {
-  private updateThemeObservable;
-  private updateModeObservable;
   private current: string = 'blue';
   private mode: string = 'light';
+  private updateThemeObservable = new BehaviorSubject<string>(this.current);
+  private updateModeObservable = new BehaviorSubject<string>(this.mode);
 
-  public currentTheme = new Observable<string>((observer: any) => {
-    observer.next(this.current);
+  public currentTheme = this.updateThemeObservable.asObservable();
 
-    this.updateThemeObservable = function (newValue) {
-      observer.next(newValue);
-    };
-  });
-
-  public currentMode = new Observable<string>((observer: any) => {
-    observer.next(this.mode);
-
-    this.updateModeObservable = function (newValue) {
-      observer.next(newValue);
-    };
-  });
+  public currentMode = this.updateModeObservable.asObservable();
 
   public setBlueTheme(): void {
     this.current = 'blue';
 
-    this.updateThemeObservable('blue');
+    this.updateThemeObservable.next('blue');
   }
 
   public setPinkTheme(): void {
     this.current = 'pink';
 
-    this.updateThemeObservable('pink');
+    this.updateThemeObservable.next('pink');
   }
 
   public setGreenTheme(): void {
     this.current = 'green';
 
-    this.updateThemeObservable('green');
+    this.updateThemeObservable.next('green');
   }
 
   public setDarkMode(value: boolean): void {
     this.mode = value ? 'dark' : 'light';
 
-    this.updateModeObservable(this.mode);
+    this.updateModeObservable.next(this.mode);
   }
 }

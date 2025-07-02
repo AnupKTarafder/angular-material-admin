@@ -65,6 +65,29 @@
   }
 }
 
+// Add MDC-specific styles for the mat-chip-option
+.mat-mdc-chip-option {
+  --mdc-chip-elevated-container-color: transparent;
+  --mdc-chip-label-text-color: inherit;
+
+  &.mat-mdc-chip-selected {
+    &.mat-primary {
+      --mdc-chip-elevated-container-color: var(--mdc-filled-button-container-color);
+      --mdc-chip-label-text-color: var(--mdc-filled-button-label-text-color);
+    }
+
+    &.mat-accent {
+      --mdc-chip-elevated-container-color: var(--mdc-protected-button-container-color);
+      --mdc-chip-label-text-color: var(--mdc-protected-button-label-text-color);
+    }
+
+    &.mat-warn {
+      --mdc-chip-elevated-container-color: var(--mdc-filled-button-error-container-color);
+      --mdc-chip-label-text-color: var(--mdc-filled-button-error-label-text-color);
+    }
+  }
+}
+
 .user-button {
   font-size: 20px;
   line-height: 36px;

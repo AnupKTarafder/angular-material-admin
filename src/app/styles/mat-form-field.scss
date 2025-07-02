@@ -2,37 +2,26 @@
 
 @mixin mat-form-field {
   .add-section-menu {
-    /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
-    & .mat-form-field-label {
-      color: colors.$white;
-    }
-
-    /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
-    & .mat-form-field-underline {
-      background-color: colors.$white;
+    & .mat-mdc-form-field {
+      --mdc-filled-text-field-label-text-color: #{colors.$white};
+      --mdc-outlined-text-field-label-text-color: #{colors.$white};
+      --mdc-filled-text-field-active-indicator-color: #{colors.$white};
+      --mdc-outlined-text-field-outline-color: #{colors.$white};
     }
   }
 }
 
 @mixin mat-form-field-dark-theme {
-  & .mat-mdc-form-field-hint,
-  .mat-form-field-appearance-legacy .mat-hint {
-    color: colors.$white-70;
-  }
-
-  /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
-  & .mat-form-field-appearance-legacy .mat-form-field-underline,
-  .mat-form-field-appearance-legacy.mat-form-field-disabled .mat-form-field-underline {
-    background-color: colors.$white-70;
-  }
-
-  /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
-  & .mat-form-field-appearance-fill .mat-form-field-underline::before {
-    background-color: colors.$white-70;
-  }
-
-  /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
-  & .mat-form-field-appearance-legacy .mat-form-field-label {
-    color: colors.$white;
+  & .mat-mdc-form-field {
+    --mdc-filled-text-field-label-text-color: #{colors.$white};
+    --mdc-outlined-text-field-label-text-color: #{colors.$white};
+    --mdc-filled-text-field-active-indicator-color: #{colors.$white-70};
+    --mdc-outlined-text-field-outline-color: #{colors.$white-70};
+    --mdc-filled-text-field-disabled-active-indicator-color: #{colors.$white-70};
+    --mdc-outlined-text-field-disabled-outline-color: #{colors.$white-70};
+    --mdc-filled-text-field-input-text-color: #{colors.$white};
+    --mdc-outlined-text-field-input-text-color: #{colors.$white};
+    --mdc-filled-text-field-hint-text-color: #{colors.$white-70};
+    --mdc-outlined-text-field-hint-text-color: #{colors.$white-70};
   }
 }

@@ -2,22 +2,34 @@
 
 @mixin mat-paginator() {
   .mat-mdc-paginator {
+    --mdc-select-dropdown-icon-color: inherit;
+    --mdc-select-focus-dropdown-icon-color: inherit;
+    --mdc-select-hover-dropdown-icon-color: inherit;
+    --mdc-select-disabled-dropdown-icon-color: inherit;
+    --mdc-filled-text-field-active-indicator-color: transparent;
+    --mdc-filled-text-field-hover-active-indicator-color: transparent;
+    --mdc-filled-text-field-focus-active-indicator-color: transparent;
+
     background: transparent;
 
     & .mat-mdc-select {
       border: none;
-    }
-
-    /* TODO(mdc-migration): The following rule targets internal classes of form-field that may no longer apply for the MDC version. */
-    & .mat-form-field-underline {
-      display: none;
     }
   }
 }
 
 @mixin mat-paginator-dark() {
   .mat-mdc-paginator {
+    --mat-paginator-container-text-color: #{colors.$white};
+    --mat-paginator-container-size-label-text-color: #{colors.$white};
+    --mat-paginator-container-items-per-page-label-text-color: #{colors.$white};
+    --mat-paginator-container-page-size-select-trigger-text-color: #{colors.$white};
+    --mat-paginator-container-page-size-select-trigger-icon-color: #{colors.$white};
+    --mat-paginator-container-range-actions-button-color: #{colors.$white};
+    --mdc-select-dropdown-icon-color: #{colors.$white};
+    --mdc-select-focus-dropdown-icon-color: #{colors.$white};
+    --mdc-select-hover-dropdown-icon-color: #{colors.$white};
+
     background: transparent;
-    color: colors.$white;
   }
 }

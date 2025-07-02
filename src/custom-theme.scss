@@ -45,7 +45,6 @@
 //  error: palettes.$ama-pink,
 // );
 
-// Create the M3 theme
 $ama-m3-theme-config: (
   color: m3-palettes.$blue-palette,
   typography: (
@@ -57,256 +56,68 @@ $ama-m3-theme-config: (
   ),
   density: 0,
 );
-$color: map.get(m3-palettes.$blue-palette, 50);
 
-// Apply the M3 theme
-@include mat.all-component-themes($ama-m3-theme-config);
-@include header.header;
-@include mat-card.mat-card;
-@include mat-paginator.mat-paginator;
-@include mat-table.mat-table;
-@include mat-toolbar.mat-toolbar;
-@include mat-button.mat-button;
-@include mat-button-toggle.mat-toggle;
-@include mat-spinner.mat-spinner;
-@include mat-tab.mat-tab-without-border;
-@include mat-tab.mat-tab-color-label($color);
-@include mat-tab.mat-tab-label-active-color($color);
-@include mat-tooltip.mat-tooltip;
-@include mat-expansion-panel.mat-expansion-panel;
-@include breadcrumb.breadcrumb;
-@include mat-badge.mat-badge;
-@include sidebar.sidebar($color);
-@include footer.footer($color);
-@include settings.settings($color);
-@include mat-select.mat-select;
-@include mat-tab.mat-tab-label;
+@include mat.all-component-typographies($ama-m3-theme-config);
+@include mat.all-component-densities($ama-m3-theme-config);
 
-// Keep M2 palettes for custom components that still use them
-$ama-primary: mat.m2-define-palette(palettes.$ama-blue);
-$ama-primary-light: mat.m2-define-palette(palettes.$ama-light-blue);
-$ama-accent: mat.m2-define-palette(palettes.$ama-yellow);
-$ama-warn: mat.m2-define-palette(palettes.$ama-pink);
-$ama-success: mat.m2-define-palette(palettes.$ama-green);
-$ama-info: mat.m2-define-palette(palettes.$ama-violet);
-
-// Legacy M2 theme function for custom components
-@function ama-light-theme($primary, $accent, $warn, $success, $info, $primary-light) {
-  $base-theme: mat.m2-define-light-theme(
+@mixin set-theme($palette) {
+  @include mat.theme(
     (
-      color: (
-        primary: $primary,
-        accent: $accent,
-        warn: $warn,
-      ),
+      color: $palette,
     )
   );
 
-  @return map.merge(
-    $base-theme,
-    (
-      success: $success,
-      info: $info,
-      primary-light: $primary-light,
-    )
-  );
-}
-
-/**********************************  */
-
-/** Angular Material Admin THEME **/
-
-/*********************************  */
-
-// Create legacy M2 theme for custom components
-$ama-theme: ama-light-theme($ama-primary, $ama-accent, $ama-warn, $ama-success, $ama-info, $ama-primary-light);
-
-/**********************************  */
-
-/**            Badge             **/
-
-/*********************************  */
-
-// Apply M3 badge theme with error color variant (default for badges)
-
-// For custom badge colors, we'll keep using the M2 approach for now
-// Create a custom badge theme that extends the base theme
-$ama-badge-theme: ama-light-theme($ama-primary, $ama-accent, $ama-warn, $ama-success, $ama-info, $ama-primary-light);
-
-// Define a custom badge theme mixin that adds support for our custom colors
-@mixin custom-badge-theme($theme) {
-  $success: map.get($theme, success);
-  $info: map.get($theme, info);
-  $primary-light: map.get($theme, primary-light);
-
-  // Add custom color variants
-  .mat-badge-success {
-    .mat-badge-content {
-      color: mat.m2-get-color-from-palette($success, default-contrast);
-      background: mat.m2-get-color-from-palette($success);
-    }
-  }
-
-  .mat-badge-info {
-    .mat-badge-content {
-      color: mat.m2-get-color-from-palette($info, default-contrast);
-      background: mat.m2-get-color-from-palette($info);
-    }
-  }
-
-  .mat-badge-primary-light {
-    .mat-badge-content {
-      color: mat.m2-get-color-from-palette($primary-light, default-contrast);
-      background: mat.m2-get-color-from-palette($primary-light);
-    }
+  & {
+    --main-color: #{map.get($palette, 50)};
   }
 }
 
-@include custom-badge-theme($ama-badge-theme);
-
-/**********************************  */
-
-/**          Radio Button        **/
-
-/*********************************  */
-
-// Apply M3 radio button theme
-
-// For custom radio button colors, we'll keep using the M2 approach for now
-$ama-radio-button-theme: ama-light-theme(
-  $ama-primary,
-  $ama-accent,
-  $ama-warn,
-  $ama-success,
-  $ama-info,
-  $ama-primary-light
-);
-
-// Define a custom radio button theme mixin that customizes the accent color to use success
-@mixin custom-radio-theme($theme) {
-  $success: map.get($theme, success);
-
-  // Override the accent color to use success
-  .mat-mdc-radio-button {
-    &.mat-accent {
-      &.mat-mdc-radio-checked {
-        .mdc-radio__background .mdc-radio__outer-circle {
-          border-color: mat.m2-get-color-from-palette($success);
-        }
-
-        .mdc-radio__background .mdc-radio__inner-circle {
-          border-color: mat.m2-get-color-from-palette($success);
-        }
-      }
-
-      .mat-ripple-element,
-      .mat-mdc-radio-ripple .mat-mdc-focus-indicator::before {
-        background-color: mat.m2-get-color-from-palette($success, 0.26);
-      }
-    }
-  }
+.pinkTheme {
+  @include set-theme(m3-palettes.$pink-palette);
 }
 
-@include custom-radio-theme($ama-radio-button-theme);
-
-/**********************************  */
-
-/**             Chip             **/
-
-/*********************************  */
-
-// Apply M3 chips theme
-
-// For custom chip colors, we'll keep using the M2 approach for now
-$ama-chip-theme: ama-light-theme($ama-primary, $ama-accent, $ama-warn, $ama-success, $ama-info, $ama-primary-light);
-
-// Define a custom chips theme mixin that adds support for our custom colors
-@mixin custom-chips-theme($theme) {
-  $success: map.get($theme, success);
-  $info: map.get($theme, info);
-
-  // Add custom color variants for selected chips
-  .mat-mdc-chip.mat-mdc-standard-chip.mat-mdc-chip-selected {
-    &.mat-success {
-      background-color: mat.m2-get-color-from-palette($success);
-      color: mat.m2-get-color-from-palette($success, default-contrast);
-
-      .mat-mdc-chip-remove {
-        color: mat.m2-get-color-from-palette($success, default-contrast);
-        opacity: 0.4;
-
-        &:hover {
-          opacity: 0.54;
-        }
-      }
-    }
-
-    &.mat-info {
-      background-color: mat.m2-get-color-from-palette($info);
-      color: mat.m2-get-color-from-palette($info, default-contrast);
-
-      .mat-mdc-chip-remove {
-        color: mat.m2-get-color-from-palette($info, default-contrast);
-        opacity: 0.4;
-
-        &:hover {
-          opacity: 0.54;
-        }
-      }
-    }
-  }
+.blueTheme {
+  @include set-theme(m3-palettes.$blue-palette);
 }
 
-@include custom-chips-theme($ama-chip-theme);
-
-/**********************************  */
-
-/**           Buttons            **/
-
-/*********************************  */
-
-// Apply M3 button themes
-
-// For custom button colors, we'll keep using the M2 approach for now
-$ama-button-theme: ama-light-theme($ama-primary, $ama-accent, $ama-warn, $ama-success, $ama-info, $ama-primary-light);
-
-// Define a custom button theme mixin that adds support for our custom colors
-@mixin custom-button-theme($theme) {
-  $success: map.get($theme, success);
-  $info: map.get($theme, info);
-
-  // Add custom color variants for buttons
-  .mat-mdc-button,
-  .mat-mdc-raised-button,
-  .mat-mdc-outlined-button,
-  .mat-mdc-unelevated-button {
-    &.mat-success {
-      --mdc-protected-button-label-text-color: mat.m2-get-color-from-palette($success);
-      --mdc-protected-button-container-color: transparent;
-      --mdc-protected-button-outline-color: mat.m2-get-color-from-palette($success);
-
-      &.mat-mdc-raised-button,
-      &.mat-mdc-unelevated-button {
-        --mdc-protected-button-container-color: mat.m2-get-color-from-palette($success);
-        --mdc-protected-button-label-text-color: mat.m2-get-color-from-palette($success, default-contrast);
-      }
-    }
-
-    &.mat-info {
-      --mdc-protected-button-label-text-color: mat.m2-get-color-from-palette($info);
-      --mdc-protected-button-container-color: transparent;
-      --mdc-protected-button-outline-color: mat.m2-get-color-from-palette($info);
-
-      &.mat-mdc-raised-button,
-      &.mat-mdc-unelevated-button {
-        --mdc-protected-button-container-color: mat.m2-get-color-from-palette($info);
-        --mdc-protected-button-label-text-color: mat.m2-get-color-from-palette($info, default-contrast);
-      }
-    }
-  }
+.greenTheme {
+  @include set-theme(m3-palettes.$green-palette);
 }
 
-@include custom-button-theme($ama-button-theme);
+// .blueTheme {
+//  @include mat.all-component-themes(
+//    (
+//      colors: m3-palettes.$blue-palette,
+//    )
+//  );
+//
+//  & {
+//    --main-color: map.get(m3-palettes.$blue-palette, 50);
+//  }
+// }
+
+html {
+  @include header.header;
+  @include mat-card.mat-card;
+  @include mat-paginator.mat-paginator;
+  @include mat-table.mat-table;
+  @include mat-toolbar.mat-toolbar;
+  @include mat-button.mat-button;
+  @include mat-button-toggle.mat-toggle;
+  @include mat-spinner.mat-spinner;
+  @include mat-tab.mat-tab-without-border;
+  @include mat-tab.mat-tab-color-label(var(--main-color));
+  @include mat-tab.mat-tab-label-active-color(var(--main-color));
+  @include mat-tooltip.mat-tooltip;
+  @include mat-expansion-panel.mat-expansion-panel;
+  @include breadcrumb.breadcrumb;
+  @include mat-badge.mat-badge;
+  @include sidebar.sidebar(var(--main-color));
+  @include footer.footer(var(--main-color));
+  @include settings.settings(var(--main-color));
+  @include mat-select.mat-select;
+  @include mat-tab.mat-tab-label;
+}
 
 html,
 body {
